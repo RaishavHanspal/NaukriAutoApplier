@@ -42,7 +42,8 @@ jobs:
         env:
           CI: "true"
           NAUKRI_SESSION_B64: ${{ secrets.NAUKRI_SESSION_B64 }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NAUKRI_LOGIN: ${{ secrets.NAUKRI_LOGIN }}
+          NAUKRI_PASSWORD: ${{ secrets.NAUKRI_PASSWORD }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
         run: python naukri_assistant.py run
 

@@ -6,13 +6,15 @@ Daily pipeline: scrape -> score vs master resume -> skip already-applied -> tail
 ## One-time setup
 1. Create a **PRIVATE** GitHub repo and push this folder (it holds your resumes, phone and email).
    `session.json` is git-ignored: never commit it.
-2. Locally: `pip install -r requirements.txt && playwright install chromium`
-   then `python naukri_assistant.py login` (log in by hand), then `base64 -w0 session.json`
+2. Locally: `pip install -r requirements.txt && playwright install chromium`.
+   Optionally set `NAUKRI_LOGIN` and `NAUKRI_PASSWORD` in your environment, then run
+   `python naukri_assistant.py login`; otherwise log in by hand. The login step can still require
+   interactive OTP/captcha. To create a GitHub Actions session fallback, run `base64 -w0 session.json`
    (macOS: `base64 -i session.json`; Windows PowerShell: `[Convert]::ToBase64String([IO.File]::ReadAllBytes("session.json"))`).
-3. Repo > Settings > Secrets > Actions: add `NAUKRI_SESSION_B64` (that output) and, optionally,
-   `ANTHROPIC_API_KEY` (lets Claude answer free-text questions from your master resume).
+3. Repo > Settings > Secrets > Actions: add `NAUKRI_LOGIN` and `NAUKRI_PASSWORD`. Optionally add
+   `NAUKRI_SESSION_B64` (the base64 session output) as a fallback when Naukri requires interactive OTP/captcha.
 4. Fill in `answers.json` (anything marked REPLACE_ME: current/expected CTC, relocation, ...).
-   Jobs needing an unanswered question are skipped, not guessed.
+   Only matching, configured answers are used; jobs with unanswered questions are skipped, not guessed.
 5. Actions > naukri-daily > Run workflow with **dry_run ON** first. Check the log, then run it with dry_run off.
 
 It then runs Mon-Sat at 10:00 IST (edit the cron in `.github/workflows/naukri-daily.yml`).
