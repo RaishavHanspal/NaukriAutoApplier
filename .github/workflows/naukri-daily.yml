@@ -19,8 +19,13 @@ concurrency:
 
 jobs:
   run:
-    runs-on: ubuntu-latest
+    # Set repo variable RUNNER_LABEL=self-hosted to run on your own PC (recommended: GitHub's
+    # datacenter IPs are blocked by Naukri's bot protection). Defaults to GitHub-hosted.
+    runs-on: ${{ vars.RUNNER_LABEL || 'ubuntu-latest' }}
     timeout-minutes: 90
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
 
@@ -32,7 +37,7 @@ jobs:
       - name: Install
         run: |
           pip install -r requirements.txt
-          playwright install --with-deps chromium
+          if [ "$RUNNER_OS" = "Linux" ]; then playwright install --with-deps chromium; else playwright install chromium; fi
 
       - name: Random start delay (scheduled runs only)
         if: github.event_name == 'schedule'
@@ -40,7 +45,8 @@ jobs:
 
       - name: Run pipeline
         env:
-          CI: "true"
+          # headless on GitHub-hosted runners; a normal visible browser on your own machine
+          CI: ${{ runner.environment == 'github-hosted' && 'true' || '' }}
           NAUKRI_SESSION_B64: ${{ secrets.NAUKRI_SESSION_B64 }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}

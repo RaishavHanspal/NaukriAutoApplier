@@ -135,7 +135,8 @@ def goto_checked(page, url):
     page.goto(url, wait_until="domcontentloaded")
     title = (page.title() or "").lower()
     if "access denied" in title or "captcha" in page.url.lower():
-        raise Blocked(f"Naukri blocked this browser (bot detection) at {page.url}")
+        screenshot(page, "blocked")
+        raise Blocked(f"Naukri blocked this browser (bot detection) at {page.url} | page title: {page.title()!r}")
     if "nlogin" in page.url:
         raise Blocked("Session expired - run `login` again and refresh the NAUKRI_SESSION_B64 secret")
 
@@ -615,7 +616,6 @@ def run():
                       "`threshold` yourself - the script will not do that silently.")
         except Blocked as ex:
             print("STOPPED:", ex)
-            write_reports()
             sys.exit(2)
         finally:
             write_reports()

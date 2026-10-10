@@ -36,3 +36,10 @@ It then runs Mon-Sat at 10:00 IST (edit the cron in `.github/workflows/naukri-da
   it applies to fewer. Add keywords in `config.json`; the script never lowers the threshold silently.
 - `max_clicks_per_run` is a safety stop in case confirmation detection breaks.
 - Automated applying is against Naukri's terms and can get the account restricted. Use at your own risk.
+
+## If the run stops with "Naukri blocked this browser"
+GitHub-hosted runners use datacenter IPs, which Naukri's bot protection blocks. Run the same workflow on your own PC instead:
+1. Repo > Settings > Actions > Runners > New self-hosted runner, and follow the steps on your PC (needs Git, Python 3.11+).
+2. Repo > Settings > Secrets and variables > Actions > Variables: add `RUNNER_LABEL` = `self-hosted`.
+3. The PC must be on at the scheduled time. A visible browser window opens during the run.
+Alternative without GitHub: schedule `python naukri_assistant.py run` with Windows Task Scheduler or cron.
