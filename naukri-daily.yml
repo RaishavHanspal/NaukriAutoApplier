@@ -1,0 +1,68 @@
+name: naukri-daily
+
+on:
+  schedule:
+    - cron: "30 4 * * 1-6"      # 04:30 UTC = 10:00 IST, Mon-Sat (GitHub cron is UTC, can run late)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (do everything except click Apply)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: naukri-daily
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Random start delay (scheduled runs only)
+        if: github.event_name == 'schedule'
+        run: sleep $((RANDOM % 1200))
+
+      - name: Run pipeline
+        env:
+          CI: "true"
+          NAUKRI_SESSION_B64: ${{ secrets.NAUKRI_SESSION_B64 }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
+        run: python naukri_assistant.py run
+
+      - name: Commit state, resumes and reports
+        if: always()
+        run: |
+          git config user.name "naukri-bot"
+          git config user.email "naukri-bot@users.noreply.github.com"
+          git add jobs.json applied_log.json applied_jobs.md applied_jobs.csv unanswered_questions.json resumes 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Daily run $(date -u +%F) [skip ci]"
+            git pull --rebase
+            git push
+          fi
+
+      - name: Upload debug screenshots
+        if: failure() || always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug
+          path: debug/
+          if-no-files-found: ignore
+          retention-days: 7

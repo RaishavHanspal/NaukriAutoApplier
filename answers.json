@@ -1,0 +1,61 @@
+{
+  "_readme": "Facts used to answer Naukri screening questions. 'pattern' is a regex matched against the lower-cased question. 'answer' may be a string or a list of acceptable option texts (first match wins). Anything containing REPLACE_ME is ignored, and the job is skipped (and logged in unanswered_questions.json) until you fill it in. Only put TRUE facts here.",
+  "rules": [
+    {
+      "pattern": "total (work |overall |professional |relevant )?experience|overall experience|how many years of (work )?experience do you have$",
+      "answer": [
+        "1.5",
+        "1 year 5 months",
+        "1",
+        "1-2 years"
+      ]
+    },
+    {
+      "pattern": "notice period|when can you join|how soon can you join|joining (time|period)|available to join",
+      "answer": [
+        "Immediate",
+        "Immediately",
+        "Immediate Joiner",
+        "Less than 15 days",
+        "15 Days or less"
+      ]
+    },
+    {
+      "pattern": "current (location|city)|where (are you|do you) (currently )?(located|live|reside|based)|residing",
+      "answer": [
+        "Noida",
+        "Noida, Uttar Pradesh"
+      ]
+    },
+    {
+      "pattern": "highest (qualification|education)|educational qualification",
+      "answer": [
+        "Post Graduate",
+        "Postgraduate",
+        "Post Graduation",
+        "Master",
+        "M.Com"
+      ]
+    },
+    {
+      "pattern": "current (ctc|salary|compensation|package)|present (ctc|salary)",
+      "answer": "REPLACE_ME (e.g. 0 or your last drawn CTC in LPA)"
+    },
+    {
+      "pattern": "expected (ctc|salary|compensation|package)|salary expectation",
+      "answer": "REPLACE_ME (e.g. 3 LPA)"
+    },
+    {
+      "pattern": "relocate|relocation",
+      "answer": "REPLACE_ME (Yes/No)"
+    },
+    {
+      "pattern": "work from office|office.*(5|five) days|comfortable.*(office|on-?site|commut)|commute",
+      "answer": "REPLACE_ME (Yes/No)"
+    },
+    {
+      "pattern": "serving.*notice|currently (employed|working)|are you employed",
+      "answer": "REPLACE_ME (Yes/No)"
+    }
+  ]
+}
