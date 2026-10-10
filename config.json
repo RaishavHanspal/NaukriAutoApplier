@@ -1,0 +1,26 @@
+{
+  "keywords": [
+    "data analyst",
+    "MIS executive",
+    "reporting analyst",
+    "business analyst",
+    "project coordinator",
+    "project manager",
+    "marketing analyst"
+  ],
+  "location": "noida",
+  "pages": 2,
+  "max_jobs": 40,
+  "threshold": 80,
+  "min_jd_skills": 4,
+  "require_area_match": false,
+  "area_terms": ["sector 143", "sector-143", "sector 142", "sector 144", "sector 135", "sector 136", "sector 137", "noida expressway", "noida"],
+  "skills_vocab": [
+    "excel", "pivot tables", "power bi", "sql", "postgresql", "python", "r",
+    "bitrix24", "agile", "scrum", "project coordination", "project management",
+    "project proposals", "client presentations", "status reporting", "workflow automation",
+    "crm", "catalog management system", "data analysis", "business analysis",
+    "market analysis", "customer analysis", "reporting", "mis", "marketing analysis",
+    "sales", "revenue", "profit", "customer service", "communication"
+  ]
+}
