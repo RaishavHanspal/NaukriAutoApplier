@@ -69,5 +69,7 @@
   ],
   "upload_tailored_resume": true,
   "restore_master_resume": true,
-  "max_questions": 15
+  "max_questions": 15,
+  "use_llm_for_questions": true,
+  "llm_model": "claude-haiku-5-5"
 }

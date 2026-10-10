@@ -9,8 +9,7 @@ Naukri assistant - one-shot daily pipeline.
 
 Environment:
   NAUKRI_SESSION_B64   base64 of session.json (GitHub secret). Used when session.json is absent.
-  NAUKRI_LOGIN         Naukri email/phone (use a GitHub Actions secret in CI).
-  NAUKRI_PASSWORD      Naukri password (use a GitHub Actions secret in CI).
+  ANTHROPIC_API_KEY    optional; lets Claude answer free-text screening questions from your master resume.
   DRY_RUN=1            do everything except click Apply.
   CI=true              headless browser.
 
@@ -77,7 +76,7 @@ SEL = {
     "jd": '[class*="dang-inner-html"]',
     "apply_btn": '#apply-button, button:has-text("Apply"):not(:has-text("company site")):not(:has-text("Applied"))',
     "company_btn": '#company-site-button, button:has-text("company site"), a:has-text("company site")',
-    "already": '#already-applied, button:has-text("Applied"), text=/^\\s*Already Applied\\s*$/i',
+    "already": '#already-applied, button:text-is("Applied"), :text-matches("^\\\\s*Already Applied\\\\s*$", "i")',
     "success": "text=/successfully applied|application (has been )?(sent|submitted)|you have applied/i",
     "chat_root": '[class*="chatbot_DrawerContentWrapper"], [class*="chatbot_Drawer"]',
     "bot_msg": '[class*="botMsg"]',
@@ -113,58 +112,22 @@ def ensure_session():
     b64 = os.environ.get("NAUKRI_SESSION_B64", "").strip()
     if b64 and not SESSION.exists():
         SESSION.write_bytes(base64.b64decode(b64))
-    has_login = bool(os.environ.get("NAUKRI_LOGIN", "").strip())
-    has_password = bool(os.environ.get("NAUKRI_PASSWORD", ""))
-    if has_login != has_password:
-        sys.exit("Set both NAUKRI_LOGIN and NAUKRI_PASSWORD, or neither.")
-    if not SESSION.exists() and not (has_login and has_password):
-        sys.exit("No session or Naukri credentials. Run `python naukri_assistant.py login` locally, "
-                 "or set NAUKRI_SESSION_B64 / NAUKRI_LOGIN and NAUKRI_PASSWORD.")
-
-
-def authenticate(page, interactive=False):
-    page.goto("https://www.naukri.com/nlogin/login", wait_until="domcontentloaded")
-    login_name = os.environ.get("NAUKRI_LOGIN", "").strip()
-    password = os.environ.get("NAUKRI_PASSWORD", "")
-    if login_name and password:
-        username_input = page.locator(
-            "#usernameField, input[name='username'], input[type='email']"
-        ).first
-        password_input = page.locator(
-            "#passwordField, input[name='password'], input[type='password']"
-        ).first
-        if not username_input.count() or not password_input.count():
-            raise Blocked("Could not find Naukri's login fields; the login page may have changed.")
-        username_input.fill(login_name)
-        password_input.fill(password)
-        page.locator("#loginButton, button[type='submit']").first.click()
-        page.wait_for_timeout(3000)
-
-    if "nlogin" in page.url:
-        if not interactive:
-            raise Blocked(
-                "Naukri login needs OTP/captcha or credentials were rejected. "
-                "Log in locally and refresh NAUKRI_SESSION_B64."
-            )
-        input("Complete Naukri login (including any OTP/captcha), then press Enter here... ")
-    if "nlogin" in page.url:
-        raise Blocked("Naukri login did not complete; session was not saved.")
-    page.context.storage_state(path=str(SESSION))
+    if not SESSION.exists():
+        sys.exit("No session. Run `python naukri_assistant.py login` locally, "
+                 "or set the NAUKRI_SESSION_B64 secret.")
 
 
 def new_context(p):
     ensure_session()
     browser = p.chromium.launch(headless=HEADLESS, args=["--disable-blink-features=AutomationControlled"])
     ctx = browser.new_context(
-        storage_state=str(SESSION) if SESSION.exists() else None,
+        storage_state=str(SESSION),
         viewport={"width": 1366, "height": 850},
         locale="en-IN",
         timezone_id="Asia/Kolkata",
         user_agent=("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"),
     )
-    if not SESSION.exists():
-        authenticate(ctx.new_page(), interactive=not HEADLESS)
     return browser, ctx
 
 
@@ -174,13 +137,7 @@ def goto_checked(page, url):
     if "access denied" in title or "captcha" in page.url.lower():
         raise Blocked(f"Naukri blocked this browser (bot detection) at {page.url}")
     if "nlogin" in page.url:
-        authenticate(page, interactive=not HEADLESS)
-        page.goto(url, wait_until="domcontentloaded")
-        title = (page.title() or "").lower()
-        if "access denied" in title or "captcha" in page.url.lower():
-            raise Blocked(f"Naukri blocked this browser (bot detection) at {page.url}")
-        if "nlogin" in page.url:
-            raise Blocked("Naukri login did not persist; refresh the session or check credentials.")
+        raise Blocked("Session expired - run `login` again and refresh the NAUKRI_SESSION_B64 secret")
 
 
 def login():
@@ -189,9 +146,11 @@ def login():
         browser = p.chromium.launch(headless=False)
         ctx = browser.new_context()
         page = ctx.new_page()
-        authenticate(page, interactive=True)
+        page.goto("https://www.naukri.com/nlogin/login")
+        input("Log in in the browser (OTP/captcha included), then press Enter here... ")
+        ctx.storage_state(path=str(SESSION))
         browser.close()
-    print(f"Saved {SESSION}. For GitHub Actions, store its base64 output as NAUKRI_SESSION_B64.")
+    print(f"Saved {SESSION}. For GitHub Actions run:  base64 -w0 session.json  and store it as NAUKRI_SESSION_B64")
 
 
 # ------------------------------------------------------------------ applied log (dedupe + report data)
@@ -414,6 +373,34 @@ def match_option(candidates_, options):
     return None
 
 
+def llm_answer(question, options):
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if not key or not CFG.get("use_llm_for_questions", True):
+        return None
+    try:
+        import anthropic
+        client = anthropic.Anthropic(api_key=key)
+        facts = [r for r in ANSWERS.get("rules", []) if usable(r.get("answer"))]
+        system = (
+            "You answer job-application screening questions on behalf of the candidate, using ONLY the "
+            "facts in the master resume and profile facts provided. Never invent facts, numbers, salary, "
+            "dates, employers or skills. You may infer years of use of a tool only from the dated roles in "
+            "the resume. If the answer is not clearly supported, reply with exactly UNKNOWN. "
+            "If options are given, reply with exactly one option copied verbatim. For free text reply in "
+            "1-3 plain first-person sentences, no markdown.")
+        user = (f"MASTER RESUME:\n{json.dumps(MASTER)}\n\nPROFILE FACTS:\n{json.dumps(facts)}\n\n"
+                f"QUESTION: {question}\nOPTIONS: {options if options else 'none (free text)'}")
+        msg = client.messages.create(model=CFG.get("llm_model", "claude-haiku-5-5"), max_tokens=300,
+                                     system=system, messages=[{"role": "user", "content": user}])
+        text = msg.content[0].text.strip()
+        if text.upper().startswith("UNKNOWN"):
+            return None
+        return match_option(text, options) if options else text
+    except Exception as ex:
+        print("  LLM answer failed:", ex)
+        return None
+
+
 def answer_question(question, options):
     """Returns an answer string or None (None = we don't know, so a human must answer)."""
     ql = question.lower()
@@ -426,7 +413,7 @@ def answer_question(question, options):
                     return m
             else:
                 return a[0] if isinstance(a, list) else a
-    return None
+    return llm_answer(question, options)
 
 
 def record_unanswered(j, question, options):
