@@ -210,18 +210,6 @@
     "attempts": 1
   },
   {
-    "date": "2026-10-10 21:37",
-    "url": "https://www.naukri.com/job-listings-data-analyst-marketing-analyst-fintech-cloud-noida-2-to-5-years-270926002287",
-    "title": "Data Analyst ( Marketing Analyst)",
-    "company": "Fintech Cloud",
-    "location": "Noida(Sector 63)",
-    "score": 100,
-    "resume": "resumes/pratiksha-malhotra_fintech-cloud_data-analyst-marketing-analyst.docx",
-    "status": "needs_manual",
-    "detail": "no answer for: How Many Years of Experience you have in Marketing Analyst ?",
-    "attempts": 1
-  },
-  {
     "date": "2026-10-10 21:38",
     "url": "https://www.naukri.com/job-listings-digital-marketing-analyst-mnb-soft-solution-noida-2-to-4-years-021225503562",
     "title": "Digital Marketing Analyst",
@@ -294,30 +282,6 @@
     "attempts": 2
   },
   {
-    "date": "2026-10-10 21:41",
-    "url": "https://www.naukri.com/job-listings-marketing-specialist-rnf-technologies-noida-2-to-5-years-210926027658",
-    "title": "Marketing Specialist",
-    "company": "RNF Technologies",
-    "location": "Noida",
-    "score": 83,
-    "resume": "resumes/pratiksha-malhotra_rnf-technologies_marketing-specialist.docx",
-    "status": "needs_manual",
-    "detail": "no answer for: How many years of experience do you have in Digital Marketing?",
-    "attempts": 1
-  },
-  {
-    "date": "2026-10-10 21:42",
-    "url": "https://www.naukri.com/job-listings-business-analyst-crescendo-global-leadership-hiring-india-noida-gurugram-2-to-5-years-170926023580",
-    "title": "Business Analyst",
-    "company": "Crescendo Global",
-    "location": "Hybrid - Noida, Gurugram",
-    "score": 83,
-    "resume": "resumes/pratiksha-malhotra_crescendo-global_business-analyst.docx",
-    "status": "needs_manual",
-    "detail": "no answer for: How many years of experience do you have in Business Analytics?",
-    "attempts": 1
-  },
-  {
     "date": "2026-10-10 21:42",
     "url": "https://www.naukri.com/job-listings-client-project-coordinator-wac-engineers-india-pvt-ltd-noida-2-to-5-years-011026031004",
     "title": "Client / Project Coordinator",
@@ -340,5 +304,41 @@
     "status": "already_applied",
     "detail": "",
     "attempts": 1
+  },
+  {
+    "date": "2026-10-11 15:02",
+    "url": "https://www.naukri.com/job-listings-data-analyst-marketing-analyst-fintech-cloud-noida-2-to-5-years-270926002287",
+    "title": "Data Analyst ( Marketing Analyst)",
+    "company": "Fintech Cloud",
+    "location": "Noida(Sector 63)",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_fintech-cloud_data-analyst-marketing-analyst.docx",
+    "status": "needs_manual",
+    "detail": "no answer for: How Many Years of Experience you have in Marketing Analyst ?",
+    "attempts": 2
+  },
+  {
+    "date": "2026-10-11 15:03",
+    "url": "https://www.naukri.com/job-listings-marketing-specialist-rnf-technologies-noida-2-to-5-years-210926027658",
+    "title": "Marketing Specialist",
+    "company": "RNF Technologies",
+    "location": "Noida",
+    "score": 83,
+    "resume": "resumes/pratiksha-malhotra_rnf-technologies_marketing-specialist.docx",
+    "status": "needs_manual",
+    "detail": "no answer for: How many years of experience do you have in Digital Marketing?",
+    "attempts": 2
+  },
+  {
+    "date": "2026-10-11 15:03",
+    "url": "https://www.naukri.com/job-listings-business-analyst-crescendo-global-leadership-hiring-india-noida-gurugram-2-to-5-years-170926023580",
+    "title": "Business Analyst",
+    "company": "Crescendo Global",
+    "location": "Hybrid - Noida, Gurugram",
+    "score": 83,
+    "resume": "resumes/pratiksha-malhotra_crescendo-global_business-analyst.docx",
+    "status": "needs_manual",
+    "detail": "no answer for: How many years of experience do you have in Business Analytics?",
+    "attempts": 2
   }
 ]

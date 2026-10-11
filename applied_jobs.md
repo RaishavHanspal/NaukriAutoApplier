@@ -1,6 +1,6 @@
 # Applied jobs
 
-Total applied: **12**  |  last updated 2026-10-10 21:43 IST
+Total applied: **12**  |  last updated 2026-10-11 15:04 IST
 
 | Date | Role | Company | Match | Resume used | Job |
 |---|---|---|---|---|---|
@@ -36,8 +36,8 @@ Total applied: **12**  |  last updated 2026-10-10 21:43 IST
 
 | Role | Company | Status | Detail | Job |
 |---|---|---|---|---|
-| Data Analyst ( Marketing Analyst) | Fintech Cloud | needs_manual | no answer for: How Many Years of Experience you have in Marketing Analyst ? | [open](https://www.naukri.com/job-listings-data-analyst-marketing-analyst-fintech-cloud-noida-2-to-5-years-270926002287) |
 | Mis Executive | IndiaMART | needs_manual | no answer for: What is your percentage in 10th? | [open](https://www.naukri.com/job-listings-mis-executive-indiamart-noida-1-to-3-years-071026013741) |
 | Mis Executive | Clapbox In | needs_manual | no answer for: How many years of experience do you have in MIS Reporting? | [open](https://www.naukri.com/job-listings-mis-executive-clapbox-in-greater-noida-3-to-5-years-300926003056) |
+| Data Analyst ( Marketing Analyst) | Fintech Cloud | needs_manual | no answer for: How Many Years of Experience you have in Marketing Analyst ? | [open](https://www.naukri.com/job-listings-data-analyst-marketing-analyst-fintech-cloud-noida-2-to-5-years-270926002287) |
 | Marketing Specialist | RNF Technologies | needs_manual | no answer for: How many years of experience do you have in Digital Marketing? | [open](https://www.naukri.com/job-listings-marketing-specialist-rnf-technologies-noida-2-to-5-years-210926027658) |
 | Business Analyst | Crescendo Global | needs_manual | no answer for: How many years of experience do you have in Business Analytics? | [open](https://www.naukri.com/job-listings-business-analyst-crescendo-global-leadership-hiring-india-noida-gurugram-2-to-5-years-170926023580) |
