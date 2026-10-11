@@ -1,0 +1,1 @@
+python naukri_assistant.py run
