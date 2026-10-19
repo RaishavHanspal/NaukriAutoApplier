@@ -1,6 +1,6 @@
 # Applied jobs
 
-Total applied: **12**  |  last updated 2026-10-17 14:25 IST
+Total applied: **12**  |  last updated 2026-10-19 15:53 IST
 
 | Date | Role | Company | Match | Resume used | Job |
 |---|---|---|---|---|---|
