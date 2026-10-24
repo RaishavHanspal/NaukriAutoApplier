@@ -11,8 +11,8 @@
   "location": "noida",
   "pages": 2,
   "max_jobs": 40,
-  "threshold": 80,
-  "min_jd_skills": 4,
+  "threshold": 60,
+  "min_jd_skills": 3,
   "require_area_match": false,
   "area_terms": [
     "sector 143",
@@ -57,19 +57,21 @@
     "customer service",
     "communication"
   ],
-  "pages_if_short": 5,
-  "max_new_descriptions": 40,
-  "daily_target": 10,
-  "max_clicks_per_run": 15,
+  "pages_if_short": 6,
+  "max_new_descriptions": 120,
+  "max_clicks_per_run": 90,
   "max_min_experience": 3,
   "max_attempts_per_job": 2,
   "apply_delay": [
-    10,
-    25
+    8,
+    18
   ],
   "upload_tailored_resume": true,
   "restore_master_resume": true,
   "max_questions": 15,
   "use_llm_for_questions": true,
-  "llm_model": "claude-haiku-5-5"
+  "llm_model": "claude-haiku-5-5",
+  "per_profile_target": 10,
+  "max_run_minutes": 45,
+  "scrape_budget_minutes": 15
 }

@@ -3,7 +3,7 @@
 Naukri assistant - one-shot daily pipeline.
 
   python naukri_assistant.py login     # local only: log in by hand, saves session.json
-  python naukri_assistant.py run       # scrape -> score -> tailor -> apply (to daily target) -> reports
+  python naukri_assistant.py run       # scrape -> score -> tailor -> apply (N per profile, time-capped) -> reports
   python naukri_assistant.py report    # rebuild applied_jobs.md / .csv from applied_log.json
   python naukri_assistant.py scrape | score | tailor   # individual steps (offline-friendly)
 
@@ -62,6 +62,34 @@ def now_ist():
     return datetime.now(IST)
 
 
+START = time.monotonic()
+
+
+def minutes_used():
+    return (time.monotonic() - START) / 60
+
+
+def time_left():
+    """Minutes left of max_run_minutes (the whole run, scraping included)."""
+    return CFG.get("max_run_minutes", 45) - minutes_used()
+
+
+class Tee:
+    """Mirror stdout into run.log so the bat run leaves a log that gets committed."""
+    def __init__(self, path):
+        self.f = open(path, "w", encoding="utf-8")
+        self.out = sys.stdout
+
+    def write(self, s):
+        self.out.write(s)
+        self.f.write(s)
+        self.f.flush()
+
+    def flush(self):
+        self.out.flush()
+        self.f.flush()
+
+
 def pause(a=3.0, b=7.0):
     time.sleep(random.uniform(a, b))
 
@@ -85,6 +113,7 @@ SEL = {
                   '[class*="chatbot_InputContainer"] input, [class*="chatbot"] textarea',
     "send": '[class*="sendMsg"], button:has-text("Save"), button:has-text("Submit")',
     "resume_input": 'input[type="file"]',
+    "quota": "text=/daily (apply )?(quota|limit)|reached.{0,40}(quota|limit)|cannot apply.{0,40}today/i",
 }
 
 CARD_JS = """
@@ -104,6 +133,14 @@ els => els.map(e => {
 
 
 class Blocked(Exception):
+    pass
+
+
+class SessionExpired(Blocked):
+    pass
+
+
+class QuotaReached(Exception):
     pass
 
 
@@ -138,7 +175,7 @@ def goto_checked(page, url):
         screenshot(page, "blocked")
         raise Blocked(f"Naukri blocked this browser (bot detection) at {page.url} | page title: {page.title()!r}")
     if "nlogin" in page.url:
-        raise Blocked("Session expired - run `login` again and refresh the NAUKRI_SESSION_B64 secret")
+        raise SessionExpired("Session expired - run `login` again and refresh the NAUKRI_SESSION_B64 secret")
 
 
 def login():
@@ -191,13 +228,38 @@ def log_result(j, status, detail=""):
     save_json(LOG_FILE, log)
 
 
+def unanswered_options(question):
+    for d in load_json(UNANSWERED_FILE, []):
+        if d["question"] == question:
+            return d.get("options", [])
+    return []
+
+
+def now_answerable(e):
+    """A job skipped for a question we can answer now (new answers.json rule / fallback) gets retried."""
+    m = re.match(r"(no answer for|stuck on): (.+)", e.get("detail", ""), re.S)
+    return bool(e["status"] == "needs_manual" and m
+                and answer_offline(m.group(2), unanswered_options(m.group(2))) is not None)
+
+
 def blocked_urls():
     """Jobs we must not try again."""
     out = set()
     for e in load_log():
-        if e["status"] in DONE or e.get("attempts", 1) >= CFG.get("max_attempts_per_job", 2):
+        if e["status"] in DONE:
+            out.add(e["url"])
+        elif e.get("attempts", 1) >= CFG.get("max_attempts_per_job", 2) and not now_answerable(e):
             out.add(e["url"])
     return out
+
+
+def prune_unanswered():
+    """Drop questions from unanswered_questions.json that answers.json / the fallback now handles."""
+    data = load_json(UNANSWERED_FILE, [])
+    keep = [d for d in data if answer_offline(d["question"], d.get("options", [])) is None]
+    if len(keep) != len(data):
+        save_json(UNANSWERED_FILE, keep)
+        print(f"{len(data) - len(keep)} previously unanswered questions can now be answered")
 
 
 def applied_today():
@@ -206,28 +268,42 @@ def applied_today():
 
 
 # ------------------------------------------------------------------ scrape
-def scrape(page, pages):
-    jobs = load_json(JOBS_FILE, {})
+def search(page, jobs, kw, pages):
+    """Scrape result pages `pages` (a range) for one profile keyword into `jobs`."""
     loc = CFG["location"]
-    for kw in CFG["keywords"]:
-        for pg in range(1, pages + 1):
-            suffix = "" if pg == 1 else f"-{pg}"
-            url = (f"https://www.naukri.com/{slug(kw)}-jobs-in-{slug(loc)}{suffix}"
-                   f"?k={quote(kw)}&l={quote(loc)}")
-            print("Search:", url)
-            goto_checked(page, url)
-            try:
-                page.wait_for_selector(SEL["card"], timeout=15000)
-            except Exception:
-                print("  no cards (end of results or layout change)")
-                break
-            for c in page.eval_on_selector_all(SEL["card"], CARD_JS):
-                if c["url"] and c["url"] not in jobs:
-                    jobs[c["url"]] = c
-            pause()
+    today = now_ist().strftime("%Y-%m-%d")
+    for pg in pages:
+        suffix = "" if pg == 1 else f"-{pg}"
+        url = (f"https://www.naukri.com/{slug(kw)}-jobs-in-{slug(loc)}{suffix}"
+               f"?k={quote(kw)}&l={quote(loc)}")
+        print("Search:", url)
+        goto_checked(page, url)
+        try:
+            page.wait_for_selector(SEL["card"], timeout=15000)
+        except Exception:
+            print("  no cards (end of results or layout change)")
+            break
+        for c in page.eval_on_selector_all(SEL["card"], CARD_JS):
+            if not c["url"]:
+                continue
+            j = jobs.setdefault(c["url"], c)
+            if kw not in j.setdefault("profiles", []):
+                j["profiles"].append(kw)
+            j["last_seen"] = today
+        pause()
+
+
+def fetch_descriptions(page, jobs, deadline, profile=None):
     skip = blocked_urls()
-    pending = [j for j in jobs.values() if not j.get("description") and j["url"] not in skip]
+    max_exp = CFG.get("max_min_experience", 3)
+    # only fetch JDs for jobs we could actually apply to; freshest listings first
+    pending = [j for j in jobs.values() if not j.get("description") and j["url"] not in skip
+               and min_exp(j) <= max_exp and (not profile or profile in job_profiles(j))]
+    pending.sort(key=lambda j: j.get("last_seen", ""), reverse=True)
     for j in pending[: CFG.get("max_new_descriptions", 40)]:
+        if minutes_used() >= deadline:
+            print("Scrape time budget used up - continuing with the JDs fetched so far")
+            break
         goto_checked(page, j["url"])
         try:
             page.wait_for_selector(SEL["jd"], timeout=10000)
@@ -269,17 +345,26 @@ def min_exp(j):
     return int(m.group(1)) if m else 0
 
 
-def score_all():
+def score_all(quiet=False):
     jobs = load_json(JOBS_FILE, {})
     for j in jobs.values():
         j["match"] = score_job(j)
     save_json(JOBS_FILE, jobs)
+    if quiet:
+        return
     ranked = sorted(jobs.values(), key=lambda r: r["match"]["score"], reverse=True)
     for r in ranked[:25]:
         print(f"{r['match']['score']:>3}%  {r['title'][:40]:40} {r['company'][:28]:28} {r.get('experience','')}")
 
 
-def candidates():
+def job_profiles(j):
+    """Profile keywords a job belongs to (where it was found; older jobs: by title)."""
+    if j.get("profiles"):
+        return j["profiles"]
+    return [kw for kw in CFG["keywords"] if has_term(kw, j.get("title", "").lower())]
+
+
+def candidates(profile=None):
     jobs = load_json(JOBS_FILE, {})
     skip = blocked_urls()
     out = []
@@ -291,8 +376,11 @@ def candidates():
             continue
         if CFG.get("require_area_match") and not m.get("area_match"):
             continue
+        if profile and profile not in job_profiles(j):
+            continue
         out.append(j)
-    out.sort(key=lambda j: (not j["match"]["area_match"], -j["match"]["score"]))
+    # listings seen in this/recent searches are most likely still open
+    out.sort(key=lambda j: (j.get("last_seen", ""), j["match"]["area_match"], j["match"]["score"]), reverse=True)
     return out
 
 
@@ -374,6 +462,83 @@ def match_option(candidates_, options):
     return None
 
 
+MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct",
+                                       "nov", "dec"], 1)}
+STOP = {"in", "on", "of", "with", "and", "or", "the", "a", "an", "any", "your", "tools", "tool", "domain",
+        "field", "role", "work", "working", "experience", "hands", "relevant", "using", "as"}
+
+
+def stems(text):
+    """Crude stemming so 'analytics'/'analysis'/'analysed' and 'reporting'/'reports' match."""
+    return {w[:5] if len(w) >= 5 else w for w in re.findall(r"[a-z0-9+#]+", text.lower()) if w not in STOP}
+
+
+def role_months(e):
+    d = re.findall(r"([A-Za-z]{3})[a-z]*\.?\s+(\d{4})", e.get("dates", ""))
+    if len(d) < 2:
+        return 0
+    (m1, y1), (m2, y2) = d[0], d[-1]
+    return (int(y2) - int(y1)) * 12 + MONTHS.get(m2.lower(), 1) - MONTHS.get(m1.lower(), 1) + 1
+
+
+def skill_years(skill):
+    """Years across the dated resume roles whose text mentions every word of `skill`. 0 if none."""
+    want = stems(skill)
+    if not want:
+        return None
+    months = sum(role_months(e) for e in MASTER.get("experience", [])
+                 if want <= stems(" ".join([e["title"]] + e["bullets"])))
+    return round(months / 12, 1)
+
+
+def pick_years_option(years, options):
+    """Choose the option range ('1-2 Years', '3+ years', 'Less than 1 year', 'Fresher') containing `years`."""
+    for o in options:
+        ol = o.lower()
+        nums = [float(x) for x in re.findall(r"\d+(?:\.\d+)?", ol)]
+        if not nums:
+            if years < 0.5 and re.search(r"fresher|no experience|none|^no$|never", ol):
+                return o
+            continue
+        if len(nums) >= 2:
+            lo, hi = nums[0], nums[1]
+        elif re.search(r"\+|more|above|over|greater|or more", ol):
+            lo, hi = nums[0], float("inf")
+        elif re.search(r"less|below|under|<|upto|up to", ol):
+            lo, hi = 0, nums[0] - 1e-9
+        else:
+            lo = hi = nums[0]
+        if "month" in ol and "year" not in ol:
+            lo, hi = lo / 12, hi / 12
+        if lo <= years <= hi or (lo == hi and int(years) == lo):
+            return o
+    return None
+
+
+def fallback_answer(question, options):
+    """Answer skill-experience questions from the master resume only. None if not that kind of question."""
+    q = question.strip().rstrip("?").strip()
+    m = re.search(r"(?:how many|no\.? of|number of)\s+years?.{0,40}?experience.{0,30}?\b(?:in|with|on|of|as)\s+(.+)$",
+                  q, re.I)
+    if m:
+        years = skill_years(m.group(1))
+        if years is None:
+            return None
+        if options:
+            return pick_years_option(years, options)
+        return f"{years:g}"
+    m = re.search(r"^(?:do|have|did) you (?:have |had )?(?:any |prior |practical |working |hands[- ]on |relevant )*"
+                  r"(?:experience|exposure|worked|knowledge)\s*(?:in|with|on|of)?\s+(.+)$", q, re.I)
+    if m and (not options or match_option(["Yes", "No"], options)):
+        want = stems(m.group(1))
+        if not want:
+            return None
+        resume = stems(master_text())
+        ans = "Yes" if want <= resume else "No"
+        return match_option(ans, options) if options else ans
+    return None
+
+
 def llm_answer(question, options):
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key or not CFG.get("use_llm_for_questions", True):
@@ -402,9 +567,8 @@ def llm_answer(question, options):
         return None
 
 
-def answer_question(question, options):
-    """Returns an answer string or None (None = we don't know, so a human must answer)."""
-    ql = question.lower()
+def rule_answer(question, options):
+    ql = question.lower().strip().rstrip("?").strip()
     for rule in ANSWERS.get("rules", []):
         if re.search(rule["pattern"], ql) and usable(rule.get("answer")):
             a = rule["answer"]
@@ -414,7 +578,23 @@ def answer_question(question, options):
                     return m
             else:
                 return a[0] if isinstance(a, list) else a
-    return llm_answer(question, options)
+    return None
+
+
+def answer_offline(question, options):
+    """answers.json rules, then the resume-based fallback. No network."""
+    a = rule_answer(question, options)
+    return a if a is not None else fallback_answer(question, options)
+
+
+def answer_question(question, options):
+    """Returns an answer string or None (None = we don't know, so a human must answer)."""
+    a = rule_answer(question, options)
+    if a is None:
+        a = llm_answer(question, options)
+    if a is None:
+        a = fallback_answer(question, options)
+    return a
 
 
 def record_unanswered(j, question, options):
@@ -495,6 +675,8 @@ def apply_to(page, j):
         return "dry_run", "would apply"
     page.locator(SEL["apply_btn"]).first.click()
     pause(2.5, 4.5)
+    if page.locator(SEL["quota"]).count():
+        raise QuotaReached(page.locator(SEL["quota"]).first.inner_text()[:150])
     status, detail = run_questionnaire(page, j)
     if status in ("applied", "unconfirmed"):
         status = "applied" if confirm_applied(page, j["url"]) else "unconfirmed"
@@ -510,37 +692,62 @@ def screenshot(page, name):
 
 
 def apply_loop(page, target):
-    done_today = applied_today()
-    new_applied, clicks = 0, 0
+    """Apply to up to `target` jobs per profile keyword, round-robin across profiles, until time runs out.
+    Returns {profile: applied count}."""
+    profiles = list(CFG["keywords"])
+    queues = {kw: candidates(kw) for kw in profiles}
+    applied = {kw: 0 for kw in profiles}
+    tried = set()
+    clicks = 0
     master_docx = OUT / "_master_resume.docx"
     swapped = False
-    for j in candidates():
-        if done_today + new_applied >= target:
-            break
-        if clicks >= CFG.get("max_clicks_per_run", 15):
-            print("Safety cap reached for this run (max_clicks_per_run)")
-            break
-        print(f"\n[{j['match']['score']}%] {j['title']} @ {j['company']} ({j.get('experience','')})")
-        resume = tailor_for(j)
-        try:
-            if CFG.get("upload_tailored_resume", True) and not DRY:
-                upload_profile_resume(page, resume)
-                swapped = True
-            status, detail = apply_to(page, j)
-        except Blocked:
-            raise
-        except Exception as ex:
-            status, detail = "failed", str(ex)[:200]
-        print("  ->", status, detail)
-        if status == "dry_run":
-            continue
-        clicks += 1 if status in ("applied", "unconfirmed", "needs_manual") else 0
-        if status in ("failed", "needs_manual", "unconfirmed"):
-            screenshot(page, f"{j['company']}-{j['title']}")
-        log_result(j, status, detail)
-        if status == "applied":
-            new_applied += 1
-        pause(*CFG.get("apply_delay", [10, 25]))
+    try:
+        while True:
+            active = [kw for kw in profiles if applied[kw] < target and queues[kw]]
+            if not active:
+                break
+            for kw in active:
+                if time_left() < 2:  # keep time to restore the master resume
+                    print(f"\nTime limit ({CFG.get('max_run_minutes', 45)} min) almost reached after "
+                          f"{minutes_used():.0f} min - stopping and restoring the master resume")
+                    return applied
+                if clicks >= CFG.get("max_clicks_per_run", 90):
+                    print("Safety cap reached for this run (max_clicks_per_run)")
+                    return applied
+                j = queues[kw].pop(0)
+                if j["url"] in tried:  # same job listed under several profiles
+                    continue
+                tried.add(j["url"])
+                print(f"\n<{kw} {applied[kw]}/{target}> [{j['match']['score']}%] {j['title']} @ {j['company']} "
+                      f"({j.get('experience','')}) | {minutes_used():.0f} min used")
+                resume = tailor_for(j)
+                try:
+                    if CFG.get("upload_tailored_resume", True) and not DRY:
+                        upload_profile_resume(page, resume)
+                        swapped = True
+                    status, detail = apply_to(page, j)
+                except (Blocked, QuotaReached):
+                    raise
+                except Exception as ex:
+                    status, detail = "failed", str(ex)[:200]
+                print("  ->", status, detail)
+                if status == "dry_run":
+                    continue
+                clicks += 1 if status in ("applied", "unconfirmed", "needs_manual") else 0
+                if status in ("failed", "needs_manual", "unconfirmed"):
+                    screenshot(page, f"{j['company']}-{j['title']}")
+                log_result(j, status, detail)
+                if status == "applied":
+                    applied[kw] += 1
+                pause(*CFG.get("apply_delay", [10, 25]))
+    except QuotaReached as ex:
+        print("\nNaukri's daily apply quota reached - stopping:", ex)
+    finally:
+        restore_master(page, swapped, master_docx)
+    return applied
+
+
+def restore_master(page, swapped, master_docx):
     if swapped and CFG.get("restore_master_resume", True):
         OUT.mkdir(exist_ok=True)
         build_resume(None, master_docx)
@@ -549,7 +756,6 @@ def apply_loop(page, target):
             print("Profile resume restored to master")
         except Exception as ex:
             print("WARNING: could not restore master resume on profile:", ex)
-    return new_applied
 
 
 # ------------------------------------------------------------------ reports
@@ -588,32 +794,54 @@ def write_reports():
 
 
 # ------------------------------------------------------------------ one-go pipeline
+def scrape_profiles(page, target, budget):
+    """Search every profile keyword; dig deeper for profiles with fewer than `target` eligible jobs.
+    Stops scraping after `budget` minutes so there is time left to apply."""
+    jobs = load_json(JOBS_FILE, {})
+    first = CFG.get("pages", 2)
+    for kw in CFG["keywords"]:
+        if minutes_used() >= budget:
+            break
+        search(page, jobs, kw, range(1, first + 1))
+    save_json(JOBS_FILE, jobs)
+    fetch_descriptions(page, jobs, budget)
+    score_all(quiet=True)
+    for kw in CFG["keywords"]:
+        have = len(candidates(kw))
+        if have >= target or minutes_used() >= budget:
+            continue
+        print(f"{kw}: only {have} eligible - scraping deeper pages")
+        jobs = load_json(JOBS_FILE, {})
+        search(page, jobs, kw, range(first + 1, CFG.get("pages_if_short", 5) + 1))
+        save_json(JOBS_FILE, jobs)
+        fetch_descriptions(page, jobs, budget, profile=kw)
+        score_all(quiet=True)
+    print(f"\nEligible per profile (>= {CFG['threshold']}% match, not yet applied):")
+    for kw in CFG["keywords"]:
+        print(f"  {kw:22} {len(candidates(kw))}")
+
+
 def run():
+    global START
     from playwright.sync_api import sync_playwright
+    START = time.monotonic()
     migrate_log()
-    target = CFG.get("daily_target", 10)
-    if applied_today() >= target:
-        print(f"Already applied to {applied_today()} jobs today (target {target}).")
-        write_reports()
-        return
+    prune_unanswered()
+    target = CFG.get("per_profile_target", 10)
+    print(f"Run started {now_ist():%Y-%m-%d %H:%M IST}: up to {target} applications per profile x "
+          f"{len(CFG['keywords'])} profiles, max {CFG.get('max_run_minutes', 45)} min{' (DRY RUN)' if DRY else ''}")
     with sync_playwright() as p:
         browser, ctx = new_context(p)
         page = ctx.new_page()
         try:
-            for attempt, pages in enumerate([CFG.get("pages", 2), CFG.get("pages_if_short", 5)]):
-                scrape(page, pages)
-                score_all()
-                have = len(candidates())
-                need = target - applied_today()
-                print(f"Eligible (>= {CFG['threshold']}% match, not yet applied): {have}; still need {need}")
-                if have >= need or attempt == 1:
-                    break
-                print("Not enough fresh matches - scraping deeper pages...")
-            n = apply_loop(page, target)
-            print(f"\nApplied this run: {n} | today total: {applied_today()} / {target}")
-            if applied_today() < target:
-                print("Below target: not enough eligible matches. Add keywords in config.json or lower "
-                      "`threshold` yourself - the script will not do that silently.")
+            scrape_profiles(page, target, min(CFG.get("scrape_budget_minutes", 15), CFG.get("max_run_minutes", 45)))
+            applied = apply_loop(page, target)
+            print(f"\nApplied this run: {sum(applied.values())} in {minutes_used():.0f} min "
+                  f"| today total: {applied_today()}")
+            for kw, n in applied.items():
+                print(f"  {kw:22} {n}/{target}" + ("" if n >= target else "  (ran out of eligible jobs or time)"))
+        except SessionExpired:
+            raise
         except Blocked as ex:
             print("STOPPED:", ex)
             sys.exit(2)
@@ -622,12 +850,25 @@ def run():
             browser.close()
 
 
+def run_with_relogin():
+    try:
+        run()
+    except SessionExpired as ex:
+        if HEADLESS or not sys.stdin.isatty():
+            print("STOPPED:", ex)
+            sys.exit(3)
+        print("\nNaukri session expired. A browser window will open - log in there.")
+        login()
+        run()
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "login":
         login()
     elif cmd == "run":
-        run()
+        sys.stdout = Tee(BASE / "run.log")
+        run_with_relogin()
     elif cmd == "report":
         migrate_log()
         write_reports()
@@ -639,7 +880,7 @@ if __name__ == "__main__":
         from playwright.sync_api import sync_playwright
         with sync_playwright() as p:
             b, c = new_context(p)
-            scrape(c.new_page(), CFG.get("pages", 2))
+            scrape_profiles(c.new_page(), CFG.get("per_profile_target", 10), CFG.get("scrape_budget_minutes", 15))
             b.close()
     else:
         print(__doc__)

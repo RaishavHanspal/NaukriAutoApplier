@@ -1,8 +1,10 @@
 name: naukri-daily
 
 on:
-  schedule:
-    - cron: "30 4 * * 1-6"      # 04:30 UTC = 10:00 IST, Mon-Sat (GitHub cron is UTC, can run late)
+  # The schedule is off: GitHub-hosted runners get blocked by Naukri, and those runs only rewrote the
+  # reports, conflicting with pushes from ParuJobApplier.bat (the local run). Re-enable with a self-hosted runner.
+  # schedule:
+  #   - cron: "30 4 * * 1-6"      # 04:30 UTC = 10:00 IST, Mon-Sat (GitHub cron is UTC, can run late)
   workflow_dispatch:
     inputs:
       dry_run:

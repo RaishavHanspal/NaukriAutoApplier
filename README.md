@@ -1,7 +1,20 @@
-# Naukri daily assistant (GitHub Actions)
+# Naukri assistant
 
-Daily pipeline: scrape -> score vs master resume -> skip already-applied -> tailor resume -> apply
-(answering screening questions) until the daily target is reached -> write `applied_jobs.md` / `.csv`.
+Pipeline: scrape -> score vs master resume -> skip already-applied -> tailor resume -> apply
+(answering screening questions) -> write `applied_jobs.md` / `.csv`.
+
+## Normal use: the desktop shortcut (`ParuJobApplier.bat`)
+Each run: `git pull` -> apply to up to `per_profile_target` (10) new jobs for **each** keyword ("profile")
+in `config.json`, round-robin across profiles, stopping after `max_run_minutes` (45) whichever comes first
+-> commit everything and `git push`. The log of the run is in `run.log`.
+If the Naukri session has expired, a browser window opens: log in, press Enter in the console, and the run continues.
+
+Screening questions like "How many years of experience do you have in X?" / "Do you have experience with X?"
+are answered from the dated roles in `master_resume.json` (0 / No when X is not in the resume). If no option
+fits (e.g. only "1-2 Years" offered for 0 years), the job is skipped and logged, never guessed.
+Jobs skipped for a question are retried automatically once that question becomes answerable (new rule in `answers.json`).
+
+The GitHub Actions schedule is disabled (GitHub's IPs are blocked by Naukri). The setup below is only for Actions.
 
 ## One-time setup
 1. Create a **PRIVATE** GitHub repo and push this folder (it holds your resumes, phone and email).
@@ -32,8 +45,9 @@ It then runs Mon-Sat at 10:00 IST (edit the cron in `.github/workflows/naukri-da
 - "Apply on company site" jobs are not automated (every company site is different); they are listed for manual apply.
 - Naukri applies with your *profile* resume, so the script uploads the tailored file to your profile
   before each apply and restores a master-resume .docx at the end.
-- `daily_target` (10) is a target, not a guarantee: if fewer than 10 fresh jobs score >= `threshold`,
-  it applies to fewer. Add keywords in `config.json`; the script never lowers the threshold silently.
+- `per_profile_target` (10) is a target, not a guarantee: if fewer fresh jobs for a profile score >= `threshold`
+  (or are company-site only), it applies to fewer. `scrape_budget_minutes` caps the scraping part of the run.
+- Naukri has its own daily apply quota; when it shows that message the run stops cleanly.
 - `max_clicks_per_run` is a safety stop in case confirmation detection breaks.
 - Automated applying is against Naukri's terms and can get the account restricted. Use at your own risk.
 

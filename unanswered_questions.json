@@ -14,23 +14,5 @@
     ],
     "example_job": "https://www.naukri.com/job-listings-mis-executive-clapbox-in-greater-noida-3-to-5-years-300926003056",
     "how_to_fix": "add a rule for this to answers.json"
-  },
-  {
-    "question": "How Many Years of Experience you have in Marketing Analyst ?",
-    "options": [],
-    "example_job": "https://www.naukri.com/job-listings-data-analyst-marketing-analyst-fintech-cloud-noida-2-to-5-years-270926002287",
-    "how_to_fix": "add a rule for this to answers.json"
-  },
-  {
-    "question": "How many years of experience do you have in Digital Marketing?",
-    "options": [],
-    "example_job": "https://www.naukri.com/job-listings-marketing-specialist-rnf-technologies-noida-2-to-5-years-210926027658",
-    "how_to_fix": "add a rule for this to answers.json"
-  },
-  {
-    "question": "How many years of experience do you have in Business Analytics?",
-    "options": [],
-    "example_job": "https://www.naukri.com/job-listings-business-analyst-crescendo-global-leadership-hiring-india-noida-gurugram-2-to-5-years-170926023580",
-    "how_to_fix": "add a rule for this to answers.json"
   }
 ]
