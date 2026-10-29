@@ -14,5 +14,20 @@
     ],
     "example_job": "https://www.naukri.com/job-listings-mis-executive-clapbox-in-greater-noida-3-to-5-years-300926003056",
     "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "To proceed further stpes ,please fill out the form:https://forms.gle/YkBsGGSMgg6ekDLR9",
+    "options": [
+      "Yes - Filled the form",
+      "No - Not interested"
+    ],
+    "example_job": "https://www.naukri.com/job-listings-data-analyst-nxtwave-disruptive-technologies-hiring-for-a-client-noida-new-delhi-greater-noida-1-to-6-years-160926023177",
+    "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "Thank you for your responses.",
+    "options": [],
+    "example_job": "https://www.naukri.com/job-listings-data-analyst-marketing-analyst-fintech-cloud-noida-2-to-5-years-270926002287",
+    "how_to_fix": "add a rule for this to answers.json"
   }
 ]

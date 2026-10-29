@@ -39,23 +39,48 @@
     },
     {
       "pattern": "current (ctc|salary|compensation|package)|present (ctc|salary)",
-      "answer": "REPLACE_ME (e.g. 0 or your last drawn CTC in LPA)"
+      "answer": [
+        "2.46 LPA",
+        "2.46",
+        "246000",
+        "2.46 Lakhs",
+        "2-3 Lakhs",
+        "2-3 LPA",
+        "2 - 3 Lakhs",
+        "2-3"
+      ]
     },
     {
       "pattern": "expected (ctc|salary|compensation|package)|salary expectation",
-      "answer": "REPLACE_ME (e.g. 3 LPA)"
+      "answer": [
+        "4 LPA",
+        "4",
+        "400000",
+        "4 Lakhs",
+        "4-5 Lakhs",
+        "4-5 LPA",
+        "3-5 LPA",
+        "4 - 5 Lakhs",
+        "4-5"
+      ]
     },
     {
       "pattern": "relocate|relocation",
-      "answer": "REPLACE_ME (Yes/No)"
+      "answer": [
+        "Yes"
+      ]
     },
     {
       "pattern": "work from office|office.*(5|five) days|comfortable.*(office|on-?site|commut)|commute",
-      "answer": "REPLACE_ME (Yes/No)"
+      "answer": [
+        "Yes"
+      ]
     },
     {
       "pattern": "serving.*notice|currently (employed|working)|are you employed",
-      "answer": "REPLACE_ME (Yes/No)"
+      "answer": [
+        "No"
+      ]
     }
   ]
 }
