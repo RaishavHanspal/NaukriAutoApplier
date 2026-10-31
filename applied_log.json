@@ -1123,18 +1123,6 @@
   },
   {
     "date": "2026-10-30 10:35",
-    "url": "https://www.naukri.com/job-listings-mis-executive-health-claims-tata-aig-general-insurance-company-noida-1-to-2-years-281026010085",
-    "title": "Mis Executive | Health Claims",
-    "company": "Tata AIG General Insurance Company",
-    "location": "Noida",
-    "score": 83,
-    "resume": "resumes/pratiksha-malhotra_tata-aig-general-insurance-company_mis-executive-health-claims.docx",
-    "status": "needs_manual",
-    "detail": "no answer for: Thank you for your responses.",
-    "attempts": 1
-  },
-  {
-    "date": "2026-10-30 10:35",
     "url": "https://www.naukri.com/job-listings-business-analyst-university-living-accommodation-pvt-ltd-noida-1-to-4-years-290626501402",
     "title": "Business Analyst",
     "company": "University Living Accommodation",
@@ -1215,6 +1203,66 @@
     "resume": "resumes/pratiksha-malhotra_wonderworks_mis-executive.docx",
     "status": "failed",
     "detail": "no Apply button found (layout change or expired listing)",
+    "attempts": 2
+  },
+  {
+    "date": "2026-10-31 11:18",
+    "url": "https://www.naukri.com/job-listings-executive-mis-artech-noida-0-to-2-years-290923502030",
+    "title": "Executive - MIS",
+    "company": "Artech",
+    "location": "Noida",
+    "score": 75,
+    "resume": "resumes/pratiksha-malhotra_artech_executive-mis.docx",
+    "status": "company_site",
+    "detail": "Apply on company site - open the link and apply manually",
+    "attempts": 1
+  },
+  {
+    "date": "2026-10-31 11:18",
+    "url": "https://www.naukri.com/job-listings-project-manager-ernst-young-noida-3-to-8-years-301026505563",
+    "title": "Project Manager",
+    "company": "EY",
+    "location": "Noida",
+    "score": 71,
+    "resume": "resumes/pratiksha-malhotra_ey_project-manager.docx",
+    "status": "company_site",
+    "detail": "Apply on company site - open the link and apply manually",
+    "attempts": 1
+  },
+  {
+    "date": "2026-10-31 11:18",
+    "url": "https://www.naukri.com/job-listings-sales-executive-medical-healthcare-dental-platinus-technologies-private-limited-noida-india-0-to-2-years-301026934078",
+    "title": "Sales Executive Medical / Healthcare / Dental",
+    "company": "Leading Client",
+    "location": "Noida, India",
+    "score": 86,
+    "resume": "resumes/pratiksha-malhotra_leading-client_sales-executive-medical-healthcare-denta.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-10-31 11:19",
+    "url": "https://www.naukri.com/job-listings-mis-executivein-executive-right-step-consulting-private-limited-noida-0-to-5-years-151117500530",
+    "title": "MIS Executivein - Executive",
+    "company": "RIGHT STEP CONSULTING PRIVATE LIMITED",
+    "location": "Noida",
+    "score": 67,
+    "resume": "resumes/pratiksha-malhotra_right-step-consulting-private-limited_mis-executivein-executive.docx",
+    "status": "company_site",
+    "detail": "Apply on company site - open the link and apply manually",
+    "attempts": 1
+  },
+  {
+    "date": "2026-10-31 11:19",
+    "url": "https://www.naukri.com/job-listings-mis-executive-health-claims-tata-aig-general-insurance-company-noida-1-to-2-years-281026010085",
+    "title": "Mis Executive | Health Claims",
+    "company": "Tata AIG General Insurance Company",
+    "location": "Noida",
+    "score": 83,
+    "resume": "resumes/pratiksha-malhotra_tata-aig-general-insurance-company_mis-executive-health-claims.docx",
+    "status": "already_applied",
+    "detail": "",
     "attempts": 2
   }
 ]

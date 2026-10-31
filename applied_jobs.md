@@ -1,6 +1,6 @@
 # Applied jobs
 
-Total applied: **30**  |  last updated 2026-10-30 10:38 IST
+Total applied: **31**  |  last updated 2026-10-31 11:19 IST
 
 | Date | Role | Company | Match | Resume used | Job |
 |---|---|---|---|---|---|
@@ -10,6 +10,7 @@ Total applied: **30**  |  last updated 2026-10-30 10:38 IST
 | before-automation | Data Analyst | Balar Marketing | 83% | [pratiksha-malhotra_balar-marketing_data-analyst.docx](resumes/pratiksha-malhotra_balar-marketing_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-balar-marketing-noida-2-to-5-years-280926015839) |
 | before-automation | Data Analyst | Innodata India | 100% | [pratiksha-malhotra_innodata-india_data-analyst.docx](resumes/pratiksha-malhotra_innodata-india_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-innodata-india-noida-4-to-8-years-100926031730) |
 | before-automation | Mis Executive | CRC Group | 86% | [pratiksha-malhotra_crc-group_mis-executive.docx](resumes/pratiksha-malhotra_crc-group_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-crc-group-noida-4-to-8-years-190926019495) |
+| 2026-10-31 11:18 | Sales Executive Medical / Healthcare / Dental | Leading Client | 86% | [pratiksha-malhotra_leading-client_sales-executive-medical-healthcare-denta.docx](resumes/pratiksha-malhotra_leading-client_sales-executive-medical-healthcare-denta.docx) | [open](https://www.naukri.com/job-listings-sales-executive-medical-healthcare-dental-platinus-technologies-private-limited-noida-india-0-to-2-years-301026934078) |
 | 2026-10-30 10:32 | Business Analyst | Vinculum Solutions | 100% | [pratiksha-malhotra_vinculum-solutions_business-analyst.docx](resumes/pratiksha-malhotra_vinculum-solutions_business-analyst.docx) | [open](https://www.naukri.com/job-listings-business-analyst-vinculum-solutions-noida-2-to-6-years-300926009550) |
 | 2026-10-29 11:51 | Mis Executive | Medanta | 67% | [pratiksha-malhotra_medanta_mis-executive.docx](resumes/pratiksha-malhotra_medanta_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-medanta-noida-2-to-7-years-071026016564) |
 | 2026-10-29 11:50 | Mis Executive | Leading Client | 67% | [pratiksha-malhotra_leading-client_mis-executive.docx](resumes/pratiksha-malhotra_leading-client_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-prominent-network-search-noida-2-to-4-years-241026008353) |
@@ -86,6 +87,9 @@ Total applied: **30**  |  last updated 2026-10-30 10:38 IST
 | Business Analyst | University Living Accommodation | 100% | [pratiksha-malhotra_university-living-accommodation_business-analyst.docx](resumes/pratiksha-malhotra_university-living-accommodation_business-analyst.docx) | [open](https://www.naukri.com/job-listings-business-analyst-university-living-accommodation-pvt-ltd-noida-1-to-4-years-290626501402) |
 | ADN US Central Senior Professional | EY | 67% | [pratiksha-malhotra_ey_adn-us-central-senior-professional.docx](resumes/pratiksha-malhotra_ey_adn-us-central-senior-professional.docx) | [open](https://www.naukri.com/job-listings-adn-us-central-senior-professional-ernst-young-noida-0-to-1-years-261026502170) |
 | Senior Business Analyst - Healthcare | Hexaware Technologies | 100% | [pratiksha-malhotra_hexaware-technologies_senior-business-analyst-healthcare.docx](resumes/pratiksha-malhotra_hexaware-technologies_senior-business-analyst-healthcare.docx) | [open](https://www.naukri.com/job-listings-senior-business-analyst-healthcare-hexaware-technologies-noida-3-to-7-years-290526502658) |
+| Executive - MIS | Artech | 75% | [pratiksha-malhotra_artech_executive-mis.docx](resumes/pratiksha-malhotra_artech_executive-mis.docx) | [open](https://www.naukri.com/job-listings-executive-mis-artech-noida-0-to-2-years-290923502030) |
+| Project Manager | EY | 71% | [pratiksha-malhotra_ey_project-manager.docx](resumes/pratiksha-malhotra_ey_project-manager.docx) | [open](https://www.naukri.com/job-listings-project-manager-ernst-young-noida-3-to-8-years-301026505563) |
+| MIS Executivein - Executive | RIGHT STEP CONSULTING PRIVATE LIMITED | 67% | [pratiksha-malhotra_right-step-consulting-private-limited_mis-executivein-executive.docx](resumes/pratiksha-malhotra_right-step-consulting-private-limited_mis-executivein-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executivein-executive-right-step-consulting-private-limited-noida-0-to-5-years-151117500530) |
 
 ## Needs your attention
 
@@ -104,7 +108,6 @@ Total applied: **30**  |  last updated 2026-10-30 10:38 IST
 | Data Analyst | Nxtwave Disruptive Technologies(Hiring for a Client) | needs_manual | no answer for: To proceed further stpes ,please fill out the form:https://forms.gle/YkBsGGSMgg6ekDLR | [open](https://www.naukri.com/job-listings-data-analyst-nxtwave-disruptive-technologies-hiring-for-a-client-noida-new-delhi-greater-noida-1-to-6-years-160926023177) |
 | Project Coordinator | Tarento Technologies | failed | no Apply button found (layout change or expired listing) | [open](https://www.naukri.com/job-listings-project-coordinator-tarento-technologies-pvt-ltd-noida-2-to-4-years-170926502557) |
 | Data Analyst | Nxtwave Disruptive Technologies (Hiring for a Client) | needs_manual | no answer for: To proceed further stpes ,please fill out the form:https://forms.gle/YkBsGGSMgg6ekDLR | [open](https://www.naukri.com/job-listings-data-analyst-nxtwave-disruptive-technologies-hiring-for-a-client-noida-greater-noida-1-to-6-years-160926023177) |
-| Mis Executive | Health Claims | Tata AIG General Insurance Company | needs_manual | no answer for: Thank you for your responses. | [open](https://www.naukri.com/job-listings-mis-executive-health-claims-tata-aig-general-insurance-company-noida-1-to-2-years-281026010085) |
 | MIS Executive | A big name in Fashion Industry | failed | no Apply button found (layout change or expired listing) | [open](https://www.naukri.com/job-listings-mis-executive-sarvysampanna-system-solutions-noida-1-to-5-years-260326010955) |
 | Walk-in || Mis Executive | Manabs Sourcing Solutions | failed | no Apply button found (layout change or expired listing) | [open](https://www.naukri.com/job-listings-mis-executive-manabs-sourcing-solutions-noida-1-to-2-years-101026011325) |
 | Business Analyst | University Living Accommodation | failed | no Apply button found (layout change or expired listing) | [open](https://www.naukri.com/job-listings-business-analyst-university-living-accommodation-noida-2-to-5-years-090926028504) |
