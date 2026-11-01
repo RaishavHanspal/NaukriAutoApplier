@@ -1264,5 +1264,53 @@
     "status": "already_applied",
     "detail": "",
     "attempts": 2
+  },
+  {
+    "date": "2026-11-01 21:12",
+    "url": "https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-chennai-0-to-5-years-311026502062",
+    "title": "Liquidity Risk Reporting - Analyst",
+    "company": "Barclays",
+    "location": "Noida, Chennai",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx",
+    "status": "company_site",
+    "detail": "Apply on company site - open the link and apply manually",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-01 21:13",
+    "url": "https://www.naukri.com/job-listings-sales-executive-platinus-technologies-private-limited-noida-0-to-5-years-301026933774",
+    "title": "Sales Executive",
+    "company": "Leading Client",
+    "location": "Noida",
+    "score": 86,
+    "resume": "resumes/pratiksha-malhotra_leading-client_sales-executive.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-01 21:13",
+    "url": "https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-chennai-0-to-5-years-311026502061",
+    "title": "Liquidity Risk Reporting - Analyst",
+    "company": "Barclays",
+    "location": "Noida, Chennai",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx",
+    "status": "company_site",
+    "detail": "Apply on company site - open the link and apply manually",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-01 21:14",
+    "url": "https://www.naukri.com/job-listings-sales-executive-platinus-technologies-private-limited-noida-0-to-5-years-301026933491",
+    "title": "Sales Executive",
+    "company": "Leading Client",
+    "location": "Noida",
+    "score": 86,
+    "resume": "resumes/pratiksha-malhotra_leading-client_sales-executive.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
   }
 ]

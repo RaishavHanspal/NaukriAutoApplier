@@ -1,6 +1,6 @@
 # Applied jobs
 
-Total applied: **31**  |  last updated 2026-10-31 11:19 IST
+Total applied: **33**  |  last updated 2026-11-01 21:14 IST
 
 | Date | Role | Company | Match | Resume used | Job |
 |---|---|---|---|---|---|
@@ -10,6 +10,8 @@ Total applied: **31**  |  last updated 2026-10-31 11:19 IST
 | before-automation | Data Analyst | Balar Marketing | 83% | [pratiksha-malhotra_balar-marketing_data-analyst.docx](resumes/pratiksha-malhotra_balar-marketing_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-balar-marketing-noida-2-to-5-years-280926015839) |
 | before-automation | Data Analyst | Innodata India | 100% | [pratiksha-malhotra_innodata-india_data-analyst.docx](resumes/pratiksha-malhotra_innodata-india_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-innodata-india-noida-4-to-8-years-100926031730) |
 | before-automation | Mis Executive | CRC Group | 86% | [pratiksha-malhotra_crc-group_mis-executive.docx](resumes/pratiksha-malhotra_crc-group_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-crc-group-noida-4-to-8-years-190926019495) |
+| 2026-11-01 21:14 | Sales Executive | Leading Client | 86% | [pratiksha-malhotra_leading-client_sales-executive.docx](resumes/pratiksha-malhotra_leading-client_sales-executive.docx) | [open](https://www.naukri.com/job-listings-sales-executive-platinus-technologies-private-limited-noida-0-to-5-years-301026933491) |
+| 2026-11-01 21:13 | Sales Executive | Leading Client | 86% | [pratiksha-malhotra_leading-client_sales-executive.docx](resumes/pratiksha-malhotra_leading-client_sales-executive.docx) | [open](https://www.naukri.com/job-listings-sales-executive-platinus-technologies-private-limited-noida-0-to-5-years-301026933774) |
 | 2026-10-31 11:18 | Sales Executive Medical / Healthcare / Dental | Leading Client | 86% | [pratiksha-malhotra_leading-client_sales-executive-medical-healthcare-denta.docx](resumes/pratiksha-malhotra_leading-client_sales-executive-medical-healthcare-denta.docx) | [open](https://www.naukri.com/job-listings-sales-executive-medical-healthcare-dental-platinus-technologies-private-limited-noida-india-0-to-2-years-301026934078) |
 | 2026-10-30 10:32 | Business Analyst | Vinculum Solutions | 100% | [pratiksha-malhotra_vinculum-solutions_business-analyst.docx](resumes/pratiksha-malhotra_vinculum-solutions_business-analyst.docx) | [open](https://www.naukri.com/job-listings-business-analyst-vinculum-solutions-noida-2-to-6-years-300926009550) |
 | 2026-10-29 11:51 | Mis Executive | Medanta | 67% | [pratiksha-malhotra_medanta_mis-executive.docx](resumes/pratiksha-malhotra_medanta_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-medanta-noida-2-to-7-years-071026016564) |
@@ -90,6 +92,8 @@ Total applied: **31**  |  last updated 2026-10-31 11:19 IST
 | Executive - MIS | Artech | 75% | [pratiksha-malhotra_artech_executive-mis.docx](resumes/pratiksha-malhotra_artech_executive-mis.docx) | [open](https://www.naukri.com/job-listings-executive-mis-artech-noida-0-to-2-years-290923502030) |
 | Project Manager | EY | 71% | [pratiksha-malhotra_ey_project-manager.docx](resumes/pratiksha-malhotra_ey_project-manager.docx) | [open](https://www.naukri.com/job-listings-project-manager-ernst-young-noida-3-to-8-years-301026505563) |
 | MIS Executivein - Executive | RIGHT STEP CONSULTING PRIVATE LIMITED | 67% | [pratiksha-malhotra_right-step-consulting-private-limited_mis-executivein-executive.docx](resumes/pratiksha-malhotra_right-step-consulting-private-limited_mis-executivein-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executivein-executive-right-step-consulting-private-limited-noida-0-to-5-years-151117500530) |
+| Liquidity Risk Reporting - Analyst | Barclays | 100% | [pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx](resumes/pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx) | [open](https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-chennai-0-to-5-years-311026502062) |
+| Liquidity Risk Reporting - Analyst | Barclays | 100% | [pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx](resumes/pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx) | [open](https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-chennai-0-to-5-years-311026502061) |
 
 ## Needs your attention
 
