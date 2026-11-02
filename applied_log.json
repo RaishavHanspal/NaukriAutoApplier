@@ -1336,5 +1336,41 @@
     "status": "applied",
     "detail": "",
     "attempts": 1
+  },
+  {
+    "date": "2026-11-02 18:11",
+    "url": "https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-0-to-5-years-311026502062",
+    "title": "Liquidity Risk Reporting - Analyst",
+    "company": "Barclays",
+    "location": "Noida",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx",
+    "status": "company_site",
+    "detail": "Apply on company site - open the link and apply manually",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-02 18:12",
+    "url": "https://www.naukri.com/job-listings-associate-product-manager-skilllabs-greater-noida-0-to-3-years-021126014841",
+    "title": "Associate Product Manager",
+    "company": "SkillLabs",
+    "location": "Greater Noida",
+    "score": 67,
+    "resume": "resumes/pratiksha-malhotra_skilllabs_associate-product-manager.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-02 18:12",
+    "url": "https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-0-to-5-years-021126500679",
+    "title": "Liquidity Risk Reporting - Analyst",
+    "company": "Barclays",
+    "location": "Noida",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx",
+    "status": "company_site",
+    "detail": "Apply on company site - open the link and apply manually",
+    "attempts": 1
   }
 ]

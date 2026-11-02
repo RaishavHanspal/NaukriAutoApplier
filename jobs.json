@@ -2543,7 +2543,7 @@
     "profiles": [
       "project manager"
     ],
-    "last_seen": "2026-11-01"
+    "last_seen": "2026-11-02"
   },
   "https://www.naukri.com/job-listings-project-manager-amansoft-gimt-noida-1-to-6-years-170626504769": {
     "title": "Project Manager",
@@ -5578,6 +5578,100 @@
         "communication"
       ],
       "missing": [],
+      "area_match": true
+    }
+  },
+  "https://www.naukri.com/job-listings-mis-executive-in-senior-executive-right-step-consulting-private-limited-noida-0-to-5-years-290617500537": {
+    "title": "MIS Executive in - Senior Executive",
+    "url": "https://www.naukri.com/job-listings-mis-executive-in-senior-executive-right-step-consulting-private-limited-noida-0-to-5-years-290617500537",
+    "company": "RIGHT STEP CONSULTING PRIVATE LIMITED",
+    "experience": "0-5 Yrs",
+    "location": "Noida",
+    "snippet": "Employment Type: Permanent Job, Full Time Education -UG: Any Graduate - Any Specialization",
+    "profiles": [
+      "MIS executive"
+    ],
+    "last_seen": "2026-11-02",
+    "description": "Brief Role : Job Description\nObtaining data from MIS\nCoding information & resolving processing problems\nInteraction with client\nConditional formatting ifs and sums formulas etc. activity of the process\nCoordinate with process managers for data collation and reporting\nManaging weekly monthly MIS Database. Represent data for Higher Management.\nSalary:INR 2 , 00 , 000 - 3 , 25 , 000 P.A.\nIndustry:IT - Software / Software Services\nFunctional Area:Financial Services , Banking , Investments , Insurance\nRole Category:Financial Services / Stock Broking\nRole:Analyst\nEmployment Type: Permanent Job , Full Time\nDesired Candidate Profile\nPlease refer to the Job description above\nEducation -\nUG: Any Graduate - Any Specialization",
+    "match": {
+      "score": 0,
+      "matched": [
+        "reporting"
+      ],
+      "missing": [
+        "mis"
+      ],
+      "area_match": true
+    }
+  },
+  "https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-0-to-5-years-311026502062": {
+    "title": "Liquidity Risk Reporting - Analyst",
+    "url": "https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-0-to-5-years-311026502062",
+    "company": "Barclays",
+    "experience": "0-5 Yrs",
+    "location": "Noida",
+    "snippet": "Join Barclays as Liquidity Risk Reporting - Analyst where the role holder will support ...",
+    "profiles": [
+      "reporting analyst"
+    ],
+    "last_seen": "2026-11-02",
+    "description": "Join Barclays as Liquidity Risk Reporting - Analyst where the role holder will support wider team with the completion of their reporting and control activities, assisting them with the investigation and resolution of more complex issues. At Barclays, we dont just anticipate the future - were creating it.\n\n\n\n\nTo be successful in this role, you should have:\n\nMust have good communication skills, both written and verbal, with the ability to work collaboratively with the Reporting teams across the different locations.\nGood presentation skills.\nVery good Microsoft Excel skills.\nUnderstanding of Balance Sheet and Finance processes.\nUnderstanding of Control and Governance frameworks.\nCA / CWA / CS / MBA / Finance / Commerce / Economics background.\n\n\n\nSome other highly valued skills may include:\n\nExperience supporting the roll out of controls frameworks.\nUnderstanding of Treasury and/or Risk systems in Barclays.\nReporting work experience in a Bank / Financial Institution.\n\n\n\nYou may be assessed on the key critical skills relevant for success in role, such as risk and controls, change and transformation, business acumen strategic thinking and digital and technology, as well as job-specific technical skills.\n\n\n\n\nThis role is based in our Chennai office.\n\nPurpose of the role\n\nTo provide administrative, analytical, and operational support to traders, enabling them to focus on their core responsibilities such as the analysis of markets, execution of trades, and management of risk.\n\nAccountabilities\n\nReceive, validate, and process orders from traders, ensuring accuracy and adherence to trading guidelines, and monitoring of order status to communicate updates to traders and counterparties.\nDiagnosis, troubleshooting, and resolution of trading platform issues, connectivity problems, and application errors. Work collaboratively with IT teams to address complex technical issues.\nSupport to traders in monitoring and management of market risk, credit risk, and operational risk including the preparation and maintenance of reports on trading risk exposure and compliance with regulatory requirements.\nManagement of the banks trading calendar, ensuring that traders are aware of upcoming market events, economic data releases, and regulatory changes.\nMarket research and analysis to identify potential trading opportunities and support traders trading strategies, and preparation of market reports and presentations for traders and senior colleagues.\nDue diligence on counterparties and verify their trading credentials, and monitoring of trading activity for any potential compliance breaches or suspicious transactions.\n\nAnalyst Expectations\n\nTo meet the needs of stakeholders/ customers through specialist advice and support\nPerform prescribed activities in a timely manner and to a high standard which will impact both the role itself and surrounding roles.\nLikely to have responsibility for specific processes within a team\nThey may lead and supervise a team, guiding and supporting professional development, allocating work requirements and coordinating team resources. They supervise a team, allocate work requirements and coordinate team resources.\nIf the position has leadership responsibilities, People Leaders are expected to demonstrate a clear set of leadership behaviours to create an environment for colleagues to thrive and deliver to a consistently excellent standard. The four LEAD behaviours are: L - Listen and be authentic, E - Energise and inspire, A - Align across the enterprise, D - Develop others.\nOR for an individual contributor, they manage own workload, take responsibility for the implementation of systems and processes within own work area and participate on projects broader than direct team.\nExecute work requirements as identified in processes and procedures, collaborating with and impacting on the work of closely related teams.\nCheck work of colleagues within team to meet internal and stakeholder requirements.\nProvide specialist advice and support pertaining to own work area.\nTake ownership for managing risk and strengthening controls in relation to the work you own or contribute to. Deliver your work and areas of responsibility in line with relevant rules, regulation and codes of conduct.\nMaintain and continually build an understanding of how all teams in area contribute to the objectives of the broader sub-function, delivering impact on the work of collaborating teams.\nContinually develop awareness of the underlying principles and concepts on which the work within the area of responsibility is based, building upon administrative / operational expertise.\nMake judgements based on practise and previous experience.\nAssess the validity and applicability of previous or similar experiences and evaluate options under circumstances that are not covered by procedures.\nCommunicate sensitive or difficult information to customers in areas related specifically to customer advice or day to day administrative requirements.\nBuild relationships with stakeholders/ customers to identify and address their needs.\n\n\n\nDisclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
+    "match": {
+      "score": 100,
+      "matched": [
+        "excel",
+        "reporting",
+        "communication"
+      ],
+      "missing": [],
+      "area_match": true
+    }
+  },
+  "https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-0-to-5-years-021126500679": {
+    "title": "Liquidity Risk Reporting - Analyst",
+    "url": "https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-0-to-5-years-021126500679",
+    "company": "Barclays",
+    "experience": "0-5 Yrs",
+    "location": "Noida",
+    "snippet": "Join Barclays as Liquidity Risk Reporting - Analyst where the role holder will support ...",
+    "profiles": [
+      "reporting analyst"
+    ],
+    "last_seen": "2026-11-02",
+    "description": "Join Barclays as Liquidity Risk Reporting - Analyst where the role holder will support wider team with the completion of their reporting and control activities, assisting them with the investigation and resolution of more complex issues. At Barclays, we dont just anticipate the future - were creating it.\n\n\n\n\nTo be successful in this role, you should have:\n\nMust have good communication skills, both written and verbal, with the ability to work collaboratively with the Reporting teams across the different locations.\nGood presentation skills.\nVery good Microsoft Excel skills.\nUnderstanding of Balance Sheet and Finance processes.\nUnderstanding of Control and Governance frameworks.\nCA / CWA / CS / MBA / Finance / Commerce / Economics background.\n\n\n\nSome other highly valued skills may include:\n\nExperience supporting the roll out of controls frameworks.\nUnderstanding of Treasury and/or Risk systems in Barclays.\nReporting work experience in a Bank / Financial Institution.\n\n\n\nYou may be assessed on the key critical skills relevant for success in role, such as risk and controls, change and transformation, business acumen strategic thinking and digital and technology, as well as job-specific technical skills.\n\n\n\n\nThis role is based in our Chennai / Noida office.\n\nPurpose of the role\n\nTo verify that the bank has sufficient funds to meet its short-term and long-term obligations, and the development and implementation of strategies to manage the banks liquidity position.\n\nAccountabilities\n\nDevelopment and implementation of funding and liquidity strategies to efficiently manage the bank s liquidity position within regulatory requirements and risk appetite at favourable commercial outcomes with respect to funding costs.\nAnalysis and quantification of the regulatory and behavioural liquidity risk impact of transactions undertaken by business units.\nMaintenance of strong relationships with key business units and working with the business units to manage liquidity to within constrains.\nMonitoring of key liquidity metrics and trends and advising on actions to be taken to maintain funding and liquidity levels within tolerance.\nManaging intra-group funding arrangements to ensure subsidiaries are adequately funded and managed within balance sheet, large exposure and capital constraints.\nDesign and implementation of stress testing methodologies to assess the banks liquidity resilience under various financial shocks, economic downturns, and sector-specific crises, and analysis of stress testing results and development of mitigation strategies to address potential liquidity shortfalls.\nDevelopment of new tools, models and data analysis to support and enhance the bank s funding and liquidity management capabilities.\n\nAnalyst Expectations\n\nTo perform prescribed activities in a timely manner and to a high standard consistently driving continuous improvement.\nRequires in-depth technical knowledge and experience in their assigned area of expertise\nThorough understanding of the underlying principles and concepts within the area of expertise\nThey lead and supervise a team, guiding and supporting professional development, allocating work requirements and coordinating team resources.\nIf the position has leadership responsibilities, People Leaders are expected to demonstrate a clear set of leadership behaviours to create an environment for colleagues to thrive and deliver to a consistently excellent standard. The four LEAD behaviours are: L - Listen and be authentic, E - Energise and inspire, A - Align across the enterprise, D - Develop others.\nOR for an individual contributor, they develop technical expertise in work area, acting as an advisor where appropriate.\nWill have an impact on the work of related teams within the area.\nPartner with other functions and business areas.\nTakes responsibility for end results of a team s operational processing and activities.\nEscalate breaches of policies / procedure appropriately.\nTake responsibility for embedding new policies/ procedures adopted due to risk mitigation.\nAdvise and influence decision making within own area of expertise.\nTake ownership for managing risk and strengthening controls in relation to the work you own or contribute to. Deliver your work and areas of responsibility in line with relevant rules, regulation and codes of conduct.\nMaintain and continually build an understanding of how own sub-function integrates with function, alongside knowledge of the organisations products, services and processes within the function.\nDemonstrate understanding of how areas coordinate and contribute to the achievement of the objectives of the organisation sub-function.\nMake evaluative judgements based on the analysis of factual information, paying attention to detail.\nResolve problems by identifying and selecting solutions through the application of acquired technical experience and will be guided by precedents.\nGuide and persuade team members and communicate complex / sensitive information.\nAct as contact point for stakeholders outside of the immediate function, while building a network of contacts outside team and external to the organisation.\n\n\n\nDisclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
+    "match": {
+      "score": 100,
+      "matched": [
+        "excel",
+        "data analysis",
+        "reporting",
+        "communication"
+      ],
+      "missing": [],
+      "area_match": true
+    }
+  },
+  "https://www.naukri.com/job-listings-associate-product-manager-skilllabs-greater-noida-0-to-3-years-021126014841": {
+    "title": "Associate Product Manager",
+    "url": "https://www.naukri.com/job-listings-associate-product-manager-skilllabs-greater-noida-0-to-3-years-021126014841",
+    "company": "SkillLabs",
+    "experience": "0-3 Yrs",
+    "location": "Greater Noida",
+    "snippet": "Freshers and experienced graduates can app Graduates and working professionals with str...",
+    "profiles": [
+      "marketing analyst"
+    ],
+    "last_seen": "2026-11-02",
+    "description": "Build your career in Product Management! Work on product research, business analysis, market insights and project coordination while developing analytical, strategic and problem-solving skills. Freshers and experienced graduates can app\n\n\n\nRequired Candidate profile\n\nGraduates and working professionals with strong analytical, communication and problem-solving skills. Interest in product management, business strategy and market research preferred.",
+    "match": {
+      "score": 67,
+      "matched": [
+        "project coordination",
+        "communication"
+      ],
+      "missing": [
+        "business analysis"
+      ],
       "area_match": true
     }
   }

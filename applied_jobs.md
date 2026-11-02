@@ -1,6 +1,6 @@
 # Applied jobs
 
-Total applied: **35**  |  last updated 2026-11-02 16:23 IST
+Total applied: **36**  |  last updated 2026-11-02 18:12 IST
 
 | Date | Role | Company | Match | Resume used | Job |
 |---|---|---|---|---|---|
@@ -10,6 +10,7 @@ Total applied: **35**  |  last updated 2026-11-02 16:23 IST
 | before-automation | Data Analyst | Balar Marketing | 83% | [pratiksha-malhotra_balar-marketing_data-analyst.docx](resumes/pratiksha-malhotra_balar-marketing_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-balar-marketing-noida-2-to-5-years-280926015839) |
 | before-automation | Data Analyst | Innodata India | 100% | [pratiksha-malhotra_innodata-india_data-analyst.docx](resumes/pratiksha-malhotra_innodata-india_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-innodata-india-noida-4-to-8-years-100926031730) |
 | before-automation | Mis Executive | CRC Group | 86% | [pratiksha-malhotra_crc-group_mis-executive.docx](resumes/pratiksha-malhotra_crc-group_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-crc-group-noida-4-to-8-years-190926019495) |
+| 2026-11-02 18:12 | Associate Product Manager | SkillLabs | 67% | [pratiksha-malhotra_skilllabs_associate-product-manager.docx](resumes/pratiksha-malhotra_skilllabs_associate-product-manager.docx) | [open](https://www.naukri.com/job-listings-associate-product-manager-skilllabs-greater-noida-0-to-3-years-021126014841) |
 | 2026-11-02 16:23 | Product Manager (Fresher) | Jobaaj com | 100% | [pratiksha-malhotra_jobaaj-com_product-manager-fresher.docx](resumes/pratiksha-malhotra_jobaaj-com_product-manager-fresher.docx) | [open](https://www.naukri.com/job-listings-product-manager-fresher-jobaaj-com-noida-gurugram-delhi-ncr-0-to-1-years-261026000161) |
 | 2026-11-02 16:22 | Mis Executive | Bennett University | 86% | [pratiksha-malhotra_bennett-university_mis-executive.docx](resumes/pratiksha-malhotra_bennett-university_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-bennett-university-greater-noida-3-to-6-years-060526031143) |
 | 2026-11-01 21:14 | Sales Executive | Leading Client | 86% | [pratiksha-malhotra_leading-client_sales-executive.docx](resumes/pratiksha-malhotra_leading-client_sales-executive.docx) | [open](https://www.naukri.com/job-listings-sales-executive-platinus-technologies-private-limited-noida-0-to-5-years-301026933491) |
@@ -96,6 +97,8 @@ Total applied: **35**  |  last updated 2026-11-02 16:23 IST
 | MIS Executivein - Executive | RIGHT STEP CONSULTING PRIVATE LIMITED | 67% | [pratiksha-malhotra_right-step-consulting-private-limited_mis-executivein-executive.docx](resumes/pratiksha-malhotra_right-step-consulting-private-limited_mis-executivein-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executivein-executive-right-step-consulting-private-limited-noida-0-to-5-years-151117500530) |
 | Liquidity Risk Reporting - Analyst | Barclays | 100% | [pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx](resumes/pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx) | [open](https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-chennai-0-to-5-years-311026502062) |
 | Liquidity Risk Reporting - Analyst | Barclays | 100% | [pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx](resumes/pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx) | [open](https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-chennai-0-to-5-years-311026502061) |
+| Liquidity Risk Reporting - Analyst | Barclays | 100% | [pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx](resumes/pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx) | [open](https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-0-to-5-years-311026502062) |
+| Liquidity Risk Reporting - Analyst | Barclays | 100% | [pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx](resumes/pratiksha-malhotra_barclays_liquidity-risk-reporting-analyst.docx) | [open](https://www.naukri.com/job-listings-liquidity-risk-reporting-analyst-barclays-shared-services-noida-0-to-5-years-021126500679) |
 
 ## Needs your attention
 
