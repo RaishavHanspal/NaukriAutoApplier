@@ -1312,5 +1312,29 @@
     "status": "applied",
     "detail": "",
     "attempts": 1
+  },
+  {
+    "date": "2026-11-02 16:22",
+    "url": "https://www.naukri.com/job-listings-mis-executive-bennett-university-greater-noida-3-to-6-years-060526031143",
+    "title": "Mis Executive",
+    "company": "Bennett University",
+    "location": "Greater Noida",
+    "score": 86,
+    "resume": "resumes/pratiksha-malhotra_bennett-university_mis-executive.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-02 16:23",
+    "url": "https://www.naukri.com/job-listings-product-manager-fresher-jobaaj-com-noida-gurugram-delhi-ncr-0-to-1-years-261026000161",
+    "title": "Product Manager (Fresher)",
+    "company": "Jobaaj com",
+    "location": "Noida, Gurugram, Delhi / NCR",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_jobaaj-com_product-manager-fresher.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
   }
 ]
