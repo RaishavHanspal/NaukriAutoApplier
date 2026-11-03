@@ -29,5 +29,64 @@
     "options": [],
     "example_job": "https://www.naukri.com/job-listings-data-analyst-marketing-analyst-fintech-cloud-noida-2-to-5-years-270926002287",
     "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "Which financial planning or treasury tools have you used?",
+    "options": [],
+    "example_job": "https://www.naukri.com/job-listings-investment-analyst-trigger-education-services-noida-gurugram-0-to-1-years-021126013289",
+    "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "Do you have the experience in Quality Assurance?",
+    "options": [],
+    "example_job": "https://www.naukri.com/job-listings-quality-analyst-insights-opinion-noida-1-to-5-years-170326043863",
+    "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "In which domain have you managed projects or programs?",
+    "options": [
+      "BPM\nIT Services\nTechnology\nBFSI\nEducation\nManufacturing & Production\nInfrastructure, Transport & Real Estate\nConsumer, Retail & Hospitality\nLoad more",
+      "BPM",
+      "IT Services",
+      "Technology",
+      "BFSI",
+      "Education",
+      "Manufacturing & Production",
+      "Infrastructure, Transport & Real Estate",
+      "Consumer, Retail & Hospitality"
+    ],
+    "example_job": "https://www.naukri.com/job-listings-associate-business-analyst-clixlogix-technologies-noida-1-to-3-years-211026012580",
+    "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "What is your highest qualification & Specialisation?",
+    "options": [
+      "MBA / PGDM- HR",
+      "MBA- other specialization",
+      "B.Tech / BE",
+      "BBA",
+      "B.sc / B.com / BA",
+      "Other"
+    ],
+    "example_job": "https://www.naukri.com/job-listings-market-research-business-analyst-radiant-techsolutions-noida-0-to-2-years-151026033316",
+    "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "How would you rate your communication skills?",
+    "options": [
+      "Skip this question",
+      "Skip this question"
+    ],
+    "example_job": "https://www.naukri.com/job-listings-project-coordinator-hemant-and-nandita-noida-1-to-5-years-261026023166",
+    "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "How many years of experience do you have in Operations?",
+    "options": [
+      "Skip this question",
+      "Skip this question"
+    ],
+    "example_job": "https://www.naukri.com/job-listings-project-manager-bcs-consulting-noida-lucknow-3-to-8-years-301026015027",
+    "how_to_fix": "add a rule for this to answers.json"
   }
 ]

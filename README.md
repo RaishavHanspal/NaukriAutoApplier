@@ -3,6 +3,19 @@
 Pipeline: scrape -> score vs master resume -> skip already-applied -> tailor resume -> apply
 (answering screening questions) -> write `applied_jobs.md` / `.csv`.
 
+## Filters (in this order)
+1. Naukri's own search filters: `search_experience` (years; Naukri hides jobs whose range excludes it) and
+   `job_age_days` (posted in the last N days). Results are read from the JSON the search page loads, and
+   further pages are reached by clicking **Next** (the `-2`, `-3` page URLs redirect to page 1 and drop the filters).
+2. **Company-site postings are ignored** (`skip_company_site`): Naukri flags them in the search results
+   (`companyApplyJob`), so no JD is fetched, no resume tailored and nothing is listed for them. Jobs seen before
+   the flag existed are caught by the JD text ("aggregated from external source") or the job page's button.
+3. `max_min_experience`, `exclude_title_regex` (senior / lead / engineer ... titles).
+4. Score >= `threshold` (70): 40 points if the title is a target role (`title_patterns`) + 60 x share of the
+   JD's skills found in your resume. `skills` holds skill groups with synonyms ("analyse data", "insights" ->
+   data analysis); groups you don't have (Tableau, SAP, ...) count as missing.
+Each run prints how many jobs each filter removed.
+
 ## Normal use: the desktop shortcut (`ParuJobApplier.bat`)
 Each run: `git pull` -> apply to up to `per_profile_target` (10) new jobs for **each** keyword ("profile")
 in `config.json`, round-robin across profiles, stopping after `max_run_minutes` (45) whichever comes first
@@ -32,7 +45,7 @@ It then runs Mon-Sat at 10:00 IST (edit the cron in `.github/workflows/naukri-da
 
 ## Outputs (committed back to the repo each run)
 - `applied_jobs.md` / `applied_jobs.csv` - applied jobs with the resume used, job link, match %.
-  The .md also lists company-site jobs to apply to manually and jobs needing attention.
+  The .md also lists jobs needing attention.
 - `applied_log.json` - dedupe memory (a job is never retried once applied / company-site).
 - `unanswered_questions.json` - questions the bot could not answer; add a rule to `answers.json`.
 - `resumes/` - one tailored .docx per job.
@@ -42,11 +55,14 @@ It then runs Mon-Sat at 10:00 IST (edit the cron in `.github/workflows/naukri-da
 - Naukri may block datacenter IPs (GitHub runners) with a captcha. The run then stops and reports it.
 - All CSS selectors are in `SEL` at the top of the script and are unverified against the live site;
   run a dry run, and fix selectors there if no jobs/buttons are found. Failure screenshots are uploaded as an artifact.
-- "Apply on company site" jobs are not automated (every company site is different); they are listed for manual apply.
+- "Apply on company site" jobs are skipped entirely (see Filters).
+- Before swapping the profile resume the bot opens the job and checks it has a normal Apply button.
 - Naukri applies with your *profile* resume, so the script uploads the tailored file to your profile
   before each apply and restores a master-resume .docx at the end.
-- `per_profile_target` (10) is a target, not a guarantee: if fewer fresh jobs for a profile score >= `threshold`
-  (or are company-site only), it applies to fewer. `scrape_budget_minutes` caps the scraping part of the run.
+- `per_profile_target` (10) is a target, not a guarantee: if fewer fresh jobs for a profile score >= `threshold`,
+  it applies to fewer. Searching stops per keyword after `max_pages` or once `fresh_per_profile` (default 2 x target)
+  applicable jobs are known. `scrape_budget_minutes` caps the scraping part of the run.
+- Indeed: see the sibling project `../Indeed` (same pipeline for in.indeed.com Easy Apply jobs).
 - Naukri has its own daily apply quota; when it shows that message the run stops cleanly.
 - `max_clicks_per_run` is a safety stop in case confirmation detection breaks.
 - Automated applying is against Naukri's terms and can get the account restricted. Use at your own risk.

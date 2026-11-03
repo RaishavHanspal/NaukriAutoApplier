@@ -77,7 +77,12 @@ def time_left():
 class Tee:
     """Mirror stdout into run.log so the bat run leaves a log that gets committed."""
     def __init__(self, path):
-        self.f = open(path, "w", encoding="utf-8")
+        try:
+            self.f = open(path, "w", encoding="utf-8")
+        except PermissionError:  # run.log open/locked elsewhere (editor, second run): log to a side file
+            path = path.with_name(f"run_{datetime.now():%Y%m%d_%H%M%S}.log")
+            self.f = open(path, "w", encoding="utf-8")
+            print(f"run.log is locked - logging to {path.name}")
         self.out = sys.stdout
 
     def write(self, s):
@@ -114,7 +119,11 @@ SEL = {
     "send": '[class*="sendMsg"], button:has-text("Save"), button:has-text("Submit")',
     "resume_input": 'input[type="file"]',
     "quota": "text=/daily (apply )?(quota|limit)|reached.{0,40}(quota|limit)|cannot apply.{0,40}today/i",
+    "next_page": 'a[class*="btn-secondary"]:has-text("Next"), a:text-is("Next")',
 }
+SEARCH_API = "jobapi/v3/search"
+# Naukri appends this to JDs of jobs crawled from company career sites (always "Apply on company site")
+AGGREGATED = "aggregated from external source"
 
 CARD_JS = """
 els => els.map(e => {
@@ -268,39 +277,113 @@ def applied_today():
 
 
 # ------------------------------------------------------------------ scrape
-def search(page, jobs, kw, pages):
-    """Scrape result pages `pages` (a range) for one profile keyword into `jobs`."""
+def search_url(kw):
+    """SRP URL with Naukri's own filters: candidate experience (years) and freshness (days)."""
     loc = CFG["location"]
+    q = f"?k={quote(kw)}&l={quote(loc)}"
+    if CFG.get("search_experience") is not None:
+        q += f"&experience={CFG['search_experience']}"
+    if CFG.get("job_age_days"):
+        q += f"&jobAge={CFG['job_age_days']}"
+    return f"https://www.naukri.com/{slug(kw)}-jobs-in-{slug(loc)}{q}"
+
+
+def api_job(d):
+    """One job from Naukri's search API response (the JSON the results page itself loads)."""
+    ph = {x.get("type"): x.get("label", "") for x in d.get("placeholders", [])}
+    url = d.get("jdURL", "") or ""
+    if url.startswith("/"):
+        url = "https://www.naukri.com" + url
+    return {"title": (d.get("title") or "").strip(), "url": url.split("?")[0],
+            "company": (d.get("companyName") or "").strip(),
+            "experience": ph.get("experience", ""), "location": ph.get("location", ""),
+            "snippet": re.sub(r"<[^>]+>", " ", d.get("jobDescription") or "").strip(),
+            "tags": d.get("tagsAndSkills") or "",
+            "company_site": bool(d.get("companyApplyJob")),
+            "posted": d.get("footerPlaceholderLabel", "")}
+
+
+def search(page, jobs, kw, max_pages, want, deadline):
+    """Walk the result pages for one profile keyword, reading the search API JSON the page loads.
+    Page 2+ is reached by clicking Next: the -2/-3 URLs redirect to page 1 and drop the filters.
+    Stops once `want` fresh, applicable jobs are known for this keyword."""
     today = now_ist().strftime("%Y-%m-%d")
-    for pg in pages:
-        suffix = "" if pg == 1 else f"-{pg}"
-        url = (f"https://www.naukri.com/{slug(kw)}-jobs-in-{slug(loc)}{suffix}"
-               f"?k={quote(kw)}&l={quote(loc)}")
-        print("Search:", url)
-        goto_checked(page, url)
+    skip = blocked_urls()
+    for pg in range(1, max_pages + 1):
+        if minutes_used() >= deadline:
+            print("  search time budget used up")
+            return
+        if pg > 1:
+            nxt = page.locator(SEL["next_page"]).first
+            if not nxt.count():
+                return
         try:
-            page.wait_for_selector(SEL["card"], timeout=15000)
-        except Exception:
-            print("  no cards (end of results or layout change)")
-            break
-        for c in page.eval_on_selector_all(SEL["card"], CARD_JS):
+            with page.expect_response(lambda r: SEARCH_API in r.url, timeout=25000) as ri:
+                if pg == 1:
+                    goto_checked(page, search_url(kw))
+                else:
+                    nxt.click()
+            data = ri.value.json()
+        except Blocked:
+            raise
+        except Exception as ex:
+            print(f"  page {pg}: no search API response ({str(ex)[:80]}) - reading cards from the page")
+            data = None
+        if data is None:
+            found = [dict(c, company_site=None) for c in page.eval_on_selector_all(SEL["card"], CARD_JS)]
+            total = 0
+        else:
+            found = [api_job(d) for d in data.get("jobDetails", [])]
+            total = data.get("noOfJobs") or 0
+        if not found:
+            return
+        new = comp = 0
+        for c in found:
             if not c["url"]:
                 continue
-            j = jobs.setdefault(c["url"], c)
+            j = jobs.get(c["url"])
+            if j is None:
+                j = jobs[c["url"]] = c
+                new += 1
+            else:  # refresh listing fields, keep the fetched description / score
+                j.update({k: v for k, v in c.items() if v not in ("", None) and k != "snippet"})
             if kw not in j.setdefault("profiles", []):
                 j["profiles"].append(kw)
             j["last_seen"] = today
+            comp += bool(j.get("company_site"))
+        fresh = sum(1 for j in jobs.values() if kw in j.get("profiles", []) and prefilter(j, skip) is None)
+        print(f"  {kw} p{pg}: {len(found)} jobs ({comp} company-site, {new} new) of {total or '?'} "
+              f"| {fresh} fresh applicable")
+        if fresh >= want or data is None or (total and pg * 20 >= total):
+            return
         pause()
 
 
-def fetch_descriptions(page, jobs, deadline, profile=None):
+def prefilter(j, skip=()):
+    """Reason a job can never be applied to by this bot (before scoring), or None."""
+    if j["url"] in skip:
+        return "done"
+    if CFG.get("skip_company_site", True) and (j.get("company_site")
+                                                or AGGREGATED in j.get("description", "").lower()):
+        return "company site"
+    if min_exp(j) > CFG.get("max_min_experience", 3):
+        return "experience"
+    ex = CFG.get("exclude_title_regex")
+    if ex and re.search(ex, j.get("title", "").lower()):
+        return "title excluded"
+    return None
+
+
+def fetch_descriptions(page, jobs, deadline):
+    """Fetch full JDs for applicable jobs, best pre-score (title + tags + snippet) first.
+    The job page also tells us if it is company-site only or already applied."""
     skip = blocked_urls()
-    max_exp = CFG.get("max_min_experience", 3)
-    # only fetch JDs for jobs we could actually apply to; freshest listings first
-    pending = [j for j in jobs.values() if not j.get("description") and j["url"] not in skip
-               and min_exp(j) <= max_exp and (not profile or profile in job_profiles(j))]
-    pending.sort(key=lambda j: j.get("last_seen", ""), reverse=True)
-    for j in pending[: CFG.get("max_new_descriptions", 40)]:
+    # a job whose title is not a target role tops out at 60 points: only worth a JD fetch if that can pass
+    reachable = lambda j: 60 + 40 * bool(re.search(CFG.get("title_patterns", "."), j["title"].lower())) >= CFG["threshold"]
+    pending = [j for j in jobs.values()
+               if not j.get("description") and prefilter(j, skip) is None and reachable(j)]
+    pending.sort(key=lambda j: (j.get("match", {}).get("score", 0), j.get("last_seen", "")), reverse=True)
+    for j in pending[: CFG.get("max_new_descriptions", 80)]:
         if minutes_used() >= deadline:
             print("Scrape time budget used up - continuing with the JDs fetched so far")
             break
@@ -310,9 +393,12 @@ def fetch_descriptions(page, jobs, deadline, profile=None):
             j["description"] = page.inner_text(SEL["jd"])
         except Exception:
             j["description"] = j.get("snippet", "")
-        print("  JD:", j["title"], "-", j["company"])
+        if not page.locator(SEL["apply_btn"]).count() and page.locator(SEL["company_btn"]).count():
+            j["company_site"] = True
+        note = " (company site - skipped)" if prefilter(j) == "company site" else ""
+        print("  JD:", j["title"], "-", j["company"] + note)
         save_json(JOBS_FILE, jobs)
-        pause()
+        pause(2, 5)
     save_json(JOBS_FILE, jobs)
     print(f"{len(jobs)} jobs known")
 
@@ -329,15 +415,41 @@ def has_term(term, text):
     return re.search(r"(?<![a-z0-9+#])" + re.escape(term.lower()) + r"(?![a-z0-9+#])", text) is not None
 
 
+def skill_groups():
+    """{skill: [regex aliases]}; aliases match at a word start ('analy' hits analyse/analysis/analytics)."""
+    if CFG.get("skills"):
+        return CFG["skills"]
+    return {s: [re.escape(s)] for s in CFG.get("skills_vocab", [])}
+
+
+def find_skills(text):
+    return [name for name, aliases in skill_groups().items()
+            if any(re.search(r"(?<![a-z0-9+#])" + a, text) for a in aliases)]
+
+
+_MASTER_SKILLS = None
+
+
+def master_skills():
+    global _MASTER_SKILLS
+    if _MASTER_SKILLS is None:
+        _MASTER_SKILLS = set(find_skills(master_text()))
+    return _MASTER_SKILLS
+
+
 def score_job(j):
-    jd = (j.get("title", "") + " " + j.get("description", "")).lower()
-    jd_skills = [s for s in CFG["skills_vocab"] if has_term(s, jd)]
-    mtxt = master_text()
-    matched = [s for s in jd_skills if has_term(s, mtxt)]
+    """40 points if the title is a target role + 60 x share of the JD's skills found in the resume
+    (shared over at least `min_jd_skills`, so a JD naming one skill can't score 100%)."""
+    title = j.get("title", "").lower()
+    jd = " ".join([title, j.get("tags", ""), j.get("description") or j.get("snippet", "")]).lower()
+    jd_skills = find_skills(jd)
+    matched = [s for s in jd_skills if s in master_skills()]
     missing = [s for s in jd_skills if s not in matched]
-    pct = round(100 * len(matched) / len(jd_skills)) if len(jd_skills) >= CFG["min_jd_skills"] else 0
+    title_ok = bool(re.search(CFG.get("title_patterns", "."), title))
+    share = len(matched) / max(len(jd_skills), CFG.get("min_jd_skills", 3))
+    pct = round(40 * title_ok + 60 * share)
     area = any(a in (j.get("location", "") + jd).lower() for a in CFG["area_terms"])
-    return {"score": pct, "matched": matched, "missing": missing, "area_match": area}
+    return {"score": pct, "matched": matched, "missing": missing, "area_match": area, "title_match": title_ok}
 
 
 def min_exp(j):
@@ -370,9 +482,7 @@ def candidates(profile=None):
     out = []
     for j in jobs.values():
         m = j.get("match") or {}
-        if j["url"] in skip or m.get("score", 0) < CFG["threshold"]:
-            continue
-        if min_exp(j) > CFG.get("max_min_experience", 3):
+        if prefilter(j, skip) or m.get("score", 0) < CFG["threshold"]:
             continue
         if CFG.get("require_area_match") and not m.get("area_match"):
             continue
@@ -397,13 +507,14 @@ def build_resume(j, path):
     doc.add_paragraph(" | ".join(MASTER.get("contact", [])))
     doc.add_heading("Summary", 1)
     doc.add_paragraph(MASTER["summary"])
-    skills = sorted(MASTER["skills"], key=lambda s: (s.lower() not in jd_skills, not has_term(s, jd)))
+    skills = sorted(MASTER["skills"], key=lambda s: (not set(find_skills(s.lower())) & jd_skills,
+                                                     not has_term(s, jd)))
     doc.add_heading("Skills", 1)
     doc.add_paragraph(", ".join(skills))
     doc.add_heading("Experience", 1)
     for e in MASTER["experience"]:
         doc.add_paragraph().add_run(f"{e['title']} - {e['company']} ({e['dates']})").bold = True
-        bullets = sorted(e["bullets"], key=lambda b: -sum(has_term(s, b.lower()) for s in jd_skills))
+        bullets = sorted(e["bullets"], key=lambda b: -len(set(find_skills(b.lower())) & jd_skills))
         for b in bullets:
             doc.add_paragraph(b, style="List Bullet")
     doc.add_heading("Education", 1)
@@ -683,6 +794,21 @@ def apply_to(page, j):
     return status, detail
 
 
+def precheck(page, j):
+    """Open the job before swapping the profile resume (slow) - skip jobs we can't apply to.
+    Returns (status, detail) to log, or None when the job has a normal Apply button."""
+    goto_checked(page, j["url"])
+    pause(1.5, 3)
+    if page.locator(SEL["already"]).count():
+        return "already_applied", ""
+    if page.locator(SEL["apply_btn"]).count():
+        return None
+    if page.locator(SEL["company_btn"]).count():
+        j["company_site"] = True
+        return "company_site", "company-site posting - skipped"
+    return "failed", "no Apply button found (layout change or expired listing)"
+
+
 def screenshot(page, name):
     try:
         DEBUG.mkdir(exist_ok=True)
@@ -715,13 +841,21 @@ def apply_loop(page, target):
                     print("Safety cap reached for this run (max_clicks_per_run)")
                     return applied
                 j = queues[kw].pop(0)
-                if j["url"] in tried:  # same job listed under several profiles
+                key = (j["company"].lower(), j["title"].lower())
+                if j["url"] in tried or key in tried:  # listed under several profiles / reposted
                     continue
-                tried.add(j["url"])
+                tried.update([j["url"], key])
                 print(f"\n<{kw} {applied[kw]}/{target}> [{j['match']['score']}%] {j['title']} @ {j['company']} "
                       f"({j.get('experience','')}) | {minutes_used():.0f} min used")
-                resume = tailor_for(j)
                 try:
+                    pre = precheck(page, j)
+                    if pre:
+                        status, detail = pre
+                        print("  ->", status, detail)
+                        if not DRY:
+                            log_result(j, status, detail)
+                        continue
+                    resume = tailor_for(j)
                     if CFG.get("upload_tailored_resume", True) and not DRY:
                         upload_profile_resume(page, resume)
                         swapped = True
@@ -772,12 +906,6 @@ def write_reports():
     for e in applied:
         lines.append(f"| {e['date']} | {e['title']} | {e['company']} | {e.get('score','')}% | "
                      f"{link(e)} | [open]({e['url']}) |")
-    comp = [e for e in log if e["status"] == "company_site"]
-    if comp:
-        lines += ["", "## Apply manually: company-site jobs", "", "| Role | Company | Match | Resume ready | Job |",
-                  "|---|---|---|---|---|"]
-        lines += [f"| {e['title']} | {e['company']} | {e.get('score','')}% | {link(e)} | [open]({e['url']}) |"
-                  for e in comp]
     man = [e for e in log if e["status"] in ("needs_manual", "unconfirmed", "failed")]
     if man:
         lines += ["", "## Needs your attention", "", "| Role | Company | Status | Detail | Job |", "|---|---|---|---|---|"]
@@ -795,28 +923,25 @@ def write_reports():
 
 # ------------------------------------------------------------------ one-go pipeline
 def scrape_profiles(page, target, budget):
-    """Search every profile keyword; dig deeper for profiles with fewer than `target` eligible jobs.
-    Stops scraping after `budget` minutes so there is time left to apply."""
+    """Search every profile keyword (filtered + paginated), then fetch JDs for the best-looking
+    applicable jobs. Searching gets half of `budget` minutes, JDs the rest."""
     jobs = load_json(JOBS_FILE, {})
-    first = CFG.get("pages", 2)
+    want = CFG.get("fresh_per_profile", target * 2)
     for kw in CFG["keywords"]:
-        if minutes_used() >= budget:
-            break
-        search(page, jobs, kw, range(1, first + 1))
-    save_json(JOBS_FILE, jobs)
-    fetch_descriptions(page, jobs, budget)
-    score_all(quiet=True)
-    for kw in CFG["keywords"]:
-        have = len(candidates(kw))
-        if have >= target or minutes_used() >= budget:
-            continue
-        print(f"{kw}: only {have} eligible - scraping deeper pages")
-        jobs = load_json(JOBS_FILE, {})
-        search(page, jobs, kw, range(first + 1, CFG.get("pages_if_short", 5) + 1))
+        print(f"Search: {kw}  ({search_url(kw)})")
+        search(page, jobs, kw, CFG.get("max_pages", 6), want, budget / 2)
         save_json(JOBS_FILE, jobs)
-        fetch_descriptions(page, jobs, budget, profile=kw)
-        score_all(quiet=True)
-    print(f"\nEligible per profile (>= {CFG['threshold']}% match, not yet applied):")
+    score_all(quiet=True)
+    fetch_descriptions(page, load_json(JOBS_FILE, {}), budget)
+    score_all(quiet=True)
+    skip = blocked_urls()
+    reasons = {}
+    for j in load_json(JOBS_FILE, {}).values():
+        r = prefilter(j, skip)
+        if r and r != "done":
+            reasons[r] = reasons.get(r, 0) + 1
+    print("\nFiltered out (never applied to): " + (", ".join(f"{v} {k}" for k, v in reasons.items()) or "none"))
+    print(f"Eligible per profile (>= {CFG['threshold']}% match, not yet applied):")
     for kw in CFG["keywords"]:
         print(f"  {kw:22} {len(candidates(kw))}")
 

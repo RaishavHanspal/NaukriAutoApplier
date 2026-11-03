@@ -9,9 +9,12 @@
     "marketing analyst"
   ],
   "location": "noida",
-  "pages": 2,
+  "search_experience": 1,
+  "job_age_days": 15,
+  "max_pages": 6,
+  "skip_company_site": true,
   "max_jobs": 40,
-  "threshold": 60,
+  "threshold": 70,
   "min_jd_skills": 3,
   "require_area_match": false,
   "area_terms": [
@@ -25,40 +28,181 @@
     "noida expressway",
     "noida"
   ],
-  "skills_vocab": [
-    "excel",
-    "pivot tables",
-    "power bi",
-    "sql",
-    "postgresql",
-    "python",
-    "r",
-    "bitrix24",
-    "agile",
-    "scrum",
-    "project coordination",
-    "project management",
-    "project proposals",
-    "client presentations",
-    "status reporting",
-    "workflow automation",
-    "crm",
-    "catalog management system",
-    "data analysis",
-    "business analysis",
-    "market analysis",
-    "customer analysis",
-    "reporting",
-    "mis",
-    "marketing analysis",
-    "sales",
-    "revenue",
-    "profit",
-    "customer service",
-    "communication"
-  ],
-  "pages_if_short": 6,
-  "max_new_descriptions": 120,
+  "title_patterns": "analy|\\bmis\\b|report|coordinat|project|insight|operations? (executive|analyst|associate)|business (associate|executive)|data (executive|associate)|catalog|crm",
+  "exclude_title_regex": "\\b(senior|sr|lead|head|principal|director|vp|avp|architect|engineer|developer|scientist|telecaller|tele ?sales|voice process)\\b",
+  "skills": {
+    "excel": [
+      "excel",
+      "spreadsheet",
+      "google sheets",
+      "vlookup",
+      "xlookup"
+    ],
+    "pivot tables": [
+      "pivot"
+    ],
+    "power bi": [
+      "power ?bi"
+    ],
+    "sql": [
+      "sql",
+      "postgres",
+      "mysql"
+    ],
+    "python": [
+      "python",
+      "pandas"
+    ],
+    "data analysis": [
+      "data analy",
+      "analy[sz]\\w* (complex |large |the |business )?(data|datasets|numbers|trends)",
+      "analytical",
+      "analytics",
+      "insights?\\b",
+      "data[- ]driven"
+    ],
+    "reporting / dashboards": [
+      "report",
+      "dashboard",
+      "kpi",
+      "\\bmis\\b"
+    ],
+    "mis": [
+      "\\bmis\\b",
+      "management information"
+    ],
+    "project coordination": [
+      "coordinat",
+      "follow[- ]?ups?\\b",
+      "task (tracking|assignment|allocation)"
+    ],
+    "project management": [
+      "project manag",
+      "project lifecycle",
+      "milestone",
+      "jira",
+      "trello",
+      "asana",
+      "bitrix",
+      "project plan"
+    ],
+    "agile / scrum": [
+      "agile",
+      "scrum",
+      "sprint"
+    ],
+    "communication / stakeholders": [
+      "communicat",
+      "stakeholder",
+      "presentation",
+      "client (calls?|interaction|communication)"
+    ],
+    "crm": [
+      "crm",
+      "salesforce",
+      "zoho",
+      "bitrix24"
+    ],
+    "market / customer analysis": [
+      "customer (analy|insight|data|behavio)",
+      "market (analy|research|position)",
+      "competitor"
+    ],
+    "sales / revenue": [
+      "sales\\b",
+      "revenue",
+      "profit"
+    ],
+    "marketing": [
+      "marketing",
+      "campaign",
+      "paid ads",
+      "organic"
+    ],
+    "customer service": [
+      "customer (service|support|issues?|satisfaction)"
+    ],
+    "data management": [
+      "data (entry|accuracy|management|quality|cleaning|validation)",
+      "records\\b",
+      "catalog"
+    ],
+    "workflow automation": [
+      "automat",
+      "workflow"
+    ],
+    "requirements / documentation": [
+      "requirement",
+      "documentation",
+      "proposal",
+      "\\bbrd\\b"
+    ],
+    "tableau / looker / qlik": [
+      "tableau",
+      "looker",
+      "qlik"
+    ],
+    "sap / erp": [
+      "\\bsap\\b",
+      "\\berp\\b",
+      "oracle (ebs|fusion|erp)"
+    ],
+    "servicenow / itsm": [
+      "servicenow",
+      "itsm",
+      "itil"
+    ],
+    "accounting / finance ops": [
+      "tally",
+      "\\bgst\\b",
+      "accounts payable",
+      "accounts receivable",
+      "reconciliation",
+      "bookkeeping",
+      "ledger",
+      "\\bifrs\\b",
+      "gaap",
+      "record to report",
+      "\\b(r2r|p2p|o2c)\\b",
+      "invoice"
+    ],
+    "statistics / ml": [
+      "machine learning",
+      "statistic",
+      "predictive model",
+      "regression"
+    ],
+    "cloud / big data": [
+      "\\baws\\b",
+      "azure",
+      "\\bgcp\\b",
+      "snowflake",
+      "databricks",
+      "spark\\b",
+      "hadoop",
+      "\\betl\\b",
+      "data warehous"
+    ],
+    "programming (java/.net/js)": [
+      "java\\b",
+      "\\.net\\b",
+      "javascript",
+      "\\bc#",
+      "react\\b",
+      "node\\.?js"
+    ],
+    "vba / macros": [
+      "\\bvba\\b",
+      "macros?\\b"
+    ],
+    "web analytics / seo": [
+      "google analytics",
+      "\\bga4\\b",
+      "\\bseo\\b",
+      "\\bsem\\b",
+      "adobe analytics"
+    ]
+  },
   "max_clicks_per_run": 90,
   "max_min_experience": 3,
   "max_attempts_per_job": 2,
@@ -73,5 +217,6 @@
   "llm_model": "claude-haiku-5-5",
   "per_profile_target": 10,
   "max_run_minutes": 45,
-  "scrape_budget_minutes": 15
+  "scrape_budget_minutes": 12,
+  "max_new_descriptions": 80
 }
