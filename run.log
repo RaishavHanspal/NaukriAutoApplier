@@ -1,244 +1,56 @@
-Run started 2026-11-03 14:53 IST: up to 10 applications per profile x 7 profiles, max 45 min
+Run started 2026-11-04 23:36 IST: up to 10 applications per profile x 7 profiles, max 45 min
 Search: data analyst  (https://www.naukri.com/data-analyst-jobs-in-noida?k=data%20analyst&l=noida&experience=1&jobAge=15)
-  data analyst p1: 20 jobs (9 company-site, 0 new) of 151 | 26 fresh applicable
+  data analyst p1: 20 jobs (9 company-site, 3 new) of 131 | 18 fresh applicable
+  data analyst p2: 20 jobs (4 company-site, 0 new) of 131 | 18 fresh applicable
+  data analyst p3: 20 jobs (6 company-site, 13 new) of 131 | 29 fresh applicable
 Search: MIS executive  (https://www.naukri.com/mis-executive-jobs-in-noida?k=MIS%20executive&l=noida&experience=1&jobAge=15)
-  MIS executive p1: 20 jobs (5 company-site, 2 new) of 109 | 22 fresh applicable
+  MIS executive p1: 20 jobs (6 company-site, 3 new) of 95 | 24 fresh applicable
 Search: reporting analyst  (https://www.naukri.com/reporting-analyst-jobs-in-noida?k=reporting%20analyst&l=noida&experience=1&jobAge=15)
-  reporting analyst p1: 20 jobs (8 company-site, 0 new) of 109 | 23 fresh applicable
+  reporting analyst p1: 20 jobs (11 company-site, 0 new) of 96 | 25 fresh applicable
 Search: business analyst  (https://www.naukri.com/business-analyst-jobs-in-noida?k=business%20analyst&l=noida&experience=1&jobAge=15)
-  business analyst p1: 20 jobs (7 company-site, 0 new) of 121 | 21 fresh applicable
+  business analyst p1: 20 jobs (10 company-site, 1 new) of 105 | 18 fresh applicable
+  business analyst p2: 20 jobs (7 company-site, 1 new) of 105 | 22 fresh applicable
 Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
-  project coordinator p1: 20 jobs (6 company-site, 0 new) of 111 | 23 fresh applicable
+  project coordinator p1: 20 jobs (9 company-site, 1 new) of 97 | 22 fresh applicable
 Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
-  project manager p1: 20 jobs (5 company-site, 0 new) of 91 | 27 fresh applicable
+  project manager p1: 20 jobs (9 company-site, 0 new) of 81 | 23 fresh applicable
 Search: marketing analyst  (https://www.naukri.com/marketing-analyst-jobs-in-noida?k=marketing%20analyst&l=noida&experience=1&jobAge=15)
-  marketing analyst p1: 20 jobs (8 company-site, 0 new) of 116 | 22 fresh applicable
-  JD: Operations Executive - Efleet Systems
-358 jobs known
+  marketing analyst p1: 20 jobs (6 company-site, 2 new) of 105 | 21 fresh applicable
+  JD: Associate Record To Analyze Process Expert - Capgemini
+  JD: Operation Analysis Analyst - S&P Global Market Intelligence
+  JD: Urgent Hiring For KYC/AML Analyst - Trigger Education Services
+  JD: Project Coordinator - CHL WORLDWIDE
+405 jobs known
 
-Filtered out (never applied to): 52 company site, 62 experience, 15 title excluded
+Filtered out (never applied to): 65 company site, 62 experience, 20 title excluded
 Eligible per profile (>= 70% match, not yet applied):
-  data analyst           12
-  MIS executive          11
-  reporting analyst      10
-  business analyst       15
-  project coordinator    21
-  project manager        13
-  marketing analyst      12
+  data analyst           2
+  MIS executive          1
+  reporting analyst      1
+  business analyst       2
+  project coordinator    5
+  project manager        1
+  marketing analyst      1
 
-<data analyst 0/10> [100%] Walk-InII 5th NovII Quality  Analyst Sales @ TELUS Digital () | 0 min used
-  -> failed no Apply button found (layout change or expired listing)
-
-<MIS executive 0/10> [100%] Site Project Coordinator (Interior) @ Shikhar Gupta (0-2 Yrs) | 0 min used
+<data analyst 0/10> [100%] Urgent Hiring For KYC/AML Analyst @ Trigger Education Services (0-1 Yrs) | 1 min used
   -> applied 
 
-<reporting analyst 0/10> [100%] Project Manager - Ai Data Collection (IIT / NIT only) @ Consultbae (0-3 Yrs) | 1 min used
+<MIS executive 0/10> [91%] Associate Record To Analyze Process Expert @ Capgemini (0-5 Yrs) | 2 min used
   -> applied 
 
-<business analyst 0/10> [100%] Business Analyst- CEO office @ Havells (1-2 Yrs) | 1 min used
-  Q: How many years of experience do you have in Business Strategy? -> 0
-  Q: How many years of experience do you have in Data Analysis? -> 1.1
-  Q: How many years of experience do you have in Problem Solving? -> 0
-  Q: How many years of experience do you have in Growth Strategy? -> 0
-  -> needs_manual no answer for: Thank you for your responses.
-
-<data analyst 0/10> [100%] Investment Analyst @ Trigger Education Services (0-1 Yrs) | 2 min used
-  -> needs_manual no answer for: Which financial planning or treasury tools have you used?
-
-<MIS executive 1/10> [90%] MIS Analyst @ TP (0-5 Yrs) | 3 min used
+<business analyst 0/10> [91%] Operation Analysis Analyst @ S&P Global Market Intelligence (1-2 Yrs) | 2 min used
   -> applied 
 
-<project coordinator 0/10> [100%] Project Coordinator Intern @ Consultbae (0-1 Yrs) | 3 min used
+<project coordinator 0/10> [100%] Project Coordinator @ Leading Client (3-8 Yrs) | 3 min used
   -> applied 
-
-<marketing analyst 0/10> [80%] Quality Analyst @ Insights Opinion (1-5 Yrs) | 4 min used
-  Q: What is your current CTC in Lacs per month? -> 2.46 LPA
-  Q: Are you currently residing in Noida or willing to relocate to Noida? -> No
-  -> needs_manual no answer for: Do you have the experience in Quality Assurance?
-
-<MIS executive 2/10> [88%] Operations Executive @ SMG Storage (1-4 Yrs) | 4 min used
-  Q: How many years of experience do you have in Operations Management? -> 0
-  -> applied 
-
-<reporting analyst 1/10> [85%] Associate Record To Analyze Process Expert @ Capgemini (1-6 Yrs) | 5 min used
-  -> applied 
-
-<marketing analyst 0/10> [100%] Marketing Analyst @ Musclerox Pigments With Muscle (1-5 Yrs) | 6 min used
-  -> company_site company-site posting - skipped
-
-<reporting analyst 2/10> [84%] Operations Executive @ Efleet Systems (1-3 Yrs) | 6 min used
-  Q: How many years of experience do you have in Customer Experience? -> 1.1
-  Q: How many years of experience do you have in Customer Engagement? -> 0
-  Q: How many years of experience do you have in Customer Satisfaction? -> 1.1
-  -> applied 
-
-<business analyst 0/10> [100%] Associate Business Analyst @ Clixlogix Technologies (1-3 Yrs) | 6 min used
-  -> needs_manual no answer for: In which domain have you managed projects or programs?
-
-<project coordinator 1/10> [100%] Project Coordinator / Manager / Sourcing / Vendor - AI Data Collection @ Consultbae (1-4 Yrs) | 7 min used
-  -> applied 
-
-<marketing analyst 0/10> [100%] Market Analyst-Research analyst @ RIGHT STEP CONSULTING PRIVATE LIMITED (2-5 Yrs) | 7 min used
-  -> company_site company-site posting - skipped
-
-<reporting analyst 3/10> [76%] MIS Executive and process coordinator @ Raj Packagings (1-6 Yrs) | 7 min used
-  -> applied 
-
-<business analyst 0/10> [100%] Business Intelligence Analyst I @ TP (1-6 Yrs) | 8 min used
-  -> applied 
-
-<marketing analyst 0/10> [100%] Marketing Research Analyst (MRA) - Overseas @ MBA Journals (1-3 Yrs) | 9 min used
-  -> company_site company-site posting - skipped
-
-<data analyst 0/10> [93%] AI Process Automation Analyst @ Consultbae (0-2 Yrs) | 9 min used
-  -> applied 
-
-<reporting analyst 4/10> [100%] Business Reporting Analyst @ Metlife (2-7 Yrs) | 9 min used
-  Q: How many years of experience do you have in Excel Reporting? -> 0.4
-  -> needs_manual no answer for: Thank you for your responses.
-
-<business analyst 1/10> [100%] Validation Analyst @ Axtria (0-5 Yrs) | 10 min used
-  -> applied 
-
-<project coordinator 2/10> [92%] Project Operations Client Delivery- AI Data Collection (Non-Technical) @ Consultbae (1-4 Yrs) | 10 min used
-  -> applied 
-
-<project manager 0/10> [100%] Assistant Project Manager @ Dlife Interiors (1-3 Yrs) | 11 min used
-  -> applied 
-
-<marketing analyst 0/10> [100%] Marketing Research Analyst (MRA) - DOMESTIC @ MBA Journals (1-3 Yrs) | 11 min used
-  -> company_site company-site posting - skipped
-
-<data analyst 1/10> [92%] Analyst Trainee Intern @ Axtria (0-3 Yrs) | 11 min used
-  -> applied 
-
-<MIS executive 3/10> [94%] MIS Executive @ Spar Krognos Marketing (0-3 Yrs) | 12 min used
-  -> already_applied 
-
-<business analyst 2/10> [100%] Business Analyst @ Shaktisoft Projects (1-3 Yrs) | 12 min used
-  -> company_site company-site posting - skipped
-
-<project manager 1/10> [100%] Finance and Operations Associate @ SkillLabs (0-5 Yrs) | 12 min used
-  -> applied 
-
-<marketing analyst 0/10> [100%] Marketing - Revenue Analyst @ Jubilant FoodWorks (JFL) (1-4 Yrs) | 13 min used
-  -> company_site company-site posting - skipped
-
-<MIS executive 3/10> [70%] Mis Executive @ Rimple And Harpreet Narula (2-3 Yrs) | 13 min used
-  -> applied 
-
-<reporting analyst 4/10> [85%] ServiceNow Performance Analytics & Reporting Analyst @ Alcor (3-8 Yrs) | 13 min used
-  -> company_site company-site posting - skipped
-
-<business analyst 2/10> [100%] Business Analyst @ Netcoreinfo Business Services (0-5 Yrs) | 13 min used
-  -> company_site company-site posting - skipped
-
-<project coordinator 3/10> [91%] Project Coordinator- Operations - AI Data Collection & Annotation @ Consultbae (1-3 Yrs) | 13 min used
-  -> applied 
-
-<project manager 2/10> [93%] Assistant Project Manager @ Cushman & Wakefield (1-6 Yrs) | 14 min used
-  -> applied 
-
-<marketing analyst 0/10> [100%] Market Research & Business Analyst @ Radiant Techsolutions (0-2 Yrs) | 15 min used
-  -> needs_manual no answer for: What is your highest qualification & Specialisation?
-
-<data analyst 2/10> [80%] Jr. Financial Analyst @ mrc Hr Consultants Delhi (1-5 Yrs) | 15 min used
-  -> applied 
-
-<MIS executive 4/10> [88%] Mis Executive @ BCS (3-8 Yrs) | 16 min used
-  -> failed no Apply button found (layout change or expired listing)
-
-<reporting analyst 4/10> [80%] Record To Report Ops Analyst @ Accenture (3-5 Yrs) | 16 min used
-  -> failed no Apply button found (layout change or expired listing)
-
-<business analyst 2/10> [100%] Project Manager / Business Analyst @ Plasma Softech (3-5 Yrs) | 16 min used
-  -> company_site company-site posting - skipped
-
-<marketing analyst 0/10> [100%] Product Market Research Analyst - International IT Products @ Leading Client (2-6 Yrs) | 16 min used
-  -> applied 
-
-<data analyst 3/10> [88%] Data Analyst @ Claight Corporation Expert Market Research (0-1 Yrs) | 16 min used
-  -> company_site company-site posting - skipped
-
-<MIS executive 4/10> [91%] MIS Executive | Leading NBFC @ Leading Client (3-8 Yrs) | 16 min used
-  -> failed no Apply button found (layout change or expired listing)
-
-<business analyst 2/10> [100%] Business Analyst @ Luxoft (3-8 Yrs) | 16 min used
-  -> applied 
-
-<project coordinator 4/10> [90%] Project Coordinator @ Hemant And Nandita (1-5 Yrs) | 17 min used
-  Q: How many years of experience do you have in Project Coordination? -> 0
-  Q: How many years of experience do you have in Follow Ups? -> 0
-  Q: How many years of experience do you have in Coordination? -> 0
-  -> needs_manual no answer for: How would you rate your communication skills?
-
-<marketing analyst 1/10> [100%] Product Market Research Analyst ( IT ) @ Leading Client (2-7 Yrs) | 18 min used
-  -> applied 
-
-<data analyst 3/10> [85%] Data Analyst @ COMPETENT SOFTWARE (CS) (1-3 Yrs) | 18 min used
-  -> company_site company-site posting - skipped
-
-<MIS executive 4/10> [88%] MIS Executive @ Arunachal University of Studies (1-2 Yrs) | 18 min used
-  -> failed no Apply button found (layout change or expired listing)
-
-<business analyst 3/10> [91%] BUSINESS ANALYST @ Sharda University (2-5 Yrs) | 18 min used
-  -> company_site company-site posting - skipped
-
-<project coordinator 4/10> [100%] Project Coordinator @ Calidad India (0-4 Yrs) | 18 min used
-  -> applied 
-
-<project manager 3/10> [100%] Project Managers @ Pratyaksha Medi Care (1-2 Yrs) | 19 min used
-  -> company_site company-site posting - skipped
-
-<marketing analyst 2/10> [91%] Market Research Analyst - Level 2 @ Knowledge Sourcing Intelligence (1-3 Yrs) | 19 min used
-  -> failed no Apply button found (layout change or expired listing)
-
-<data analyst 3/10> [85%] Data Analysts @ Pratyaksha Medi Care (1-2 Yrs) | 19 min used
-  -> company_site company-site posting - skipped
-
-<business analyst 3/10> [100%] Business Analyst @ Yes Madam (2-5 Yrs) | 19 min used
-  -> failed no Apply button found (layout change or expired listing)
-
-<project coordinator 5/10> [100%] Project Coordinator @ Leading Client (3-8 Yrs) | 19 min used
-  -> applied 
-
-<project manager 3/10> [100%] Project Manager @ RIGHT STEP CONSULTING PRIVATE LIMITED (0-2 Yrs) | 20 min used
-  -> company_site company-site posting - skipped
-
-<marketing analyst 2/10> [100%] Walk-in || Market Research Analyst - Immediate Joiners Preferred !Freshers !Noida @ Isource (19 Oct - 03 Nov) | 20 min used
-  -> failed no Apply button found (layout change or expired listing)
-
-<business analyst 3/10> [100%] Business Analyst @ Mentro Tech (1-6 Yrs) | 20 min used
-  -> company_site company-site posting - skipped
-
-<project manager 3/10> [100%] Project Manager @ Bcs Consulting (3-8 Yrs) | 20 min used
-  -> needs_manual no answer for: How many years of experience do you have in Operations?
-
-<business analyst 3/10> [80%] Business Advisory Analyst @ Accenture (3-5 Yrs) | 20 min used
-  -> company_site company-site posting - skipped
-
-<business analyst 3/10> [80%] Business Analyst (6-Month Contract) @ Syven Global Services (3-8 Yrs) | 20 min used
-  -> failed no Apply button found (layout change or expired listing)
-
-<project coordinator 6/10> [88%] Project Coordinator @ Global Infotech Solution (1-4 Yrs) | 20 min used
-  -> company_site company-site posting - skipped
-
-<project coordinator 6/10> [100%] Project Coordinator @ Saral Infotech (2-4 Yrs) | 20 min used
-  -> company_site company-site posting - skipped
-
-<project coordinator 6/10> [100%] Project Coordinator @ Milkyway Infotech (1-3 Yrs) | 20 min used
-  -> company_site company-site posting - skipped
-
-<project coordinator 6/10> [100%] Shopify/Magento eCommerce Project Coordinator @ 18th Digitech (0-6 Yrs) | 20 min used
-  -> failed no Apply button found (layout change or expired listing)
 Profile resume restored to master
 
-Applied this run: 25 in 21 min | today total: 25
-  data analyst           3/10  (ran out of eligible jobs or time)
-  MIS executive          4/10  (ran out of eligible jobs or time)
-  reporting analyst      4/10  (ran out of eligible jobs or time)
-  business analyst       3/10  (ran out of eligible jobs or time)
-  project coordinator    6/10  (ran out of eligible jobs or time)
-  project manager        3/10  (ran out of eligible jobs or time)
-  marketing analyst      2/10  (ran out of eligible jobs or time)
+Applied this run: 4 in 4 min | today total: 12
+  data analyst           1/10  (ran out of eligible jobs or time)
+  MIS executive          1/10  (ran out of eligible jobs or time)
+  reporting analyst      0/10  (ran out of eligible jobs or time)
+  business analyst       1/10  (ran out of eligible jobs or time)
+  project coordinator    1/10  (ran out of eligible jobs or time)
+  project manager        0/10  (ran out of eligible jobs or time)
+  marketing analyst      0/10  (ran out of eligible jobs or time)
 Reports written: applied_jobs.md, applied_jobs.csv
