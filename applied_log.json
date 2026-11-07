@@ -2284,5 +2284,89 @@
     "status": "applied",
     "detail": "",
     "attempts": 1
+  },
+  {
+    "date": "2026-11-05 10:00",
+    "url": "https://www.naukri.com/job-listings-project-coordinator-platinus-technologies-private-limited-noida-3-to-8-years-301026932396",
+    "title": "Project Coordinator",
+    "company": "Leading Client",
+    "location": "Noida",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_leading-client_project-coordinator.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-07 10:44",
+    "url": "https://www.naukri.com/job-listings-business-analyst-freelancer-soul-ai-noida-1-to-4-years-061126916218",
+    "title": "Business Analyst (freelancer)",
+    "company": "Soul Ai",
+    "location": "Noida",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_soul-ai_business-analyst-freelancer.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-07 10:45",
+    "url": "https://www.naukri.com/job-listings-data-analyst-freelancer-soul-ai-noida-1-to-4-years-061126916330",
+    "title": "Data Analyst (freelancer)",
+    "company": "Soul Ai",
+    "location": "Noida",
+    "score": 74,
+    "resume": "resumes/pratiksha-malhotra_soul-ai_data-analyst-freelancer.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-07 10:46",
+    "url": "https://www.naukri.com/job-listings-hr-analyst-freelancer-soul-ai-noida-1-to-4-years-061126915929",
+    "title": "HR Analyst (Freelancer)",
+    "company": "Soul Ai",
+    "location": "Noida",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_soul-ai_hr-analyst-freelancer.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-07 10:46",
+    "url": "https://www.naukri.com/job-listings-project-coordinator-freelancer-soul-ai-noida-1-to-4-years-061126916317",
+    "title": "Project Coordinator (Freelancer)",
+    "company": "Soul Ai",
+    "location": "Noida",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_soul-ai_project-coordinator-freelancer.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-07 10:47",
+    "url": "https://www.naukri.com/job-listings-quantitative-analyst-freelancer-soul-ai-noida-1-to-4-years-061126916339",
+    "title": "Quantitative Analyst (Freelancer)",
+    "company": "Soul Ai",
+    "location": "Noida",
+    "score": 80,
+    "resume": "resumes/pratiksha-malhotra_soul-ai_quantitative-analyst-freelancer.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-07 10:47",
+    "url": "https://www.naukri.com/job-listings-project-coordinator-platinus-technologies-noida-3-to-8-years-301026929861",
+    "title": "Project Coordinator",
+    "company": "Leading Client",
+    "location": "Noida",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_leading-client_project-coordinator.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
   }
 ]
