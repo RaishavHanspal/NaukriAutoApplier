@@ -2368,5 +2368,29 @@
     "status": "applied",
     "detail": "",
     "attempts": 1
+  },
+  {
+    "date": "2026-11-09 16:24",
+    "url": "https://www.naukri.com/job-listings-mis-executive-lifecell-greater-noida-1-to-5-years-091126002214",
+    "title": "Mis Executive",
+    "company": "Lifecell",
+    "location": "Remote",
+    "score": 93,
+    "resume": "resumes/pratiksha-malhotra_lifecell_mis-executive.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-09 16:24",
+    "url": "https://www.naukri.com/job-listings-project-coordinator-hindco-recruitment-consultants-noida-3-to-8-years-240926934328",
+    "title": "Project Coordinator",
+    "company": "Leading Client",
+    "location": "Noida",
+    "score": 88,
+    "resume": "",
+    "status": "failed",
+    "detail": "no Apply button found (layout change or expired listing)",
+    "attempts": 2
   }
 ]

@@ -1,6 +1,6 @@
 # Applied jobs
 
-Total applied: **80**  |  last updated 2026-11-07 10:48 IST
+Total applied: **81**  |  last updated 2026-11-09 16:24 IST
 
 | Date | Role | Company | Match | Resume used | Job |
 |---|---|---|---|---|---|
@@ -10,6 +10,7 @@ Total applied: **80**  |  last updated 2026-11-07 10:48 IST
 | before-automation | Data Analyst | Balar Marketing | 83% | [pratiksha-malhotra_balar-marketing_data-analyst.docx](resumes/pratiksha-malhotra_balar-marketing_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-balar-marketing-noida-2-to-5-years-280926015839) |
 | before-automation | Data Analyst | Innodata India | 100% | [pratiksha-malhotra_innodata-india_data-analyst.docx](resumes/pratiksha-malhotra_innodata-india_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-innodata-india-noida-4-to-8-years-100926031730) |
 | before-automation | Mis Executive | CRC Group | 86% | [pratiksha-malhotra_crc-group_mis-executive.docx](resumes/pratiksha-malhotra_crc-group_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-crc-group-noida-4-to-8-years-190926019495) |
+| 2026-11-09 16:24 | Mis Executive | Lifecell | 93% | [pratiksha-malhotra_lifecell_mis-executive.docx](resumes/pratiksha-malhotra_lifecell_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-lifecell-greater-noida-1-to-5-years-091126002214) |
 | 2026-11-07 10:47 | Quantitative Analyst (Freelancer) | Soul Ai | 80% | [pratiksha-malhotra_soul-ai_quantitative-analyst-freelancer.docx](resumes/pratiksha-malhotra_soul-ai_quantitative-analyst-freelancer.docx) | [open](https://www.naukri.com/job-listings-quantitative-analyst-freelancer-soul-ai-noida-1-to-4-years-061126916339) |
 | 2026-11-07 10:47 | Project Coordinator | Leading Client | 100% | [pratiksha-malhotra_leading-client_project-coordinator.docx](resumes/pratiksha-malhotra_leading-client_project-coordinator.docx) | [open](https://www.naukri.com/job-listings-project-coordinator-platinus-technologies-noida-3-to-8-years-301026929861) |
 | 2026-11-07 10:46 | HR Analyst (Freelancer) | Soul Ai | 100% | [pratiksha-malhotra_soul-ai_hr-analyst-freelancer.docx](resumes/pratiksha-malhotra_soul-ai_hr-analyst-freelancer.docx) | [open](https://www.naukri.com/job-listings-hr-analyst-freelancer-soul-ai-noida-1-to-4-years-061126915929) |
@@ -122,3 +123,4 @@ Total applied: **80**  |  last updated 2026-11-07 10:48 IST
 | Business Analyst (6-Month Contract) | Syven Global Services | failed | no Apply button found (layout change or expired listing) | [open](https://www.naukri.com/job-listings-business-analyst-6-month-contract-syven-global-services-noida-3-to-8-years-290926041165) |
 | Project Coordinator | Hemant And Nandita | needs_manual | no answer for: How would you rate your communication skills? | [open](https://www.naukri.com/job-listings-project-coordinator-hemant-and-nandita-noida-1-to-5-years-261026023166) |
 | Shopify/Magento eCommerce Project Coordinator | 18th Digitech | failed | no Apply button found (layout change or expired listing) | [open](https://www.naukri.com/job-listings-shopify-magento-ecommerce-project-coordinator-18th-digitech-noida-0-to-6-years-100124009308) |
+| Project Coordinator | Leading Client | failed | no Apply button found (layout change or expired listing) | [open](https://www.naukri.com/job-listings-project-coordinator-hindco-recruitment-consultants-noida-3-to-8-years-240926934328) |

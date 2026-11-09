@@ -1,60 +1,44 @@
-Run started 2026-11-07 10:44 IST: up to 10 applications per profile x 7 profiles, max 45 min
+Run started 2026-11-09 16:23 IST: up to 10 applications per profile x 7 profiles, max 45 min
 Search: data analyst  (https://www.naukri.com/data-analyst-jobs-in-noida?k=data%20analyst&l=noida&experience=1&jobAge=15)
-  data analyst p1: 20 jobs (4 company-site, 16 new) of 137 | 43 fresh applicable
+  data analyst p1: 20 jobs (6 company-site, 1 new) of 116 | 41 fresh applicable
 Search: MIS executive  (https://www.naukri.com/mis-executive-jobs-in-noida?k=MIS%20executive&l=noida&experience=1&jobAge=15)
-  MIS executive p1: 20 jobs (4 company-site, 9 new) of 95 | 34 fresh applicable
+  MIS executive p1: 20 jobs (5 company-site, 1 new) of 78 | 35 fresh applicable
 Search: reporting analyst  (https://www.naukri.com/reporting-analyst-jobs-in-noida?k=reporting%20analyst&l=noida&experience=1&jobAge=15)
-  reporting analyst p1: 20 jobs (10 company-site, 0 new) of 96 | 26 fresh applicable
+  reporting analyst p1: 20 jobs (9 company-site, 0 new) of 77 | 30 fresh applicable
 Search: business analyst  (https://www.naukri.com/business-analyst-jobs-in-noida?k=business%20analyst&l=noida&experience=1&jobAge=15)
-  business analyst p1: 20 jobs (9 company-site, 2 new) of 104 | 25 fresh applicable
+  business analyst p1: 20 jobs (10 company-site, 0 new) of 87 | 25 fresh applicable
 Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
-  project coordinator p1: 20 jobs (6 company-site, 1 new) of 98 | 29 fresh applicable
+  project coordinator p1: 20 jobs (5 company-site, 0 new) of 80 | 29 fresh applicable
 Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
-  project manager p1: 20 jobs (9 company-site, 2 new) of 77 | 28 fresh applicable
+  project manager p1: 20 jobs (7 company-site, 0 new) of 64 | 29 fresh applicable
 Search: marketing analyst  (https://www.naukri.com/marketing-analyst-jobs-in-noida?k=marketing%20analyst&l=noida&experience=1&jobAge=15)
-  marketing analyst p1: 20 jobs (3 company-site, 1 new) of 103 | 27 fresh applicable
-  JD: Data Analyst (freelancer) - Soul Ai
-  JD: Business Analyst (freelancer) - Soul Ai
-  JD: Quantitative Analyst (Freelancer) - Soul Ai
-  JD: Project Coordinator (Freelancer) - Soul Ai
-  JD: HR Analyst (Freelancer) - Soul Ai
-436 jobs known
+  marketing analyst p1: 20 jobs (3 company-site, 0 new) of 85 | 29 fresh applicable
+  JD: Mis Executive - Lifecell
+439 jobs known
 
 Filtered out (never applied to): 69 company site, 62 experience, 21 title excluded
 Eligible per profile (>= 70% match, not yet applied):
-  data analyst           4
-  MIS executive          2
+  data analyst           1
+  MIS executive          1
   reporting analyst      1
   business analyst       1
-  project coordinator    5
+  project coordinator    2
   project manager        1
-  marketing analyst      2
+  marketing analyst      1
 
-<data analyst 0/10> [100%] Business Analyst (freelancer) @ Soul Ai (1-4 Yrs) | 1 min used
+<data analyst 0/10> [93%] Mis Executive @ Lifecell (1-5 Yrs) | 1 min used
   -> applied 
 
-<reporting analyst 0/10> [74%] Data Analyst (freelancer) @ Soul Ai (1-4 Yrs) | 1 min used
-  -> applied 
-
-<data analyst 1/10> [100%] HR Analyst (Freelancer) @ Soul Ai (1-4 Yrs) | 2 min used
-  -> applied 
-
-<project coordinator 0/10> [100%] Project Coordinator (Freelancer) @ Soul Ai (1-4 Yrs) | 2 min used
-  -> applied 
-
-<data analyst 2/10> [80%] Quantitative Analyst (Freelancer) @ Soul Ai (1-4 Yrs) | 3 min used
-  -> applied 
-
-<project coordinator 1/10> [100%] Project Coordinator @ Leading Client (3-8 Yrs) | 3 min used
-  -> applied 
+<project coordinator 0/10> [88%] Project Coordinator @ Leading Client (3-8 Yrs) | 2 min used
+  -> failed no Apply button found (layout change or expired listing)
 Profile resume restored to master
 
-Applied this run: 6 in 4 min | today total: 6
-  data analyst           3/10  (ran out of eligible jobs or time)
+Applied this run: 1 in 2 min | today total: 1
+  data analyst           1/10  (ran out of eligible jobs or time)
   MIS executive          0/10  (ran out of eligible jobs or time)
-  reporting analyst      1/10  (ran out of eligible jobs or time)
+  reporting analyst      0/10  (ran out of eligible jobs or time)
   business analyst       0/10  (ran out of eligible jobs or time)
-  project coordinator    2/10  (ran out of eligible jobs or time)
+  project coordinator    0/10  (ran out of eligible jobs or time)
   project manager        0/10  (ran out of eligible jobs or time)
   marketing analyst      0/10  (ran out of eligible jobs or time)
 Reports written: applied_jobs.md, applied_jobs.csv

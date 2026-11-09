@@ -1,0 +1,39 @@
+Run started 2026-11-09 10:00 IST: up to 10 applications per profile x 7 profiles, max 45 min
+Search: data analyst  (https://www.naukri.com/data-analyst-jobs-in-noida?k=data%20analyst&l=noida&experience=1&jobAge=15)
+  data analyst p1: 20 jobs (6 company-site, 1 new) of 114 | 40 fresh applicable
+Search: MIS executive  (https://www.naukri.com/mis-executive-jobs-in-noida?k=MIS%20executive&l=noida&experience=1&jobAge=15)
+  MIS executive p1: 20 jobs (6 company-site, 0 new) of 76 | 33 fresh applicable
+Search: reporting analyst  (https://www.naukri.com/reporting-analyst-jobs-in-noida?k=reporting%20analyst&l=noida&experience=1&jobAge=15)
+  reporting analyst p1: 20 jobs (9 company-site, 0 new) of 75 | 28 fresh applicable
+Search: business analyst  (https://www.naukri.com/business-analyst-jobs-in-noida?k=business%20analyst&l=noida&experience=1&jobAge=15)
+  business analyst p1: 20 jobs (10 company-site, 0 new) of 85 | 24 fresh applicable
+Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
+  project coordinator p1: 20 jobs (6 company-site, 0 new) of 78 | 27 fresh applicable
+Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
+  project manager p1: 20 jobs (7 company-site, 0 new) of 62 | 27 fresh applicable
+Search: marketing analyst  (https://www.naukri.com/marketing-analyst-jobs-in-noida?k=marketing%20analyst&l=noida&experience=1&jobAge=15)
+  marketing analyst p1: 20 jobs (4 company-site, 0 new) of 83 | 27 fresh applicable
+437 jobs known
+
+Filtered out (never applied to): 69 company site, 62 experience, 21 title excluded
+Eligible per profile (>= 70% match, not yet applied):
+  data analyst           0
+  MIS executive          0
+  reporting analyst      0
+  business analyst       0
+  project coordinator    1
+  project manager        0
+  marketing analyst      0
+
+<project coordinator 0/10> [88%] Project Coordinator @ Leading Client (3-8 Yrs) | 0 min used
+  -> failed no Apply button found (layout change or expired listing)
+
+Applied this run: 0 in 0 min | today total: 0
+  data analyst           0/10  (ran out of eligible jobs or time)
+  MIS executive          0/10  (ran out of eligible jobs or time)
+  reporting analyst      0/10  (ran out of eligible jobs or time)
+  business analyst       0/10  (ran out of eligible jobs or time)
+  project coordinator    0/10  (ran out of eligible jobs or time)
+  project manager        0/10  (ran out of eligible jobs or time)
+  marketing analyst      0/10  (ran out of eligible jobs or time)
+Reports written: applied_jobs.md, applied_jobs.csv
