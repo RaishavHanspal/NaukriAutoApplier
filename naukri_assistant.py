@@ -6,6 +6,7 @@ Naukri assistant - one-shot daily pipeline.
   python naukri_assistant.py run       # scrape -> score -> tailor -> apply (N per profile, time-capped) -> reports
   python naukri_assistant.py report    # rebuild applied_jobs.md / .csv from applied_log.json
   python naukri_assistant.py scrape | score | tailor   # individual steps (offline-friendly)
+  ... --config config_pm_crm.json   # use another config file (default config.json), e.g. only PM / CRM roles
 
 Environment:
   NAUKRI_SESSION_B64   base64 of session.json (GitHub secret). Used when session.json is absent.
@@ -53,7 +54,21 @@ def save_json(path, data):
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-CFG = load_json(BASE / "config.json", {})
+def config_path():
+    """--config FILE (or NAUKRI_CONFIG); default config.json. Removes the option from sys.argv."""
+    name = os.environ.get("NAUKRI_CONFIG") or "config.json"
+    if "--config" in sys.argv:
+        i = sys.argv.index("--config")
+        name = sys.argv[i + 1]
+        del sys.argv[i:i + 2]
+    path = Path(name)
+    return path if path.is_absolute() else BASE / path
+
+
+CONFIG_FILE = config_path()
+if not CONFIG_FILE.exists():
+    sys.exit(f"Config file not found: {CONFIG_FILE}")
+CFG = load_json(CONFIG_FILE, {})
 MASTER = load_json(BASE / "master_resume.json", {})
 ANSWERS = load_json(BASE / "answers.json", {"rules": []})
 
@@ -954,7 +969,7 @@ def run():
     prune_unanswered()
     target = CFG.get("per_profile_target", 10)
     print(f"Run started {now_ist():%Y-%m-%d %H:%M IST}: up to {target} applications per profile x "
-          f"{len(CFG['keywords'])} profiles, max {CFG.get('max_run_minutes', 45)} min{' (DRY RUN)' if DRY else ''}")
+          f"{len(CFG['keywords'])} profiles, max {CFG.get('max_run_minutes', 45)} min, config {CONFIG_FILE.name}{' (DRY RUN)' if DRY else ''}")
     with sync_playwright() as p:
         browser, ctx = new_context(p)
         page = ctx.new_page()

@@ -29,6 +29,14 @@ Jobs skipped for a question are retried automatically once that question becomes
 
 The GitHub Actions schedule is disabled (GitHub's IPs are blocked by Naukri). The setup below is only for Actions.
 
+## Scheduled PM / Coordinator / CRM run (`ParuPMCRMScheduler.bat`)
+Windows Task Scheduler task **"Naukri PM-CRM applier"** runs Mon-Sat at 14:00 (PC must be on and logged in).
+It does the same as the desktop shortcut but with `--config config_pm_crm.json`: it searches only project
+management / project coordinator / PMO / CRM keywords, and `title_patterns` there only gives the 40 title
+points to `project|coordinat|pmo|crm` titles, so other titles cannot reach the 70 threshold.
+It shares `applied_log.json` with the normal run, so no job is applied to twice.
+Change the time: Task Scheduler > "Naukri PM-CRM applier" > Triggers. Run now: `schtasks /run /tn "Naukri PM-CRM applier"`.
+
 ## One-time setup
 1. Create a **PRIVATE** GitHub repo and push this folder (it holds your resumes, phone and email).
    `session.json` is git-ignored: never commit it.
