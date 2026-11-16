@@ -103,5 +103,27 @@
     ],
     "example_job": "https://www.naukri.com/job-listings-market-research-analyst-design-ak-enterprises-noida-1-to-4-years-141126011393",
     "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "are you an immediate Joine",
+    "options": [],
+    "example_job": "https://www.naukri.com/job-listings-project-coordinator-chl-worldwide-greater-noida-1-to-3-years-041126015658",
+    "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "Which type of consulting work have you primarily done?",
+    "options": [
+      "Financial Advisory\nHR Consulting\nIT / Technology\nLegal & Compliance\nManagement / Strategy\nMarketing & Sales\nOperations Consulting\nSustainability / ESG\nLoad more",
+      "Financial Advisory",
+      "HR Consulting",
+      "IT / Technology",
+      "Legal & Compliance",
+      "Management / Strategy",
+      "Marketing & Sales",
+      "Operations Consulting",
+      "Sustainability / ESG"
+    ],
+    "example_job": "https://www.naukri.com/job-listings-project-coordinator-power-distribution-lambent-engineering-noida-0-to-1-years-101126009010",
+    "how_to_fix": "add a rule for this to answers.json"
   }
 ]

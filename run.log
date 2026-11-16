@@ -1,45 +1,52 @@
-Run started 2026-11-16 21:43 IST: up to 10 applications per profile x 8 profiles, max 45 min, config config_pm_crm.json
+Run started 2026-11-16 21:52 IST: up to 10 applications per profile x 8 profiles, max 45 min, config config_pm_crm.json
 Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
-  project coordinator p1: 20 jobs (8 company-site, 12 new) of 134 | 56 fresh applicable
+  project coordinator p1: 20 jobs (8 company-site, 0 new) of 134 | 56 fresh applicable
 Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
-  project manager p1: 20 jobs (5 company-site, 2 new) of 120 | 43 fresh applicable
+  project manager p1: 20 jobs (5 company-site, 0 new) of 120 | 43 fresh applicable
 Search: project management  (https://www.naukri.com/project-management-jobs-in-noida?k=project%20management&l=noida&experience=1&jobAge=15)
-  project management p1: 7 jobs (3 company-site, 3 new) of 7 | 3 fresh applicable
+  project management p1: 7 jobs (3 company-site, 0 new) of 7 | 3 fresh applicable
 Search: project executive  (https://www.naukri.com/project-executive-jobs-in-noida?k=project%20executive&l=noida&experience=1&jobAge=15)
-  project executive p1: 20 jobs (8 company-site, 9 new) of 140 | 8 fresh applicable
-  project executive p2: 20 jobs (6 company-site, 4 new) of 140 | 21 fresh applicable
+  project executive p1: 20 jobs (8 company-site, 0 new) of 140 | 21 fresh applicable
 Search: PMO  (https://www.naukri.com/pmo-jobs-in-noida?k=PMO&l=noida&experience=1&jobAge=15)
-  PMO p1: 20 jobs (7 company-site, 0 new) of 134 | 12 fresh applicable
-  PMO p2: 20 jobs (6 company-site, 5 new) of 134 | 21 fresh applicable
+  PMO p1: 20 jobs (7 company-site, 0 new) of 134 | 21 fresh applicable
 Search: CRM executive  (https://www.naukri.com/crm-executive-jobs-in-noida?k=CRM%20executive&l=noida&experience=1&jobAge=15)
-  CRM executive p1: 20 jobs (5 company-site, 10 new) of 143 | 15 fresh applicable
-  CRM executive p2: 20 jobs (5 company-site, 0 new) of 143 | 26 fresh applicable
+  CRM executive p1: 20 jobs (5 company-site, 0 new) of 143 | 26 fresh applicable
 Search: CRM analyst  (https://www.naukri.com/crm-analyst-jobs-in-noida?k=CRM%20analyst&l=noida&experience=1&jobAge=15)
-  CRM analyst p1: 20 jobs (7 company-site, 4 new) of 145 | 13 fresh applicable
-  CRM analyst p2: 20 jobs (3 company-site, 0 new) of 145 | 26 fresh applicable
+  CRM analyst p1: 20 jobs (7 company-site, 0 new) of 145 | 26 fresh applicable
 Search: CRM manager  (https://www.naukri.com/crm-manager-jobs-in-noida?k=CRM%20manager&l=noida&experience=1&jobAge=15)
-  CRM manager p1: 20 jobs (7 company-site, 4 new) of 136 | 13 fresh applicable
-  CRM manager p2: 20 jobs (5 company-site, 0 new) of 136 | 23 fresh applicable
-  JD: Walk-in || Project Delivery Executive (PDE) - Asl Infosystem
+  CRM manager p1: 20 jobs (7 company-site, 0 new) of 136 | 23 fresh applicable
 590 jobs known
 
 Filtered out (never applied to): 96 company site, 62 experience, 47 title excluded
-Eligible per profile (>= 70% match, not yet applied):
-  project coordinator    1
-  project manager        0
-  project management     0
-  project executive      1
+Eligible per profile (>= 60% match, not yet applied):
+  project coordinator    3
+  project manager        2
+  project management     1
+  project executive      2
   PMO                    1
   CRM executive          1
   CRM analyst            1
   CRM manager            1
 
-<project coordinator 0/10> [100%] Walk-in || Project Delivery Executive (PDE) @ Asl Infosystem () | 1 min used
+<project coordinator 0/10> [100%] Walk-in || Project Delivery Executive (PDE) @ Asl Infosystem () | 0 min used
   -> failed no Apply button found (layout change or expired listing)
 
-Applied this run: 0 in 1 min | today total: 1
+<project manager 0/10> [60%] Hiring Technical Project Manager- Spanish , Portuguese @ Global Multilingual (1-6 Yrs) | 0 min used
+  -> applied 
+
+<project management 0/10> [60%] Project Coordinator @ CHL WORLDWIDE (1-3 Yrs) | 1 min used
+  -> needs_manual no answer for: are you an immediate Joine
+
+<project manager 1/10> [60%] Project Manager @ Socius Innovative Global Brains (3-5 Yrs) | 1 min used
+  -> company_site company-site posting - skipped
+
+<project executive 0/10> [60%] Project Coordinator- Power Distribution @ Lambent Engineering (0-1 Yrs) | 1 min used
+  -> needs_manual no answer for: Which type of consulting work have you primarily done?
+Profile resume restored to master
+
+Applied this run: 1 in 2 min | today total: 2
   project coordinator    0/10  (ran out of eligible jobs or time)
-  project manager        0/10  (ran out of eligible jobs or time)
+  project manager        1/10  (ran out of eligible jobs or time)
   project management     0/10  (ran out of eligible jobs or time)
   project executive      0/10  (ran out of eligible jobs or time)
   PMO                    0/10  (ran out of eligible jobs or time)

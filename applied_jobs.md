@@ -1,6 +1,6 @@
 # Applied jobs
 
-Total applied: **95**  |  last updated 2026-11-16 21:44 IST
+Total applied: **96**  |  last updated 2026-11-16 21:54 IST
 
 | Date | Role | Company | Match | Resume used | Job |
 |---|---|---|---|---|---|
@@ -10,6 +10,7 @@ Total applied: **95**  |  last updated 2026-11-16 21:44 IST
 | before-automation | Data Analyst | Balar Marketing | 83% | [pratiksha-malhotra_balar-marketing_data-analyst.docx](resumes/pratiksha-malhotra_balar-marketing_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-balar-marketing-noida-2-to-5-years-280926015839) |
 | before-automation | Data Analyst | Innodata India | 100% | [pratiksha-malhotra_innodata-india_data-analyst.docx](resumes/pratiksha-malhotra_innodata-india_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-innodata-india-noida-4-to-8-years-100926031730) |
 | before-automation | Mis Executive | CRC Group | 86% | [pratiksha-malhotra_crc-group_mis-executive.docx](resumes/pratiksha-malhotra_crc-group_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-crc-group-noida-4-to-8-years-190926019495) |
+| 2026-11-16 21:53 | Hiring Technical Project Manager- Spanish , Portuguese | Global Multilingual | 60% | [pratiksha-malhotra_global-multilingual_hiring-technical-project-manager-spanish.docx](resumes/pratiksha-malhotra_global-multilingual_hiring-technical-project-manager-spanish.docx) | [open](https://www.naukri.com/job-listings-hiring-technical-project-manager-spanish-portuguese-global-multilingual-noida-1-to-6-years-231026030524) |
 | 2026-11-16 10:02 | MIS/CRM Executive | Eva Developers | 95% | [pratiksha-malhotra_eva-developers_mis-crm-executive.docx](resumes/pratiksha-malhotra_eva-developers_mis-crm-executive.docx) | [open](https://www.naukri.com/job-listings-mis-crm-executive-eva-developers-noida-1-to-5-years-131126015320) |
 | 2026-11-13 10:03 | Analyst | Delight HR | 100% | [pratiksha-malhotra_delight-hr_analyst.docx](resumes/pratiksha-malhotra_delight-hr_analyst.docx) | [open](https://www.naukri.com/job-listings-analyst-delight-hr-services-pvt-ltd-noida-0-to-1-years-111126915507) |
 | 2026-11-13 10:02 | Mis Executive | Delight HR | 82% | [pratiksha-malhotra_delight-hr_mis-executive.docx](resumes/pratiksha-malhotra_delight-hr_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-delight-hr-services-pvt-ltd-noida-1-to-3-years-111126912729) |
@@ -142,3 +143,5 @@ Total applied: **95**  |  last updated 2026-11-16 21:44 IST
 | Market Research Analyst - Design | AK Enterprises | needs_manual | no answer for: Are you an immediate joiner? | [open](https://www.naukri.com/job-listings-market-research-analyst-design-ak-enterprises-noida-1-to-4-years-141126011393) |
 | Operations Analyst | Spice Money | needs_manual | no answer for: Thank you for your responses. | [open](https://www.naukri.com/job-listings-operations-analyst-spice-money-noida-0-to-2-years-131126025075) |
 | Walk-in || Project Delivery Executive (PDE) | Asl Infosystem | failed | no Apply button found (layout change or expired listing) | [open](https://www.naukri.com/job-listings-project-delivery-executive-pde-asl-infosystem-noida-0-to-1-years-161126021357) |
+| Project Coordinator | CHL WORLDWIDE | needs_manual | no answer for: are you an immediate Joine | [open](https://www.naukri.com/job-listings-project-coordinator-chl-worldwide-greater-noida-1-to-3-years-041126015658) |
+| Project Coordinator- Power Distribution | Lambent Engineering | needs_manual | no answer for: Which type of consulting work have you primarily done? | [open](https://www.naukri.com/job-listings-project-coordinator-power-distribution-lambent-engineering-noida-0-to-1-years-101126009010) |

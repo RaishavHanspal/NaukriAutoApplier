@@ -2610,7 +2610,7 @@
     "attempts": 1
   },
   {
-    "date": "2026-11-16 21:44",
+    "date": "2026-11-16 21:53",
     "url": "https://www.naukri.com/job-listings-project-delivery-executive-pde-asl-infosystem-noida-0-to-1-years-161126021357",
     "title": "Walk-in || Project Delivery Executive (PDE)",
     "company": "Asl Infosystem",
@@ -2619,6 +2619,54 @@
     "resume": "",
     "status": "failed",
     "detail": "no Apply button found (layout change or expired listing)",
+    "attempts": 2
+  },
+  {
+    "date": "2026-11-16 21:53",
+    "url": "https://www.naukri.com/job-listings-hiring-technical-project-manager-spanish-portuguese-global-multilingual-noida-1-to-6-years-231026030524",
+    "title": "Hiring Technical Project Manager- Spanish , Portuguese",
+    "company": "Global Multilingual",
+    "location": "Noida",
+    "score": 60,
+    "resume": "resumes/pratiksha-malhotra_global-multilingual_hiring-technical-project-manager-spanish.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-16 21:53",
+    "url": "https://www.naukri.com/job-listings-project-coordinator-chl-worldwide-greater-noida-1-to-3-years-041126015658",
+    "title": "Project Coordinator",
+    "company": "CHL WORLDWIDE",
+    "location": "Hybrid - Greater Noida",
+    "score": 60,
+    "resume": "resumes/pratiksha-malhotra_chl-worldwide_project-coordinator.docx",
+    "status": "needs_manual",
+    "detail": "no answer for: are you an immediate Joine",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-16 21:54",
+    "url": "https://www.naukri.com/job-listings-project-manager-socius-igb-pvt-ltd-greater-noida-thiruvananthapuram-3-to-5-years-251024501696",
+    "title": "Project Manager",
+    "company": "Socius Innovative Global Brains",
+    "location": "Greater Noida, Thiruvananthapuram",
+    "score": 60,
+    "resume": "",
+    "status": "company_site",
+    "detail": "company-site posting - skipped",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-16 21:54",
+    "url": "https://www.naukri.com/job-listings-project-coordinator-power-distribution-lambent-engineering-noida-0-to-1-years-101126009010",
+    "title": "Project Coordinator- Power Distribution",
+    "company": "Lambent Engineering",
+    "location": "Noida(B Block Sector 4)",
+    "score": 60,
+    "resume": "resumes/pratiksha-malhotra_lambent-engineering_project-coordinator-power-distribution.docx",
+    "status": "needs_manual",
+    "detail": "no answer for: Which type of consulting work have you primarily done?",
     "attempts": 1
   }
 ]
