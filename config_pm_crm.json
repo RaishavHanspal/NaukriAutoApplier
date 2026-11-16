@@ -15,7 +15,7 @@
   "max_pages": 6,
   "skip_company_site": true,
   "max_jobs": 40,
-  "threshold": 70,
+  "threshold": 60,
   "min_jd_skills": 3,
   "require_area_match": false,
   "area_terms": [
