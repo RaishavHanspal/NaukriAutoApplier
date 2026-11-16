@@ -88,5 +88,20 @@
     ],
     "example_job": "https://www.naukri.com/job-listings-project-manager-bcs-consulting-noida-lucknow-3-to-8-years-301026015027",
     "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "What type of hiring or recruitment have you done?",
+    "options": [],
+    "example_job": "https://www.naukri.com/job-listings-hiring-for-business-analyst-wfo-orcapod-consulting-services-noida-new-delhi-gurugram-0-to-2-years-150926015740",
+    "how_to_fix": "add a rule for this to answers.json"
+  },
+  {
+    "question": "Are you an immediate joiner?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "example_job": "https://www.naukri.com/job-listings-market-research-analyst-design-ak-enterprises-noida-1-to-4-years-141126011393",
+    "how_to_fix": "add a rule for this to answers.json"
   }
 ]
