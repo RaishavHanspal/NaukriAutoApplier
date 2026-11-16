@@ -394,7 +394,10 @@ def fetch_descriptions(page, jobs, deadline):
     The job page also tells us if it is company-site only or already applied."""
     skip = blocked_urls()
     # a job whose title is not a target role tops out at 60 points: only worth a JD fetch if that can pass
-    reachable = lambda j: 60 + 40 * bool(re.search(CFG.get("title_patterns", "."), j["title"].lower())) >= CFG["threshold"]
+    # with require_title_match only target-role titles are ever applied to
+    def reachable(j):
+        title_ok = bool(re.search(CFG.get("title_patterns", "."), j["title"].lower()))
+        return title_ok if CFG.get("require_title_match") else 60 + 40 * title_ok >= CFG["threshold"]
     pending = [j for j in jobs.values()
                if not j.get("description") and prefilter(j, skip) is None and reachable(j)]
     pending.sort(key=lambda j: (j.get("match", {}).get("score", 0), j.get("last_seen", "")), reverse=True)
@@ -498,6 +501,8 @@ def candidates(profile=None):
     for j in jobs.values():
         m = j.get("match") or {}
         if prefilter(j, skip) or m.get("score", 0) < CFG["threshold"]:
+            continue
+        if CFG.get("require_title_match") and not m.get("title_match"):
             continue
         if CFG.get("require_area_match") and not m.get("area_match"):
             continue

@@ -33,7 +33,7 @@ The GitHub Actions schedule is disabled (GitHub's IPs are blocked by Naukri). Th
 Windows Task Scheduler task **"Naukri PM-CRM applier"** runs Mon-Sat at 14:00 (PC must be on and logged in).
 It does the same as the desktop shortcut but with `--config config_pm_crm.json`: it searches only project
 management / project coordinator / PMO / CRM keywords, and `title_patterns` there only gives the 40 title
-points to `project|coordinat|pmo|crm` titles, its `threshold` is 60 (main run: 70); other titles can only reach 60 if every JD skill matches.
+points to `project|coordinat|pmo|crm` titles, its `threshold` is 60 (main run: 70); and `require_title_match` means other titles are never applied to.
 It shares `applied_log.json` with the normal run, so no job is applied to twice.
 Change the time: Task Scheduler > "Naukri PM-CRM applier" > Triggers. Run now: `schtasks /run /tn "Naukri PM-CRM applier"`.
 

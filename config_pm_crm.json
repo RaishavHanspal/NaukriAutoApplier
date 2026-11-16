@@ -219,5 +219,6 @@
   "per_profile_target": 10,
   "max_run_minutes": 45,
   "scrape_budget_minutes": 12,
-  "max_new_descriptions": 80
+  "max_new_descriptions": 80,
+  "require_title_match": true
 }
