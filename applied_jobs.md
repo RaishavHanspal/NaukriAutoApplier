@@ -1,6 +1,6 @@
 # Applied jobs
 
-Total applied: **95**  |  last updated 2026-11-16 10:02 IST
+Total applied: **95**  |  last updated 2026-11-16 21:44 IST
 
 | Date | Role | Company | Match | Resume used | Job |
 |---|---|---|---|---|---|
@@ -141,3 +141,4 @@ Total applied: **95**  |  last updated 2026-11-16 10:02 IST
 | Hiring For Business Analyst-WFO | Orcapod Consulting Services | needs_manual | no answer for: What type of hiring or recruitment have you done? | [open](https://www.naukri.com/job-listings-hiring-for-business-analyst-wfo-orcapod-consulting-services-noida-new-delhi-gurugram-0-to-2-years-150926015740) |
 | Market Research Analyst - Design | AK Enterprises | needs_manual | no answer for: Are you an immediate joiner? | [open](https://www.naukri.com/job-listings-market-research-analyst-design-ak-enterprises-noida-1-to-4-years-141126011393) |
 | Operations Analyst | Spice Money | needs_manual | no answer for: Thank you for your responses. | [open](https://www.naukri.com/job-listings-operations-analyst-spice-money-noida-0-to-2-years-131126025075) |
+| Walk-in || Project Delivery Executive (PDE) | Asl Infosystem | failed | no Apply button found (layout change or expired listing) | [open](https://www.naukri.com/job-listings-project-delivery-executive-pde-asl-infosystem-noida-0-to-1-years-161126021357) |

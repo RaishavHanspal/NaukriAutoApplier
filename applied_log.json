@@ -2608,5 +2608,17 @@
     "status": "applied",
     "detail": "",
     "attempts": 1
+  },
+  {
+    "date": "2026-11-16 21:44",
+    "url": "https://www.naukri.com/job-listings-project-delivery-executive-pde-asl-infosystem-noida-0-to-1-years-161126021357",
+    "title": "Walk-in || Project Delivery Executive (PDE)",
+    "company": "Asl Infosystem",
+    "location": "Noida(Sector 63)",
+    "score": 100,
+    "resume": "",
+    "status": "failed",
+    "detail": "no Apply button found (layout change or expired listing)",
+    "attempts": 1
   }
 ]

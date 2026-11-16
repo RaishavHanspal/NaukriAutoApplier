@@ -1,320 +1,49 @@
-Run started 2026-11-09 16:23 IST: up to 10 applications per profile x 7 profiles, max 45 min
-Search: data analyst  (https://www.naukri.com/data-analyst-jobs-in-noida?k=data%20analyst&l=noida&experience=1&jobAge=15)
-  data analyst p1: 20 jobs (6 company-site, 1 new) of 116 | 41 fresh applicable
-Search: MIS executive  (https://www.naukri.com/mis-executive-jobs-in-noida?k=MIS%20executive&l=noida&experience=1&jobAge=15)
-  MIS executive p1: 20 jobs (5 company-site, 1 new) of 78 | 35 fresh applicable
-Search: reporting analyst  (https://www.naukri.com/reporting-analyst-jobs-in-noida?k=reporting%20analyst&l=noida&experience=1&jobAge=15)
-  reporting analyst p1: 20 jobs (9 company-site, 0 new) of 77 | 30 fresh applicable
-Search: business analyst  (https://www.naukri.com/business-analyst-jobs-in-noida?k=business%20analyst&l=noida&experience=1&jobAge=15)
-  business analyst p1: 20 jobs (10 company-site, 0 new) of 87 | 25 fresh applicable
+Run started 2026-11-16 21:43 IST: up to 10 applications per profile x 8 profiles, max 45 min, config config_pm_crm.json
 Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
-  project coordinator p1: 20 jobs (5 company-site, 0 new) of 80 | 29 fresh applicable
+  project coordinator p1: 20 jobs (8 company-site, 12 new) of 134 | 56 fresh applicable
 Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
-  project manager p1: 20 jobs (7 company-site, 0 new) of 64 | 29 fresh applicable
-Search: marketing analyst  (https://www.naukri.com/marketing-analyst-jobs-in-noida?k=marketing%20analyst&l=noida&experience=1&jobAge=15)
-  marketing analyst p1: 20 jobs (3 company-site, 0 new) of 85 | 29 fresh applicable
-  JD: Mis Executive - Lifecell
-439 jobs known
+  project manager p1: 20 jobs (5 company-site, 2 new) of 120 | 43 fresh applicable
+Search: project management  (https://www.naukri.com/project-management-jobs-in-noida?k=project%20management&l=noida&experience=1&jobAge=15)
+  project management p1: 7 jobs (3 company-site, 3 new) of 7 | 3 fresh applicable
+Search: project executive  (https://www.naukri.com/project-executive-jobs-in-noida?k=project%20executive&l=noida&experience=1&jobAge=15)
+  project executive p1: 20 jobs (8 company-site, 9 new) of 140 | 8 fresh applicable
+  project executive p2: 20 jobs (6 company-site, 4 new) of 140 | 21 fresh applicable
+Search: PMO  (https://www.naukri.com/pmo-jobs-in-noida?k=PMO&l=noida&experience=1&jobAge=15)
+  PMO p1: 20 jobs (7 company-site, 0 new) of 134 | 12 fresh applicable
+  PMO p2: 20 jobs (6 company-site, 5 new) of 134 | 21 fresh applicable
+Search: CRM executive  (https://www.naukri.com/crm-executive-jobs-in-noida?k=CRM%20executive&l=noida&experience=1&jobAge=15)
+  CRM executive p1: 20 jobs (5 company-site, 10 new) of 143 | 15 fresh applicable
+  CRM executive p2: 20 jobs (5 company-site, 0 new) of 143 | 26 fresh applicable
+Search: CRM analyst  (https://www.naukri.com/crm-analyst-jobs-in-noida?k=CRM%20analyst&l=noida&experience=1&jobAge=15)
+  CRM analyst p1: 20 jobs (7 company-site, 4 new) of 145 | 13 fresh applicable
+  CRM analyst p2: 20 jobs (3 company-site, 0 new) of 145 | 26 fresh applicable
+Search: CRM manager  (https://www.naukri.com/crm-manager-jobs-in-noida?k=CRM%20manager&l=noida&experience=1&jobAge=15)
+  CRM manager p1: 20 jobs (7 company-site, 4 new) of 136 | 13 fresh applicable
+  CRM manager p2: 20 jobs (5 company-site, 0 new) of 136 | 23 fresh applicable
+  JD: Walk-in || Project Delivery Executive (PDE) - Asl Infosystem
+590 jobs known
 
-Filtered out (never applied to): 69 company site, 62 experience, 21 title excluded
+Filtered out (never applied to): 96 company site, 62 experience, 47 title excluded
 Eligible per profile (>= 70% match, not yet applied):
-  data analyst           1
-  MIS executive          1
-  reporting analyst      1
-  business analyst       1
-  project coordinator    2
-  project manager        1
-  marketing analyst      1
+  project coordinator    1
+  project manager        0
+  project management     0
+  project executive      1
+  PMO                    1
+  CRM executive          1
+  CRM analyst            1
+  CRM manager            1
 
-<data analyst 0/10> [93%] Mis Executive @ Lifecell (1-5 Yrs) | 1 min used
-  -> applied 
-
-<project coordinator 0/10> [88%] Project Coordinator @ Leading Client (3-8 Yrs) | 2 min used
+<project coordinator 0/10> [100%] Walk-in || Project Delivery Executive (PDE) @ Asl Infosystem () | 1 min used
   -> failed no Apply button found (layout change or expired listing)
-Profile resume restored to master
 
-Applied this run: 1 in 2 min | today total: 1
-  data analyst           1/10  (ran out of eligible jobs or time)
-  MIS executive          0/10  (ran out of eligible jobs or time)
-  reporting analyst      0/10  (ran out of eligible jobs or time)
-  business analyst       0/10  (ran out of eligible jobs or time)
+Applied this run: 0 in 1 min | today total: 1
   project coordinator    0/10  (ran out of eligible jobs or time)
   project manager        0/10  (ran out of eligible jobs or time)
-  marketing analyst      0/10  (ran out of eligible jobs or time)
-Reports written: applied_jobs.md, applied_jobs.csv
-run.log is locked - logging to run_20261110_100001.log
-Run started 2026-11-10 10:00 IST: up to 10 applications per profile x 7 profiles, max 45 min
-Search: data analyst  (https://www.naukri.com/data-analyst-jobs-in-noida?k=data%20analyst&l=noida&experience=1&jobAge=15)
-  data analyst p1: 20 jobs (4 company-site, 0 new) of 115 | 40 fresh applicable
-Search: MIS executive  (https://www.naukri.com/mis-executive-jobs-in-noida?k=MIS%20executive&l=noida&experience=1&jobAge=15)
-  MIS executive p1: 20 jobs (6 company-site, 0 new) of 77 | 34 fresh applicable
-Search: reporting analyst  (https://www.naukri.com/reporting-analyst-jobs-in-noida?k=reporting%20analyst&l=noida&experience=1&jobAge=15)
-  reporting analyst p1: 20 jobs (9 company-site, 0 new) of 76 | 29 fresh applicable
-Search: business analyst  (https://www.naukri.com/business-analyst-jobs-in-noida?k=business%20analyst&l=noida&experience=1&jobAge=15)
-  business analyst p1: 20 jobs (10 company-site, 0 new) of 86 | 24 fresh applicable
-Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
-  project coordinator p1: 20 jobs (6 company-site, 0 new) of 79 | 27 fresh applicable
-Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
-  project manager p1: 20 jobs (7 company-site, 0 new) of 63 | 28 fresh applicable
-Search: marketing analyst  (https://www.naukri.com/marketing-analyst-jobs-in-noida?k=marketing%20analyst&l=noida&experience=1&jobAge=15)
-  marketing analyst p1: 20 jobs (4 company-site, 0 new) of 84 | 28 fresh applicable
-439 jobs known
-
-Filtered out (never applied to): 69 company site, 62 experience, 21 title excluded
-Eligible per profile (>= 70% match, not yet applied):
-  data analyst           0
-  MIS executive          0
-  reporting analyst      0
-  business analyst       0
-  project coordinator    0
-  project manager        0
-  marketing analyst      0
-
-Applied this run: 0 in 0 min | today total: 0
-  data analyst           0/10  (ran out of eligible jobs or time)
-  MIS executive          0/10  (ran out of eligible jobs or time)
-  reporting analyst      0/10  (ran out of eligible jobs or time)
-  business analyst       0/10  (ran out of eligible jobs or time)
-  project coordinator    0/10  (ran out of eligible jobs or time)
-  project manager        0/10  (ran out of eligible jobs or time)
-  marketing analyst      0/10  (ran out of eligible jobs or time)
-Reports written: applied_jobs.md, applied_jobs.csv
-run.log is locked - logging to run_20261111_100004.log
-Run started 2026-11-11 10:00 IST: up to 10 applications per profile x 7 profiles, max 45 min
-Search: data analyst  (https://www.naukri.com/data-analyst-jobs-in-noida?k=data%20analyst&l=noida&experience=1&jobAge=15)
-  data analyst p1: 20 jobs (3 company-site, 2 new) of 106 | 41 fresh applicable
-Search: MIS executive  (https://www.naukri.com/mis-executive-jobs-in-noida?k=MIS%20executive&l=noida&experience=1&jobAge=15)
-  MIS executive p1: 20 jobs (3 company-site, 3 new) of 72 | 38 fresh applicable
-Search: reporting analyst  (https://www.naukri.com/reporting-analyst-jobs-in-noida?k=reporting%20analyst&l=noida&experience=1&jobAge=15)
-  reporting analyst p1: 20 jobs (7 company-site, 0 new) of 72 | 32 fresh applicable
-Search: business analyst  (https://www.naukri.com/business-analyst-jobs-in-noida?k=business%20analyst&l=noida&experience=1&jobAge=15)
-  business analyst p1: 20 jobs (8 company-site, 0 new) of 81 | 24 fresh applicable
-Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
-  project coordinator p1: 20 jobs (4 company-site, 1 new) of 73 | 32 fresh applicable
-Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
-  project manager p1: 20 jobs (7 company-site, 0 new) of 61 | 32 fresh applicable
-Search: marketing analyst  (https://www.naukri.com/marketing-analyst-jobs-in-noida?k=marketing%20analyst&l=noida&experience=1&jobAge=15)
-  marketing analyst p1: 20 jobs (1 company-site, 1 new) of 80 | 32 fresh applicable
-  JD: Project Coordinator- Power Distribution - Lambent Engineering
-446 jobs known
-
-Filtered out (never applied to): 69 company site, 62 experience, 22 title excluded
-Eligible per profile (>= 70% match, not yet applied):
-  data analyst           0
-  MIS executive          0
-  reporting analyst      0
-  business analyst       0
-  project coordinator    0
-  project manager        0
-  marketing analyst      0
-
-Applied this run: 0 in 1 min | today total: 0
-  data analyst           0/10  (ran out of eligible jobs or time)
-  MIS executive          0/10  (ran out of eligible jobs or time)
-  reporting analyst      0/10  (ran out of eligible jobs or time)
-  business analyst       0/10  (ran out of eligible jobs or time)
-  project coordinator    0/10  (ran out of eligible jobs or time)
-  project manager        0/10  (ran out of eligible jobs or time)
-  marketing analyst      0/10  (ran out of eligible jobs or time)
-Reports written: applied_jobs.md, applied_jobs.csv
-run.log is locked - logging to run_20261112_100001.log
-Run started 2026-11-12 10:00 IST: up to 10 applications per profile x 7 profiles, max 45 min
-Search: data analyst  (https://www.naukri.com/data-analyst-jobs-in-noida?k=data%20analyst&l=noida&experience=1&jobAge=15)
-  data analyst p1: 20 jobs (3 company-site, 16 new) of 145 | 55 fresh applicable
-Search: MIS executive  (https://www.naukri.com/mis-executive-jobs-in-noida?k=MIS%20executive&l=noida&experience=1&jobAge=15)
-  MIS executive p1: 20 jobs (2 company-site, 11 new) of 121 | 49 fresh applicable
-Search: reporting analyst  (https://www.naukri.com/reporting-analyst-jobs-in-noida?k=reporting%20analyst&l=noida&experience=1&jobAge=15)
-  reporting analyst p1: 20 jobs (4 company-site, 4 new) of 124 | 43 fresh applicable
-Search: business analyst  (https://www.naukri.com/business-analyst-jobs-in-noida?k=business%20analyst&l=noida&experience=1&jobAge=15)
-  business analyst p1: 20 jobs (4 company-site, 2 new) of 131 | 36 fresh applicable
-Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
-  project coordinator p1: 20 jobs (2 company-site, 2 new) of 122 | 42 fresh applicable
-Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
-  project manager p1: 20 jobs (2 company-site, 14 new) of 109 | 41 fresh applicable
-Search: marketing analyst  (https://www.naukri.com/marketing-analyst-jobs-in-noida?k=marketing%20analyst&l=noida&experience=1&jobAge=15)
-  marketing analyst p1: 20 jobs (3 company-site, 2 new) of 129 | 38 fresh applicable
-  JD: CRM Executive - Mores Techno
-  JD: Project Management Officer - Low Code / No Code Platforms - Forward Eye Technologies
-  JD: Analyst - Delight HR
-  JD: Analyst - Delight HR
-  JD: Business Analysis/Reengineering Practitioner - Shashwath Solution
-  JD: Business Analyst - Shashwath Solution
-  JD: Research Analyst - Markntel Advisors
-  JD: Mis Executive - Delight HR
-  JD: Mis Executive - Delight HR
-  JD: Analyst-Fulfillment,order management - Delight HR
-  JD: Hiring Fresher For Analyst Quality Control in Bangalore (Murgeshpalya) - Delight HR
-  JD: Analyst-Fulfillment,order management - Delight HR
-497 jobs known
-
-Filtered out (never applied to): 73 company site, 62 experience, 38 title excluded
-Eligible per profile (>= 70% match, not yet applied):
-  data analyst           8
-  MIS executive          4
-  reporting analyst      9
-  business analyst       8
-  project coordinator    3
-  project manager        0
-  marketing analyst      4
-
-<data analyst 0/10> [100%] Analyst-Fulfillment,order management @ Delight HR (0-1 Yrs) | 1 min used
-  -> applied 
-
-<MIS executive 0/10> [100%] Project Management Officer - Low Code / No Code Platforms @ Forward Eye Technologies (1-2 Yrs) | 2 min used
-  -> applied 
-
-<MIS executive 1/10> [95%] CRM Executive @ Mores Techno (1-3 Yrs) | 2 min used
-  Q: How many years of experience do you have in CRM Management? -> 1.1
-  Q: How many years of experience do you have in After Sales Service? -> 0
-  Q: How many years of experience do you have in Payment Followup? -> 0
-  Q: How many years of experience do you have in Customer Relationship? -> 0
-  -> applied 
-
-<project coordinator 0/10> [82%] Mis Executive @ Delight HR (1-3 Yrs) | 3 min used
-  -> applied 
-
-<reporting analyst 0/10> [100%] Analyst @ Delight HR (0-1 Yrs) | 4 min used
-  -> applied 
-
-<business analyst 0/10> [100%] Business Analysis/Reengineering Practitioner @ Shashwath Solution (1-2 Yrs) | 4 min used
-  -> applied 
-
-<marketing analyst 0/10> [93%] Research Analyst @ Markntel Advisors (1-3 Yrs) | 5 min used
-  -> applied 
-
-<data analyst 1/10> [85%] Business Analyst @ Shashwath Solution (1-2 Yrs) | 5 min used
-  -> applied 
-
-<data analyst 2/10> [80%] Hiring Fresher For Analyst Quality Control in Bangalore (Murgeshpalya) @ Delight HR (0-1 Yrs) | 6 min used
-  -> applied 
-Profile resume restored to master
-
-Applied this run: 9 in 7 min | today total: 9
-  data analyst           3/10  (ran out of eligible jobs or time)
-  MIS executive          2/10  (ran out of eligible jobs or time)
-  reporting analyst      1/10  (ran out of eligible jobs or time)
-  business analyst       1/10  (ran out of eligible jobs or time)
-  project coordinator    1/10  (ran out of eligible jobs or time)
-  project manager        0/10  (ran out of eligible jobs or time)
-  marketing analyst      1/10  (ran out of eligible jobs or time)
-Reports written: applied_jobs.md, applied_jobs.csv
-run.log is locked - logging to run_20261113_100001.log
-Run started 2026-11-13 10:00 IST: up to 10 applications per profile x 7 profiles, max 45 min
-Search: data analyst  (https://www.naukri.com/data-analyst-jobs-in-noida?k=data%20analyst&l=noida&experience=1&jobAge=15)
-  data analyst p1: 20 jobs (4 company-site, 8 new) of 164 | 55 fresh applicable
-Search: MIS executive  (https://www.naukri.com/mis-executive-jobs-in-noida?k=MIS%20executive&l=noida&experience=1&jobAge=15)
-  MIS executive p1: 20 jobs (2 company-site, 7 new) of 134 | 51 fresh applicable
-Search: reporting analyst  (https://www.naukri.com/reporting-analyst-jobs-in-noida?k=reporting%20analyst&l=noida&experience=1&jobAge=15)
-  reporting analyst p1: 20 jobs (6 company-site, 1 new) of 137 | 39 fresh applicable
-Search: business analyst  (https://www.naukri.com/business-analyst-jobs-in-noida?k=business%20analyst&l=noida&experience=1&jobAge=15)
-  business analyst p1: 20 jobs (5 company-site, 0 new) of 142 | 34 fresh applicable
-Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
-  project coordinator p1: 20 jobs (4 company-site, 5 new) of 135 | 48 fresh applicable
-Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
-  project manager p1: 20 jobs (2 company-site, 0 new) of 118 | 42 fresh applicable
-Search: marketing analyst  (https://www.naukri.com/marketing-analyst-jobs-in-noida?k=marketing%20analyst&l=noida&experience=1&jobAge=15)
-  marketing analyst p1: 20 jobs (3 company-site, 1 new) of 143 | 39 fresh applicable
-  JD: Hiring For Business Analyst-WFO - Orcapod Consulting Services
-  JD: Junior Business Analyst Product & Business Operations - Firmwise Services
-  JD: Mis Executive - Saraca Solutions
-519 jobs known
-
-Filtered out (never applied to): 75 company site, 62 experience, 43 title excluded
-Eligible per profile (>= 70% match, not yet applied):
-  data analyst           4
-  MIS executive          2
-  reporting analyst      5
-  business analyst       4
-  project coordinator    2
-  project manager        1
-  marketing analyst      2
-
-<data analyst 0/10> [100%] Analyst-Fulfillment,order management @ Delight HR (0-1 Yrs) | 0 min used
-  -> applied 
-
-<MIS executive 0/10> [90%] Mis Executive @ Saraca Solutions (1-4 Yrs) | 1 min used
-  -> applied 
-
-<project coordinator 0/10> [94%] Hiring For Business Analyst-WFO @ Orcapod Consulting Services (0-2 Yrs) | 1 min used
-  -> needs_manual no answer for: What type of hiring or recruitment have you done?
-
-<project manager 0/10> [100%] Junior Business Analyst Product & Business Operations @ Firmwise Services (0-2 Yrs) | 2 min used
-  Q: How many years of experience do you have in Business Analysis? -> 1.1
-  Q: How many years of experience do you have in Product Documentation? -> 0
-  Q: How many years of experience do you have in Presentation Skills? -> 0
-  Q: How many years of experience do you have in Stakeholder Management? -> 0
-  -> needs_manual no answer for: Thank you for your responses.
-
-<MIS executive 1/10> [82%] Mis Executive @ Delight HR (1-3 Yrs) | 3 min used
-  -> applied 
-
-<reporting analyst 0/10> [100%] Analyst @ Delight HR (0-1 Yrs) | 3 min used
-  -> applied 
-Profile resume restored to master
-
-Applied this run: 4 in 4 min | today total: 4
-  data analyst           1/10  (ran out of eligible jobs or time)
-  MIS executive          2/10  (ran out of eligible jobs or time)
-  reporting analyst      1/10  (ran out of eligible jobs or time)
-  business analyst       0/10  (ran out of eligible jobs or time)
-  project coordinator    0/10  (ran out of eligible jobs or time)
-  project manager        0/10  (ran out of eligible jobs or time)
-  marketing analyst      0/10  (ran out of eligible jobs or time)
-Reports written: applied_jobs.md, applied_jobs.csv
-run.log is locked - logging to run_20261116_100001.log
-Run started 2026-11-16 10:00 IST: up to 10 applications per profile x 7 profiles, max 45 min
-Search: data analyst  (https://www.naukri.com/data-analyst-jobs-in-noida?k=data%20analyst&l=noida&experience=1&jobAge=15)
-  data analyst p1: 20 jobs (4 company-site, 4 new) of 151 | 54 fresh applicable
-Search: MIS executive  (https://www.naukri.com/mis-executive-jobs-in-noida?k=MIS%20executive&l=noida&experience=1&jobAge=15)
-  MIS executive p1: 20 jobs (2 company-site, 6 new) of 119 | 56 fresh applicable
-Search: reporting analyst  (https://www.naukri.com/reporting-analyst-jobs-in-noida?k=reporting%20analyst&l=noida&experience=1&jobAge=15)
-  reporting analyst p1: 20 jobs (6 company-site, 1 new) of 121 | 39 fresh applicable
-Search: business analyst  (https://www.naukri.com/business-analyst-jobs-in-noida?k=business%20analyst&l=noida&experience=1&jobAge=15)
-  business analyst p1: 20 jobs (5 company-site, 0 new) of 125 | 33 fresh applicable
-Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
-  project coordinator p1: 20 jobs (4 company-site, 2 new) of 121 | 51 fresh applicable
-Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
-  project manager p1: 20 jobs (2 company-site, 1 new) of 108 | 43 fresh applicable
-Search: marketing analyst  (https://www.naukri.com/marketing-analyst-jobs-in-noida?k=marketing%20analyst&l=noida&experience=1&jobAge=15)
-  marketing analyst p1: 20 jobs (1 company-site, 4 new) of 134 | 43 fresh applicable
-  JD: Market Research Analyst - Design - AK Enterprises
-  JD: MIS/CRM Executive - Eva Developers
-  JD: Operations Analyst - Spice Money
-537 jobs known
-
-Filtered out (never applied to): 79 company site, 62 experience, 44 title excluded
-Eligible per profile (>= 70% match, not yet applied):
-  data analyst           3
-  MIS executive          3
-  reporting analyst      4
-  business analyst       3
-  project coordinator    2
-  project manager        1
-  marketing analyst      2
-
-<data analyst 0/10> [94%] Hiring For Business Analyst-WFO @ Orcapod Consulting Services (0-2 Yrs) | 0 min used
-  -> needs_manual no answer for: What type of hiring or recruitment have you done?
-
-<MIS executive 0/10> [100%] Market Research Analyst - Design @ AK Enterprises (1-4 Yrs) | 1 min used
-  -> needs_manual no answer for: Are you an immediate joiner?
-
-<project manager 0/10> [100%] Junior Business Analyst Product & Business Operations @ Firmwise Services (0-2 Yrs) | 1 min used
-  -> already_applied 
-
-<data analyst 0/10> [90%] Operations Analyst @ Spice Money (0-2 Yrs) | 1 min used
-  Q: How many years of experience do you have in Excel? -> 0.4
-  -> needs_manual no answer for: Thank you for your responses.
-
-<MIS executive 0/10> [95%] MIS/CRM Executive @ Eva Developers (1-5 Yrs) | 2 min used
-  -> applied 
-Profile resume restored to master
-
-Applied this run: 1 in 3 min | today total: 1
-  data analyst           0/10  (ran out of eligible jobs or time)
-  MIS executive          1/10  (ran out of eligible jobs or time)
-  reporting analyst      0/10  (ran out of eligible jobs or time)
-  business analyst       0/10  (ran out of eligible jobs or time)
-  project coordinator    0/10  (ran out of eligible jobs or time)
-  project manager        0/10  (ran out of eligible jobs or time)
-  marketing analyst      0/10  (ran out of eligible jobs or time)
+  project management     0/10  (ran out of eligible jobs or time)
+  project executive      0/10  (ran out of eligible jobs or time)
+  PMO                    0/10  (ran out of eligible jobs or time)
+  CRM executive          0/10  (ran out of eligible jobs or time)
+  CRM analyst            0/10  (ran out of eligible jobs or time)
+  CRM manager            0/10  (ran out of eligible jobs or time)
 Reports written: applied_jobs.md, applied_jobs.csv
