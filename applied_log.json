@@ -2634,18 +2634,6 @@
     "attempts": 1
   },
   {
-    "date": "2026-11-16 21:53",
-    "url": "https://www.naukri.com/job-listings-project-coordinator-chl-worldwide-greater-noida-1-to-3-years-041126015658",
-    "title": "Project Coordinator",
-    "company": "CHL WORLDWIDE",
-    "location": "Hybrid - Greater Noida",
-    "score": 60,
-    "resume": "resumes/pratiksha-malhotra_chl-worldwide_project-coordinator.docx",
-    "status": "needs_manual",
-    "detail": "no answer for: are you an immediate Joine",
-    "attempts": 1
-  },
-  {
     "date": "2026-11-16 21:54",
     "url": "https://www.naukri.com/job-listings-project-manager-socius-igb-pvt-ltd-greater-noida-thiruvananthapuram-3-to-5-years-251024501696",
     "title": "Project Manager",
@@ -2658,7 +2646,55 @@
     "attempts": 1
   },
   {
-    "date": "2026-11-16 21:54",
+    "date": "2026-11-17 14:01",
+    "url": "https://www.naukri.com/job-listings-project-analyst-forensics-national-asu-forensics-ernst-young-llp-noida-0-to-5-years-171126914849",
+    "title": "Project Analyst - Forensics - National - ASU - Forensics",
+    "company": "EY",
+    "location": "Noida",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_ey_project-analyst-forensics-national-asu-f.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-17 14:01",
+    "url": "https://www.naukri.com/job-listings-project-analyst-forensics-discovery-ernst-young-llp-noida-0-to-5-years-171126910754",
+    "title": "Project Analyst-Forensics-Discovery",
+    "company": "EY",
+    "location": "Noida",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_ey_project-analyst-forensics-discovery.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-17 14:02",
+    "url": "https://www.naukri.com/job-listings-seo-project-coordinator-digital-marketing-pagetraffic-noida-1-to-4-years-230824908564",
+    "title": "SEO Project Coordinator (Digital Marketing )",
+    "company": "PageTraffic",
+    "location": "Noida",
+    "score": 88,
+    "resume": "resumes/pratiksha-malhotra_pagetraffic_seo-project-coordinator-digital-marketin.docx",
+    "status": "needs_manual",
+    "detail": "no answer for: Thank you for your responses.",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-17 14:03",
+    "url": "https://www.naukri.com/job-listings-project-coordinator-chl-worldwide-greater-noida-1-to-3-years-041126015658",
+    "title": "Project Coordinator",
+    "company": "CHL WORLDWIDE",
+    "location": "Hybrid - Greater Noida",
+    "score": 60,
+    "resume": "resumes/pratiksha-malhotra_chl-worldwide_project-coordinator.docx",
+    "status": "needs_manual",
+    "detail": "no answer for: are you an immediate Joine",
+    "attempts": 2
+  },
+  {
+    "date": "2026-11-17 14:03",
     "url": "https://www.naukri.com/job-listings-project-coordinator-power-distribution-lambent-engineering-noida-0-to-1-years-101126009010",
     "title": "Project Coordinator- Power Distribution",
     "company": "Lambent Engineering",
@@ -2667,6 +2703,6 @@
     "resume": "resumes/pratiksha-malhotra_lambent-engineering_project-coordinator-power-distribution.docx",
     "status": "needs_manual",
     "detail": "no answer for: Which type of consulting work have you primarily done?",
-    "attempts": 1
+    "attempts": 2
   }
 ]
