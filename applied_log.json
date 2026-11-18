@@ -2670,18 +2670,6 @@
     "attempts": 1
   },
   {
-    "date": "2026-11-17 14:02",
-    "url": "https://www.naukri.com/job-listings-seo-project-coordinator-digital-marketing-pagetraffic-noida-1-to-4-years-230824908564",
-    "title": "SEO Project Coordinator (Digital Marketing )",
-    "company": "PageTraffic",
-    "location": "Noida",
-    "score": 88,
-    "resume": "resumes/pratiksha-malhotra_pagetraffic_seo-project-coordinator-digital-marketin.docx",
-    "status": "needs_manual",
-    "detail": "no answer for: Thank you for your responses.",
-    "attempts": 1
-  },
-  {
     "date": "2026-11-17 14:03",
     "url": "https://www.naukri.com/job-listings-project-coordinator-chl-worldwide-greater-noida-1-to-3-years-041126015658",
     "title": "Project Coordinator",
@@ -2703,6 +2691,42 @@
     "resume": "resumes/pratiksha-malhotra_lambent-engineering_project-coordinator-power-distribution.docx",
     "status": "needs_manual",
     "detail": "no answer for: Which type of consulting work have you primarily done?",
+    "attempts": 2
+  },
+  {
+    "date": "2026-11-18 14:00",
+    "url": "https://www.naukri.com/job-listings-project-analyst-forensics-national-asu-forensics-ernst-young-llp-noida-0-to-5-years-171126914369",
+    "title": "Project Analyst - Forensics - National - ASU - Forensics",
+    "company": "EY",
+    "location": "Noida",
+    "score": 100,
+    "resume": "resumes/pratiksha-malhotra_ey_project-analyst-forensics-national-asu-f.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-18 14:01",
+    "url": "https://www.naukri.com/job-listings-event-vendor-coordination-assistant-happinesscue-noida-jaipur-delhi-ncr-0-to-2-years-181126917284",
+    "title": "Event Vendor Coordination Assistant",
+    "company": "Happinesscue",
+    "location": "Noida, Jaipur, Delhi / NCR",
+    "score": 80,
+    "resume": "resumes/pratiksha-malhotra_happinesscue_event-vendor-coordination-assistant.docx",
+    "status": "applied",
+    "detail": "",
+    "attempts": 1
+  },
+  {
+    "date": "2026-11-18 14:01",
+    "url": "https://www.naukri.com/job-listings-seo-project-coordinator-digital-marketing-pagetraffic-noida-1-to-4-years-230824908564",
+    "title": "SEO Project Coordinator (Digital Marketing )",
+    "company": "PageTraffic",
+    "location": "Noida",
+    "score": 88,
+    "resume": "",
+    "status": "already_applied",
+    "detail": "",
     "attempts": 2
   }
 ]
