@@ -1,6 +1,6 @@
 # Applied jobs
 
-Total applied: **100**  |  last updated 2026-11-18 14:01 IST
+Total applied: **100**  |  last updated 2026-11-19 19:22 IST
 
 | Date | Role | Company | Match | Resume used | Job |
 |---|---|---|---|---|---|
@@ -149,3 +149,4 @@ Total applied: **100**  |  last updated 2026-11-18 14:01 IST
 | Walk-in || Project Delivery Executive (PDE) | Asl Infosystem | failed | no Apply button found (layout change or expired listing) | [open](https://www.naukri.com/job-listings-project-delivery-executive-pde-asl-infosystem-noida-0-to-1-years-161126021357) |
 | Project Coordinator | CHL WORLDWIDE | needs_manual | no answer for: are you an immediate Joine | [open](https://www.naukri.com/job-listings-project-coordinator-chl-worldwide-greater-noida-1-to-3-years-041126015658) |
 | Project Coordinator- Power Distribution | Lambent Engineering | needs_manual | no answer for: Which type of consulting work have you primarily done? | [open](https://www.naukri.com/job-listings-project-coordinator-power-distribution-lambent-engineering-noida-0-to-1-years-101126009010) |
+| MIS / HR Coordinator _Timesheet Management | K&K Social Resources And Development India | needs_manual | no answer for: Thank you for your responses. | [open](https://www.naukri.com/job-listings-mis-hr-coordinator-timesheet-management-k-k-social-resources-and-development-india-noida-1-to-3-years-181126025876) |

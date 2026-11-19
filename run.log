@@ -1,50 +1,47 @@
-Run started 2026-11-18 14:00 IST: up to 10 applications per profile x 8 profiles, max 45 min, config config_pm_crm.json
+Run started 2026-11-19 19:21 IST: up to 10 applications per profile x 8 profiles, max 45 min, config config_pm_crm.json
 Search: project coordinator  (https://www.naukri.com/project-coordinator-jobs-in-noida?k=project%20coordinator&l=noida&experience=1&jobAge=15)
-  project coordinator p1: 20 jobs (6 company-site, 13 new) of 151 | 66 fresh applicable
+  project coordinator p1: 20 jobs (7 company-site, 11 new) of 166 | 67 fresh applicable
 Search: project manager  (https://www.naukri.com/project-manager-jobs-in-noida?k=project%20manager&l=noida&experience=1&jobAge=15)
-  project manager p1: 20 jobs (9 company-site, 5 new) of 135 | 41 fresh applicable
+  project manager p1: 20 jobs (8 company-site, 1 new) of 144 | 43 fresh applicable
 Search: project management  (https://www.naukri.com/project-management-jobs-in-noida?k=project%20management&l=noida&experience=1&jobAge=15)
-  project management p1: 12 jobs (4 company-site, 2 new) of 12 | 4 fresh applicable
+  project management p1: 9 jobs (2 company-site, 0 new) of 9 | 3 fresh applicable
 Search: project executive  (https://www.naukri.com/project-executive-jobs-in-noida?k=project%20executive&l=noida&experience=1&jobAge=15)
-  project executive p1: 20 jobs (6 company-site, 2 new) of 157 | 24 fresh applicable
+  project executive p1: 20 jobs (7 company-site, 3 new) of 171 | 24 fresh applicable
 Search: PMO  (https://www.naukri.com/pmo-jobs-in-noida?k=PMO&l=noida&experience=1&jobAge=15)
-  PMO p1: 20 jobs (4 company-site, 0 new) of 153 | 32 fresh applicable
+  PMO p1: 20 jobs (7 company-site, 0 new) of 167 | 33 fresh applicable
 Search: CRM executive  (https://www.naukri.com/crm-executive-jobs-in-noida?k=CRM%20executive&l=noida&experience=1&jobAge=15)
-  CRM executive p1: 20 jobs (5 company-site, 0 new) of 160 | 25 fresh applicable
+  CRM executive p1: 20 jobs (4 company-site, 1 new) of 174 | 27 fresh applicable
 Search: CRM analyst  (https://www.naukri.com/crm-analyst-jobs-in-noida?k=CRM%20analyst&l=noida&experience=1&jobAge=15)
-  CRM analyst p1: 20 jobs (4 company-site, 0 new) of 159 | 32 fresh applicable
+  CRM analyst p1: 20 jobs (6 company-site, 0 new) of 172 | 33 fresh applicable
 Search: CRM manager  (https://www.naukri.com/crm-manager-jobs-in-noida?k=CRM%20manager&l=noida&experience=1&jobAge=15)
-  CRM manager p1: 20 jobs (3 company-site, 0 new) of 152 | 33 fresh applicable
-  JD: Event Vendor Coordination Assistant - Happinesscue
-621 jobs known
+  CRM manager p1: 20 jobs (5 company-site, 1 new) of 167 | 35 fresh applicable
+  JD: MIS / HR Coordinator _Timesheet Management - K&K Social Resources And Development India
+  JD: MIS / HR Coordinator _Timesheet Management - K&K Social Resources And Development India
+638 jobs known
 
-Filtered out (never applied to): 105 company site, 62 experience, 50 title excluded
+Filtered out (never applied to): 114 company site, 62 experience, 52 title excluded
 Eligible per profile (>= 60% match, not yet applied):
-  project coordinator    3
-  project manager        0
-  project management     1
-  project executive      1
-  PMO                    1
+  project coordinator    2
+  project manager        2
+  project management     0
+  project executive      0
+  PMO                    0
   CRM executive          0
-  CRM analyst            1
-  CRM manager            1
+  CRM analyst            0
+  CRM manager            0
 
-<project coordinator 0/10> [100%] Project Analyst - Forensics - National - ASU - Forensics @ EY (0-5 Yrs) | 0 min used
-  -> applied 
-
-<PMO 0/10> [80%] Event Vendor Coordination Assistant @ Happinesscue (0-2 Yrs) | 1 min used
-  -> applied 
-
-<project coordinator 1/10> [88%] SEO Project Coordinator (Digital Marketing ) @ PageTraffic (1-4 Yrs) | 2 min used
-  -> already_applied 
+<project coordinator 0/10> [92%] MIS / HR Coordinator _Timesheet Management @ K&K Social Resources And Development India (1-3 Yrs) | 0 min used
+  Q: How many years of experience do you have in HR Coordination? -> 0
+  Q: How many years of experience do you have in Timesheet? -> 0
+  -> needs_manual no answer for: Thank you for your responses.
 Profile resume restored to master
 
-Applied this run: 2 in 2 min | today total: 2
-  project coordinator    1/10  (ran out of eligible jobs or time)
+Applied this run: 0 in 1 min | today total: 0
+  project coordinator    0/10  (ran out of eligible jobs or time)
   project manager        0/10  (ran out of eligible jobs or time)
   project management     0/10  (ran out of eligible jobs or time)
   project executive      0/10  (ran out of eligible jobs or time)
-  PMO                    1/10  (ran out of eligible jobs or time)
+  PMO                    0/10  (ran out of eligible jobs or time)
   CRM executive          0/10  (ran out of eligible jobs or time)
   CRM analyst            0/10  (ran out of eligible jobs or time)
   CRM manager            0/10  (ran out of eligible jobs or time)

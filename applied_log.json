@@ -2728,5 +2728,17 @@
     "status": "already_applied",
     "detail": "",
     "attempts": 2
+  },
+  {
+    "date": "2026-11-19 19:22",
+    "url": "https://www.naukri.com/job-listings-mis-hr-coordinator-timesheet-management-k-k-social-resources-and-development-india-noida-1-to-3-years-181126025876",
+    "title": "MIS / HR Coordinator _Timesheet Management",
+    "company": "K&K Social Resources And Development India",
+    "location": "Noida(Sector 63)",
+    "score": 92,
+    "resume": "resumes/pratiksha-malhotra_k-k-social-resources-and-development-india_mis-hr-coordinator-timesheet-management.docx",
+    "status": "needs_manual",
+    "detail": "no answer for: Thank you for your responses.",
+    "attempts": 1
   }
 ]
