@@ -1,6 +1,6 @@
 # Applied jobs
 
-Total applied: **100**  |  last updated 2026-11-19 19:22 IST
+Total applied: **101**  |  last updated 2026-11-21 08:13 IST
 
 | Date | Role | Company | Match | Resume used | Job |
 |---|---|---|---|---|---|
@@ -10,6 +10,7 @@ Total applied: **100**  |  last updated 2026-11-19 19:22 IST
 | before-automation | Data Analyst | Balar Marketing | 83% | [pratiksha-malhotra_balar-marketing_data-analyst.docx](resumes/pratiksha-malhotra_balar-marketing_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-balar-marketing-noida-2-to-5-years-280926015839) |
 | before-automation | Data Analyst | Innodata India | 100% | [pratiksha-malhotra_innodata-india_data-analyst.docx](resumes/pratiksha-malhotra_innodata-india_data-analyst.docx) | [open](https://www.naukri.com/job-listings-data-analyst-innodata-india-noida-4-to-8-years-100926031730) |
 | before-automation | Mis Executive | CRC Group | 86% | [pratiksha-malhotra_crc-group_mis-executive.docx](resumes/pratiksha-malhotra_crc-group_mis-executive.docx) | [open](https://www.naukri.com/job-listings-mis-executive-crc-group-noida-4-to-8-years-190926019495) |
+| 2026-11-21 08:13 | MIS / HR Coordinator _Timesheet Management | K&K Social Resources And Development India | 92% | [pratiksha-malhotra_k-k-social-resources-and-development-india_mis-hr-coordinator-timesheet-management.docx](resumes/pratiksha-malhotra_k-k-social-resources-and-development-india_mis-hr-coordinator-timesheet-management.docx) | [open](https://www.naukri.com/job-listings-mis-hr-coordinator-timesheet-management-k-k-social-resources-and-development-india-noida-1-to-3-years-181126022915) |
 | 2026-11-18 14:01 | Event Vendor Coordination Assistant | Happinesscue | 80% | [pratiksha-malhotra_happinesscue_event-vendor-coordination-assistant.docx](resumes/pratiksha-malhotra_happinesscue_event-vendor-coordination-assistant.docx) | [open](https://www.naukri.com/job-listings-event-vendor-coordination-assistant-happinesscue-noida-jaipur-delhi-ncr-0-to-2-years-181126917284) |
 | 2026-11-18 14:00 | Project Analyst - Forensics - National - ASU - Forensics | EY | 100% | [pratiksha-malhotra_ey_project-analyst-forensics-national-asu-f.docx](resumes/pratiksha-malhotra_ey_project-analyst-forensics-national-asu-f.docx) | [open](https://www.naukri.com/job-listings-project-analyst-forensics-national-asu-forensics-ernst-young-llp-noida-0-to-5-years-171126914369) |
 | 2026-11-17 14:01 | Project Analyst - Forensics - National - ASU - Forensics | EY | 100% | [pratiksha-malhotra_ey_project-analyst-forensics-national-asu-f.docx](resumes/pratiksha-malhotra_ey_project-analyst-forensics-national-asu-f.docx) | [open](https://www.naukri.com/job-listings-project-analyst-forensics-national-asu-forensics-ernst-young-llp-noida-0-to-5-years-171126914849) |
